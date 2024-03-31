@@ -1,0 +1,40 @@
+{{#issetItems}}
+    <div class="brand-skin-list-wrapper">
+        <div class="brand-skin-list swiper">
+            <div class="swiper-wrapper">
+                {{#items}}
+                    <div class="brand-skin-card swiper-slide"{{#strMainId}} id="{{.}}"{{/strMainId}}>
+                        {{#image}}
+                            <div class="brand-skin-card-image">
+                                <picture class="brand-skin-card-image__picture">
+                                    {{#mobileSrc}}
+                                        <source srcset="{{.}}" media="(max-width: 767px)">{{/mobileSrc}}
+                                    {{#tabletSrc}}
+                                        <source srcset="{{.}}" media="(max-width: 1279px)">{{/tabletSrc}}
+                                    <img src="{{src}}" alt="{{alt}}" class="brand-skin-card-image__img" loading="lazy">
+                                </picture>
+                            </div>
+                        {{/image}}
+                        <div class="brand-skin-features">
+                            {{#features}}
+                                <div class="brand-skin-feature">
+                                    <div class="brand-skin-feature-marker">
+                                        <div class="brand-skin-feature-marker__icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="4" height="10" viewBox="0 0 4 10" fill="none">
+                                                <path fill="#5A5276"
+                                                      d="m.779 9.348.985-.772-.213-4.332-1.162-.76 2.7-.458-.483 5.035 1.35.841-3.177.446Zm2.379-7.84a.871.871 0 0 1-.075.357c-.05.109-.12.207-.208.295-.087.084-.188.15-.3.2a1.02 1.02 0 0 1-.735 0 .97.97 0 0 1-.295-.2 1.084 1.084 0 0 1-.201-.295.871.871 0 0 1-.076-.358c0-.13.025-.249.076-.358a.97.97 0 0 1 .2-.295A.884.884 0 0 1 1.84.66a.946.946 0 0 1 .734 0 .956.956 0 0 1 .509.49c.05.108.075.227.075.357Z"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="brand-skin-feature__text">
+                                        {{{.}}}
+                                    </div>
+                                </div>
+                            {{/features}}
+                        </div>
+                    </div>
+                {{/items}}
+            </div>
+        </div>
+    </div>
+{{/issetItems}}

@@ -1,0 +1,15 @@
+{{#quote}}
+    <div class="brand-quote">
+        {{#image}}
+            <div class="brand-quote-image-container">
+                <img src="{{src}}" alt="{{alt}}" width="{{width}}" height="{{height}}" class="brand-quote__image"
+                     loading="lazy">
+            </div>
+        {{/image}}
+        <div class="brand-quote-content">
+            {{#text}}
+                <div class="brand-quote__text">{{{.}}}</div>
+            {{/text}}
+        </div>
+    </div>
+{{/quote}}

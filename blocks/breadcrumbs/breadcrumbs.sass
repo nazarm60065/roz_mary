@@ -1,0 +1,22 @@
+.breadcrumbs
+  font-size: 12px
+  line-height: 1.37
+  color: $main-color90
+  display: flex
+  flex-wrap: wrap
+  align-items: flex-start
+
+.breadcrumbs__item:not(.breadcrumbs__item_last)
+  border-bottom: 1px solid transparent
+  transition: $default-transition
+
+.breadcrumb__del
+  margin: 0 8px
+
+.breadcrumbs__item_last
+  color: $main-color
+
++mq(desktop)
+  .breadcrumbs__item:not(.breadcrumbs__item_last):hover
+    color: $violet-color
+    border-bottom-color: $violet-color

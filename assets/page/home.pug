@@ -1,0 +1,28 @@
+extends layout/main.pug
+
+include ../blocks/head/head.pug
+include ../blocks/header/header.pug
+include ../blocks/index-menu/index-menu.pug
+include ../blocks/popular-reels/popular-reels.pug
+include ../blocks/reviews-slider/reviews-slider.pug
+include ../blocks/index-smi/index-smi.pug
+include ../blocks/index-efirs/index-efirs.pug
+include ../blocks/index-articles/index-articles.pug
+
+
+
+
+
+
+block title
+    +head('Главная')
+block pagecontent 
+    +header
+    main
+        .container-fluid
+            +index-menu
+            +popular-reels
+            +reviews-slider
+            +index-smi
+            +index-efirs
+            +index-articles

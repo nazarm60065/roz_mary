@@ -1,0 +1,38 @@
+.brand-quote
+  background-color: #fff
+  border-radius: 16px
+  padding: 12px
+  display: flex
+  align-items: flex-start
+  gap: 12px
+
+.brand-quote-image-container
+  width: 40px
+  height: 40px
+  border-radius: 50%
+  overflow: hidden
+  flex-shrink: 0
+
+.brand-quote__image
+  width: 100%
+  height: 100%
+  object-fit: cover
+
+.brand-quote__text
+  font-size: 14px
+  line-height: 1.3
+
+  b
+    font-weight: 500
+
++mq(tablet)
+  .brand-quote
+    gap: 16px
+    padding: 24px
+
+  .brand-quote-image-container
+    width: 90px
+    height: 90px
+
+  .brand-quote__text
+    font-size: 18px

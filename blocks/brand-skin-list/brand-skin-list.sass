@@ -1,0 +1,167 @@
+.brand-skin-list-wrapper
+  padding-bottom: 141.056%
+
+.brand-skin-list
+  border-radius: 16px
+  +absoluteFluid
+
+.brand-skin-card
+  border-radius: 16px
+
+.brand-skin-card-image
+  width: 100%
+  height: 100%
+
+.brand-skin-card-image__img
+  width: 100%
+  height: 100%
+  object-fit: cover
+
+.brand-skin-feature
+  position: absolute
+
+.brand-skin-feature
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+.brand-skin-feature-marker
+  width: 40px
+  height: 40px
+  background-color: #FFFFFF3D
+  border: 2px solid #FFFFFF4F
+  border-radius: 50%
+  padding: 8px
+  transition: $default-transition
+
+.brand-skin-feature_active .brand-skin-feature-marker
+  width: 52px
+  height: 52px
+  padding: 11px
+
+.brand-skin-feature_active .brand-skin-feature-marker__icon
+  width: 26px
+  height: 26px
+  padding: 7px
+
+.brand-skin-feature_active .brand-skin-feature__text
+  +show
+
+.brand-skin-feature-marker__icon
+  width: 20px
+  height: 20px
+  background-color: #fff
+  border-radius: 50%
+  padding: 5px
+  transition: $default-transition
+  +svg
+
+.brand-skin-feature__text
+  position: absolute
+  min-width: 130px
+  font-weight: 500
+  font-size: 14px
+  line-height: 130%
+  color: #FFFFFF
+  padding: 16px
+  background-color: $violet-color12
+  border-radius: 8px
+  backdrop-filter: blur(3px)
+  white-space: nowrap
+  +hide
+
+
++mq(tablet, max)
+  .brand-skin-feature:nth-child(1)
+    margin-top: -50%
+    margin-left: -12%
+
+  .brand-skin-feature:nth-child(2)
+    margin-top: -26%
+    margin-left: 21%
+
+  .brand-skin-feature:nth-child(3)
+    margin-top: 1%
+    margin-left: 2%
+
++mq(tablet)
+  .brand-skin-list-wrapper
+    padding-bottom: 52.5%
+
+
+  .brand-skin-feature:nth-child(1)
+    margin-top: -17%
+    margin-left: 5%
+
+  .brand-skin-feature:nth-child(2)
+    margin-top: 0%
+    margin-left: 18%
+
+  .brand-skin-feature:nth-child(3)
+      margin-top: 14%
+      margin-left: 0%
+
++mq(desktop, max)
+  .brand-skin-feature:nth-child(1) .brand-skin-feature__text
+    top: 60px
+    left: 0
+
+  .brand-skin-feature:nth-child(2) .brand-skin-feature__text
+    top: 0
+    right: 60px
+
+  .brand-skin-feature:nth-child(3) .brand-skin-feature__text
+    bottom: 60px
+    left: 50%
+    transform: translateX(-50%)
+
++mq(desktop)
+  .brand-skin-feature-marker
+    width: 56px
+    height: 56px
+    padding: 12px
+
+  .brand-skin-feature-marker__icon
+    width: 28px
+    height: 28px
+    padding: 7px
+
+  .brand-skin-feature__text
+    font-size: 18px
+    padding: 24px
+
+  .brand-skin-feature_active .brand-skin-feature-marker
+    width: 72px
+    height: 72px
+    padding: 16px
+
+  .brand-skin-feature_active .brand-skin-feature-marker__icon
+    width: 36px
+    height: 36px
+    padding: 10px
+
+  .brand-skin-feature:nth-child(1)
+    margin-top: -17%
+    margin-left: 5%
+
+  .brand-skin-feature:nth-child(2)
+    margin-top: 0%
+    margin-left: 18%
+
+  .brand-skin-feature:nth-child(3)
+    margin-top: 14%
+    margin-left: 0%
+
+  .brand-skin-feature:nth-child(1) .brand-skin-feature__text
+    margin-top: 16px
+
+  .brand-skin-feature:nth-child(2) .brand-skin-feature__text
+    top: 100%
+    margin-top: 16px
+    right: 0
+
+  .brand-skin-feature:nth-child(3) .brand-skin-feature__text
+    bottom: 100%
+    margin-bottom: 16px
+    left: 0
+    transform: none

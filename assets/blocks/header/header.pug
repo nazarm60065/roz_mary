@@ -1,0 +1,135 @@
+mixin header
+    .free-devilery
+        img(src="images/free-devilery.svg", alt="")
+        strong Бесплатная доставка по России при заказе от 5000 руб.
+    header.header
+        .container-fluid
+            .header-grid
+                .header-left
+                    a(href="#").logo
+                        img(src="images/logo.svg", alt="")
+                        .logo__title Roz Mary
+                    a(href="#").consultation
+                        .consultation__icon
+                            +svg("whatsapp")
+                        span Консультация <br>по подбору косметики
+                .header-right 
+                    .header-head
+                        .contacts-head
+                            a(href="tel:+79851448085").contacts-phone
+                                +svg("phone")
+                                span +7 (985) 144-80-85
+                            .contacts-date
+                                strong Режим работы: 
+                                | С 10:00 до 19:00 по МСК
+                
+                        a(href="").button-login Кабинет партнера
+                        .social
+                            .social__title Присоединяйтесь <br>в социальных сетях:
+                            ul.social-list
+                                li.social__item
+                                    a(href="#").social__link
+                                        +svg("vk")
+                                li.social__item
+                                    a(href="#").social__link
+                                        +svg("inst")
+                                li.social__item
+                                    a(href="#").social__link
+                                        +svg("tg")
+                    .header__bottom
+                        .search
+                            .search__icon
+                                +svg("search")
+                            input(type="text" placeholder="Поиск по товарам").search__input
+                        a(href="#").button.header-basket(data-count="1")
+                            +svg("shopping-cart")
+    header.header-mobile
+        .container-fluid
+            .header-mobile-main
+                .open-menu.js-open-menu
+                a(href="#").logo
+                    img(src="images/logo.svg", alt="")
+                    .logo__title Roz Mary
+                a(href="#").button.header-basket(data-count="1")
+                    +svg("shopping-cart")
+    .menu-mobile
+        .menu-mobile-wrapper
+            .menu-mobile-title.js-close-menu Меню
+            .search
+                .search__icon
+                    +svg("search")
+                input(type="text" placeholder="Поиск по товарам").search__input
+            ul.menu
+                li.menu__item
+                    a(href="#").menu__link О бренде
+                li.menu__item
+                    a(href="#").menu__link Вся косметика
+                li.menu__item
+                    a(href="#").menu__link Уход для сухой кожи
+                li.menu__item
+                    a(href="#").menu__link Уход для нормальной кожи
+                li.menu__item
+                    a(href="#").menu__link Для жирной и проблемной кожи
+                li.menu__item
+                    a(href="#").menu__link Антивозрастной уход
+                li.menu__item
+                    a(href="#").menu__link Очищение и тонизация
+                li.menu__item
+                    a(href="#").menu__link Кремы и сыворотки
+                li.menu__item 
+                    a(href="#").menu__link Маски и пилинги
+                li.menu__item
+                    a(href="#").menu__link Для тела
+                li.menu__item
+                    a(href="#").menu__link Защита от солнца
+                li.menu__item
+                    a(href="#").menu__link Эфирные масла
+                li.menu__item
+                    a(href="#").menu__link Аромабоксы
+                li.menu__item.menu__item--mobile
+                    a(href="#").menu__link 
+                        strong Доставка и оплата
+            .contacts-head
+                a(href="tel:+79851448085").contacts-phone
+                    +svg("phone")
+                    span +7 (985) 144-80-85
+                .contacts-date
+                    strong Режим работы: 
+                    | С 10:00 до 19:00 по МСК
+            a(href="").button-login.w-100 Кабинет партнера
+            .mb-2
+                a(href="#").consultation.mb-1
+                    .consultation__icon
+                        +svg("whatsapp")
+                    span Консультация по подбору косметики
+                a(href="mailto:info@rozmary.shop").consultation
+                    .consultation__icon
+                        +svg("email")
+                    span E-mail: info@rozmary.shop
+            .social.mb-3
+                .social__title Присоединяйтесь <br>в социальных сетях:
+                ul.social-list
+                    li.social__item
+                        a(href="#").social__link
+                            +svg("vk")
+                    li.social__item
+                        a(href="#").social__link
+                            +svg("inst")
+                    li.social__item
+                        a(href="#").social__link
+                            +svg("tg")
+            ul.mobile-links
+                li.mobile-links__item
+                    a(href="").mobile-links__link Политика конфиденциальности
+                li.mobile-links__item
+                    a(href="").mobile-links__link Пользовательское соглашение
+                li.mobile-links__item
+                    a(href="").mobile-links__link  Публичная оферта
+            .row
+                .col
+                    .copy-text
+                        .d-block © 2023 Roz Mary
+                        span Все права защищены.
+                .col-auto
+                    a.button.up-menu
+                        +svg("arrow-next")

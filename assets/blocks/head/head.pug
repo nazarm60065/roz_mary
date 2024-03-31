@@ -1,0 +1,14 @@
+mixin head(page_title)
+    head
+        include ../../component/icon/index.pug
+        meta(charset='UTF-8')
+        meta(name='viewport', content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+        title #{page_title}
+
+        <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
+        link(rel="stylesheet", href="style/libs.min.css")
+        link(rel="stylesheet", href="style/main.css")
+
+        script(src="js/libs.min.js") 
+        script(src="js/script.js") 
+

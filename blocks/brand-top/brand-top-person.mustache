@@ -1,0 +1,23 @@
+{{#showPerson}}
+    <div class="brand-top-person">
+        {{#image}}
+            <div class="brand-top-person-image-wrapper">
+                <picture class="brand-top-person-image__picture">
+                    {{#mobileSrc}}
+                        <source srcset="{{.}}" media="(max-width: 767px)">{{/mobileSrc}}
+                    {{#tabletSrc}}
+                        <source srcset="{{.}}" media="(max-width: 1279px)">{{/tabletSrc}}
+                    <img src="{{src}}" alt="{{alt}}" class="brand-top-person-image__img" loading="lazy">
+                </picture>
+            </div>
+        {{/image}}
+        <div class="brand-top-person-content">
+            {{#title}}
+                <div class="brand-top-person__title">{{{.}}}</div>
+            {{/title}}
+            {{#text}}
+                <div class="brand-top-person__text">{{{.}}}</div>
+            {{/text}}
+        </div>
+    </div>
+{{/showPerson}}

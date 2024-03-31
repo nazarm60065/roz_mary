@@ -1,0 +1,18 @@
+{{#issetItems}}
+    <div class="brand-top-cards">
+        {{#items}}
+            <div class="brand-top-card"{{#strMainId}} id="{{.}}"{{/strMainId}}>
+                {{#image}}
+                    <div class="brand-top-card-image-wrapper">
+                        <div class="brand-top-card-image-inner">
+                            <img src="{{src}}" alt="{{alt}}" class="brand-top-card-image__img" loading="lazy">
+                        </div>
+                    </div>
+                {{/image}}
+                {{#title}}
+                    <div class="brand-top-card__text">{{{.}}}</div>
+                {{/title}}
+            </div>
+        {{/items}}
+    </div>
+{{/issetItems}}

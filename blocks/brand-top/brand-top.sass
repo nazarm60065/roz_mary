@@ -1,0 +1,298 @@
+.brand-top
+  padding-top: 64px
+  position: relative
+  z-index: 0
+  &:before
+    content: ''
+    border-radius: 16px 16px 0 0
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    height: 615px
+    z-index: -1
+    background: #E2E0E5 radial-gradient(72.11% 141.82% at 54.01% 74.52%, rgba(255, 255, 255, 0.81) 0%, rgba(255, 255, 255, 0) 100%)
+
+.brand-top__slogan
+  font-size: 28px
+  font-style: italic
+  font-weight: 300
+  line-height: 41px
+  b
+    font-weight: 500
+
+.brand-top-cards
+  margin: 32px 0 24px
+  display: grid
+  grid-template-columns: repeat(2, minmax(0, 1fr))
+  gap: 8px
+
+.brand-top-card
+  display: flex
+  flex-direction: column
+  background-color: #fff
+  border-radius: 16px
+  position: relative
+  overflow: hidden
+  z-index: 0
+
+.brand-top-card-image-wrapper
+  position: relative
+  width: 100%
+  padding-bottom: 100%
+  margin-bottom: -15%
+  flex-shrink: 0
+
+.brand-top-card-image-inner
+  +absoluteFluid
+  display: flex
+  align-items: flex-start
+  justify-content: center
+
+.brand-top-card-image__img
+  width: auto
+  height: auto
+  max-width: 100%
+  max-height: 100%
+
+.brand-top-card__text
+  margin: 0 8px 8px
+  font-weight: 500
+  line-height: 23px
+  padding: 11px
+  border-radius: 8px
+  backdrop-filter: blur(6px)
+  flex-grow: 1
+
+.brand-top-person
+  margin-top: 24px
+  width: 100%
+  height: 467px
+  position: relative
+
+.brand-top-person-image-wrapper
+  position: relative
+  height: 100%
+  margin: 0 (-$co1)
+  line-height: 0
+  display: flex
+  align-items: flex-end
+  justify-content: center
+
+.brand-top-person-image__picture,
+.brand-top-person-image__img
+  width: 100%
+  height: 100%
+  object-fit: contain
+  object-position: center bottom
+
+.brand-top-person-content
+  position: absolute
+  left: 0
+  bottom: 28px
+  width: 266px
+  border: 1px solid #FFFFFF
+  border-radius: 16px
+  background-color: #FFFFFFA3
+  backdrop-filter: blur(16px)
+  color: $second-color
+  padding: 18px
+
+.brand-top-person__title
+  font-size: 20px
+  font-weight: 500
+  line-height: 26px
+
+.brand-top-person__text
+  margin-top: 8px
+  line-height: 20px
+
+.brand-top__anchor
+  position: absolute
+  top: 100%
+  left: 50%
+  margin-top: -12px
+  margin-left: -12px
+  width: 24px
+  height: 24px
+  border-radius: 50px
+  background-color: $violet-color
+  padding: 7px
+  text-align: center
+  display: flex
+  align-items: center
+  justify-content: center
+  +svg
+
++mq(tablet)
+  .brand-top:before
+    height: 746px
+
+  .brand-top-cards
+    max-width: 616px
+    gap: 16px
+
+  .brand-top-card-image-wrapper
+    margin-bottom: -20%
+
+  .brand-top-card__text
+    margin: 0 16px 16px
+    padding: 16px
+    font-size: 18px
+    line-height: 26.1px
+
+  .brand-top-person
+    height: 596px
+
+  .brand-top-person-content
+    padding: 24px
+    width: 310px
+
+  .brand-top-person__title
+    font-size: 24px
+    line-height: 34.8px
+    color: $main-color
+
+  .brand-top-person__text
+    font-size: 18px
+    line-height: 26px
+    color: $main-color90
+
+  .brand-top__anchor
+    width: 40px
+    height: 40px
+    padding: 12px
+    margin-top: -20px
+
++mq(desktop, max)
+  .brand-top__title
+    display: none
+
+  .brand-top-card:nth-child(4n - 3),
+  .brand-top-card:nth-child(4n)
+    border-radius: 16px
+    background: rgba(0, 0, 0, 0.08) radial-gradient(92.32% 92.32% at 103.68% -19.29%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%)
+
+    &:before
+      content: ""
+      +absoluteFluid()
+      z-index: -1
+      background-color: #5A5276
+
+  .brand-top-card:nth-child(4n - 3) .brand-top-card__text,
+  .brand-top-card:nth-child(4n) .brand-top-card__text
+    color: #fff
+
+  .brand-top-card:nth-child(4n - 3) .brand-top-card__text,
+  .brand-top-card:nth-child(4n) .brand-top-card__text
+    background-color: #FFFFFF1A
+
+  .brand-top-card:nth-child(4n - 2),
+  .brand-top-card:nth-child(4n - 1)
+    box-shadow: 12px -14px 97px -47px $violet-color
+
+  .brand-top-card:nth-child(4n - 2) .brand-top-card__text,
+  .brand-top-card:nth-child(4n - 1) .brand-top-card__text
+    background-color: #EFEFEF80
+
++mq(desktop)
+  .brand-top
+    padding-top: 0
+    &:before
+      height: calc(100% - 207px)
+
+  .brand-top-inner
+    min-height: 992px
+    position: relative
+
+  .brand-top__title
+    position: absolute
+    top: 32px
+    right: -10px
+    z-index: -2
+    font-size: 246px
+    font-weight: 500
+    line-height: 1
+    color: $main-color4
+
+  .brand-top__slogan
+    position: absolute
+    z-index: 1
+    right: 0
+    bottom: 50%
+    margin-bottom: 35px
+    text-align: right
+    font-size: 44px
+    line-height: 64px
+
+  .brand-top-cards
+    padding-top: 64px
+    padding-bottom: 64px
+    position: relative
+    z-index: 1
+    width: 353px
+    grid-template-columns: 1fr
+
+  .brand-top-card
+    min-height: 308px
+    justify-content: flex-end
+
+  .brand-top-card:nth-child(odd)
+    border-radius: 16px
+    background: rgba(0, 0, 0, 0.08) radial-gradient(92.32% 92.32% at 103.68% -19.29%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%)
+
+    &:before
+      content: ""
+      +absoluteFluid()
+      z-index: -1
+      background-color: #5A5276
+
+  .brand-top-card:nth-child(odd) .brand-top-card__text
+    color: #fff
+
+  .brand-top-card:nth-child(odd) .brand-top-card__text
+    background-color: #FFFFFF1A
+
+  .brand-top-card:nth-child(even) .brand-top-card__text
+    background-color: #EFEFEF80
+
+  .brand-top-card-image-wrapper
+    +absoluteFluid
+    margin: 0
+    padding: 0
+
+  .brand-top-card__text
+    flex-grow: 0
+    margin-top: 16px
+
+  .brand-top-person
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    height: 992px
+    margin: 0
+
+  .brand-top-person-image-wrapper
+    margin: 0
+    padding: 0
+    justify-content: flex-end
+
+  .brand-top-person-image__img
+    object-position: right bottom
+
+  .brand-top-person-content
+    top: 50%
+    left: auto
+    right: 0
+    bottom: auto
+    margin-top: 35px
+
+
+  .brand-top__anchor
+    width: 56px
+    height: 56px
+    padding: 16px
+    left: 0
+    margin-top: -28px
+    margin-left: 0

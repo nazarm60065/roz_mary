@@ -1,0 +1,13 @@
+{
+    "name": "bobor/roz_mary",
+    "authors": [
+        {
+            "name": "nmansurov",
+            "email": "nazarm60065@gmail.com"
+        }
+    ],
+    "require": {
+        "mustache/mustache": "^2.14",
+        "vlucas/phpdotenv": "^5.6"
+    }
+}

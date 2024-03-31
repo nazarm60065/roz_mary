@@ -1,0 +1,92 @@
+.popular-reels {
+    margin-bottom: 127px;
+
+    @include medium {
+        margin-bottom: 50px;
+    }
+}
+
+.slider-reels {
+
+    @include medium {
+        margin: 0 -24px;
+        padding: 0 24px;
+    }
+
+    .swiper-slide {
+        cursor: pointer;
+
+        @include medium {
+            max-width: 181px;
+        }
+    }
+}
+
+.site-slider {
+    display: flex;
+    gap: 27px;
+    align-items: center;
+
+    &:not(:last-child) {
+        margin-bottom: 56px;
+
+        @include small {
+            margin-bottom: 30px;
+        }
+    }
+
+    @include laptop {
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            display: none;
+        }
+    }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    position: static;
+    margin: 0;
+    padding: 0;
+
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    &::after {
+        display: none;
+    }
+}
+
+.swiper-button-prev {
+    transform: scale(-1);
+}
+
+
+.swiper-pagination-progressbar {
+    position: static;
+}
+
+.swiper-horizontal>.swiper-pagination-progressbar,
+.swiper-pagination-progressbar.swiper-pagination-horizontal,
+.swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite,
+.swiper-vertical>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+    margin: 0 80px;
+    width: auto;
+    height: 8px;
+    background-color: #F4F4F4;
+    border-radius: 4px;
+    overflow: hidden;
+
+    @include laptop {
+        margin: 0;
+        height: 4px;
+    }
+}
+
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    background-color: #5A5276;
+    border-radius: 4px;
+}
