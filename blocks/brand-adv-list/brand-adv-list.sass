@@ -1,0 +1,69 @@
+.brand-adv-list
+  display: grid
+  gap: 6px
+
+.brand-adv-card
+  border-radius: 16px
+  overflow: hidden
+  box-shadow: 12px 14px 97px -47px $violet-color32
+  display: flex
+  gap: 12px
+  color: $second-color
+
+.brand-adv-card-image-container
+  width: 43.4%
+  flex-shrink: 0
+
+.brand-adv-card-image-wrapper
+  position: relative
+  padding-bottom: 100%
+  min-height: 100%
+  overflow: hidden
+  border-radius: 16px
+
+.brand-adv-card-image
+  +absoluteFluid
+
+.brand-adv-card-image__img
+  width: 100%
+  height: 100%
+  object-fit: cover
+
+.brand-adv-card-content
+  padding: 12px 12px 12px 0
+
+.brand-adv-card__title
+  font-weight: 500
+
+.brand-adv-card__text
+  font-size: 14px
+  margin-top: 6px
+
++mq(tablet)
+  .brand-adv-list
+    gap: 16px
+
+  .brand-adv-card-image-container
+    width: 180px
+
+
++mq(desktop)
+  .brand-adv-list
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+    gap: 24px
+
+  .brand-adv-card
+    gap: 24px
+
+  .brand-adv-card-image-container
+    width: 212px
+
+  .brand-adv-card-content
+    padding: 24px 24px 32px 0
+
+  .brand-adv-card__title
+    font-size: 24px
+
+  .brand-adv-card__text
+    margin-top: 16px
+    font-size: 18px

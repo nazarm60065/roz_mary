@@ -1,0 +1,32 @@
+{{#issetItems}}
+    <div class="brand-delivery-list">
+        {{#items}}
+            <div class="brand-delivery-card">
+                {{#issetGallery}}
+                    <div class="brand-delivery-card-gallery{{#isOneItem}} brand-delivery-card-gallery_one-item{{/isOneItem}}">
+                        {{#gallery}}
+                            <div class="brand-delivery-card-gallery-item-wrapper">
+                                <div class="brand-delivery-card-gallery-item">
+                                    <picture class="brand-delivery-card-gallery-item__picture">
+                                        {{#mobileSrc}}
+                                            <source media="(max-width: 767px)" srcset="{{.}}">{{/mobileSrc}}
+                                        <img src="{{src}}" alt="{{alt}}" class="brand-delivery-card-gallery-item__img"
+                                             loading="lazy">
+                                    </picture>
+                                </div>
+                            </div>
+                        {{/gallery}}
+                    </div>
+                {{/issetGallery}}
+                <div class="brand-delivery-card-content">
+                    {{#title}}
+                        <div class="brand-delivery-card__title">{{{.}}}</div>
+                    {{/title}}
+                    {{#text}}
+                        <div class="brand-delivery-card__text">{{{.}}}</div>
+                    {{/text}}
+                </div>
+            </div>
+        {{/items}}
+    </div>
+{{/issetItems}}

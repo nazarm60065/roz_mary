@@ -76,7 +76,7 @@ export class BrandSkinList {
 
         if ((viewportOffsetTop >= wrapperViewportOffsetTop) && (viewportOffsetBottom <= wrapperViewportOffsetBottom)) {
             const progress = Math.floor((viewportOffsetTop - wrapperViewportOffsetTop) / this.step)
-            console.log(progress)
+
             this.calculateProgress(progress)
         } else {
             this.deactivateFeatures()
@@ -93,10 +93,12 @@ export class BrandSkinList {
     }
 
     checkSlider() {
-        const activeSlide = this.activeFeature.closest(this.selectors.slide)
+        if (this.activeFeature) {
+            const activeSlide = this.activeFeature.closest(this.selectors.slide)
 
-        if (!activeSlide.classList.contains('swiper-slide-active')) {
-            if (this.swiper) this.swiper.slideTo(+activeSlide.dataset['index'])
+            if (!activeSlide.classList.contains('swiper-slide-active')) {
+                if (this.swiper) this.swiper.slideTo(+activeSlide.dataset['index'])
+            }
         }
     }
 

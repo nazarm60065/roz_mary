@@ -1,0 +1,17 @@
+{{#issetItems}}
+    <div class="brand-tech-slider swiper">
+        <div class="swiper-wrapper">
+            {{#items}}
+                <div class="brand-tech-slide swiper-slide"{{#strMainId}} id="{{.}}"{{/strMainId}}>
+                    <picture class="brand-tech-slide__picture">
+                        {{#mobileSrc}}
+                            <source srcset="{{.}}" media="(max-width: 767px)">
+                        {{/mobileSrc}}
+                        <img src="{{src}}" alt="{{alt}}" class="brand-tech-slide__img" loading="lazy">
+                    </picture>
+                </div>
+            {{/items}}
+        </div>
+        <div class="brand-tech-progress"></div>
+    </div>
+{{/issetItems}}

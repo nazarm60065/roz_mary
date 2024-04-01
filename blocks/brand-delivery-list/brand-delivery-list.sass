@@ -1,0 +1,57 @@
+.brand-delivery-list
+  margin-top: 24px
+  display: grid
+  grid-template-columns: 1fr
+  gap: 16px
+
+.brand-delivery-card
+  background-color: #fff
+  border-radius: 16px
+  overflow: hidden
+  box-shadow: 12px 14px 97px -47px $violet-color32
+
+.brand-delivery-card-gallery:not(.brand-delivery-card-gallery_one-item)
+  display: grid
+  grid-template-columns: repeat(2, minmax(0, 1fr))
+
+.brand-delivery-card-gallery_one-item .brand-delivery-card-gallery-item-wrapper
+  padding-bottom: 75.53%
+
+.brand-delivery-card-gallery-item-wrapper
+  padding-bottom: 115.8%
+  position: relative
+
+.brand-delivery-card-gallery-item
+  +absoluteFluid
+  overflow: hidden
+  border-radius: 16px
+
+.brand-delivery-card-gallery-item__img
+  width: 100%
+  height: auto
+
+.brand-delivery-card-content
+  padding: 16px 12px 24px
+
+.brand-delivery-card__title
+  font-size: 18px
+  font-weight: 500
+
+.brand-delivery-card__text
+  margin-top: 8px
+
++mq(tablet)
+  .brand-delivery-list
+    margin-top: 48px
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+
+  .brand-delivery-card-gallery_one-item .brand-delivery-card-gallery-item-wrapper
+    padding-bottom: 58.35%
+
+  .brand-delivery-card-gallery-item-wrapper
+    padding-bottom: 116.65%
+
++mq(desktop)
+  .brand-delivery-list
+    margin-top: 56px
+    gap: 24px
