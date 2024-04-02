@@ -41,6 +41,7 @@ export class BrandSkinList {
 
     attachEvents() {
         window.addEventListener('scroll', this.scrollHandler.bind(this), {passive: true})
+        window.addEventListener('resize', this.resizeHandler.bind(this))
     }
 
     prepareFeatures() {
@@ -56,6 +57,15 @@ export class BrandSkinList {
             this.step = this.content.clientHeight
             this.rail.style.height = ((this.featureList.length + 2) * this.step) + 'px'
         }
+    }
+
+    resizeHandler() {
+        clearTimeout(this.resizeTimer)
+
+        this.resizeTimer = setTimeout(() => {
+            this.prepareWrapperHeight()
+            this.scrollHandler()
+        }, 250)
     }
 
     initSwiper() {

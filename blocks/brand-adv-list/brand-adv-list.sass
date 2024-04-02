@@ -3,12 +3,31 @@
   gap: 6px
 
 .brand-adv-card
+  background-color: #fff
   border-radius: 16px
   overflow: hidden
   box-shadow: 12px 14px 97px -47px $violet-color32
   display: flex
   gap: 12px
   color: $second-color
+  transition: color $default-transition, background-color $default-transition
+  position: relative
+  z-index: 0
+
+  &:before
+    content: ''
+    +absoluteFluid
+    opacity: 0
+    z-index: -1
+    background: #534B6D radial-gradient(75.64% 164.28% at 35.52% 58.21%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%)
+    transition: opacity $default-transition
+
+.brand-adv-card:hover:before
+  opacity: 1
+
+.brand-adv-card:hover
+  background-color: transparent
+  color: #fff
 
 .brand-adv-card-image-container
   width: 43.4%

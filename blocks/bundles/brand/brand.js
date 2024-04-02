@@ -6,6 +6,7 @@ import 'swiper/css/pagination'
 import {BrandSkinList} from "../../brand-skin-list/brand-skin-list"
 import {BrandDispensers} from "../../brand-dispensers/brand-dispensers"
 import brandTechSlider from "../../brand-tech-slider/brand-tech-slider"
+import {BrandChangesList} from "../../brand-changes-list/brand-changes-list"
 
 import './brand.sass'
 
@@ -15,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     new BrandSkinList()
     brandTechSlider()
     new BrandDispensers()
+    new BrandChangesList()
 
     if (anchorList.length) {
         anchorList.forEach(anchor => {

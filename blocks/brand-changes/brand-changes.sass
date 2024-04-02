@@ -1,0 +1,63 @@
+.brand-changes
+  position: relative
+  z-index: 0
+  padding: 24px 0 32px
+
+.brand-changes:before
+  content: ''
+  +absoluteFluid
+  z-index: -1
+  border-radius: 16px
+  background: #E2E0E5 radial-gradient(72.11% 141.82% at 54.01% 74.52%, rgba(255, 255, 255, 0.81) 0%, rgba(255, 255, 255, 0) 100%)
+
+.brand-changes__title
+  margin-bottom: 32px
+
+.brand-changes-rails
+  position: relative
+
+.brand-changes-stick
+  position: sticky
+  top: 60px
+  padding: 0 12px
+
++mq(desktop, max)
+  .brand-changes-right
+    display: none
+
++mq(desktop)
+  .brand-changes
+    padding: 84px 0
+
+  .brand-changes__title
+    margin-bottom: 56px
+
+  .brand-changes-container
+    display: flex
+    justify-content: space-between
+    gap: 40px
+
+  .brand-changes-left
+    width: 50%
+    max-width: 660px
+
+  .brand-changes-left .brand-quote
+    display: none
+
+  .brand-changes-stick
+    padding: 0 24px
+
+  .brand-changes-right
+    width: 50%
+    max-width: 692px
+    display: flex
+    flex-direction: column
+
+  .brand-changes-right .brand-quote
+    flex-shrink: 0
+    max-width: 525px
+    margin-left: auto
+
+  .brand-changes-right .brand-changes-rail
+    height: 100%
+    min-height: 0

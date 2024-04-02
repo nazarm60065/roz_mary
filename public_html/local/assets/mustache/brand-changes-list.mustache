@@ -1,0 +1,27 @@
+{{#issetItems}}
+    <div class="brand-changes-list">
+        <div class="brand-changes-bg">
+            <div class="brand-changes-bg__inner"></div>
+        </div>
+        {{#items}}
+            <div class="brand-changes-card"{{#strMainId}} id="{{.}}"{{/strMainId}}>
+                <div class="brand-changes-card-content">
+                    <div class="brand-changes-card__index">{{index}}</div>
+                    {{#title}}
+                        <div class="brand-changes-card__title">{{{.}}}</div>
+                    {{/title}}
+                </div>
+                {{#image}}
+                    <div class="brand-changes-card-image-container">
+                        <div class="brand-changes-card-image-wrapper">
+                            <div class="brand-changes-card-image">
+                                <img src="{{#mobileSrc}}{{.}}{{/mobileSrc}}{{^mobileSrc}}{{src}}{{/mobileSrc}}"
+                                     alt="{{alt}}" class="brand-changes-card-image__img" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                {{/image}}
+            </div>
+        {{/items}}
+    </div>
+{{/issetItems}}

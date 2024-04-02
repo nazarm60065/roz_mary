@@ -7,6 +7,10 @@
 @import "../../brand-delivery-list/brand-delivery-list"
 @import "../../brand-dispensers/brand-dispensers"
 @import "../../brand-adv-list/brand-adv-list"
+@import "../../brand-changes/brand-changes"
+@import "../../brand-changes-list/brand-changes-list"
+@import "../../brand-changes-photos/brand-changes-photos"
+@import "../../brand-changes-slider/brand-changes-slider"
 
 .brand-section
   margin: 60px 0
@@ -75,6 +79,10 @@
     .brand-adv__link
       display: none
 
++mq(desktop, max)
+  .brand-adv__link
+    display: none
+
 +mq(desktop)
   .brand-section
     margin: 100px 0
@@ -112,9 +120,10 @@
     display: flex
     align-items: center
     justify-content: space-between
+    gap: 40px
 
   .brand-adv__link
     width: 322px
-    padding: 17px
+    padding: 17px 17px 18px
     flex-shrink: 0
 

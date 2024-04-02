@@ -1,0 +1,15 @@
+{{#issetItems}}
+    <div class="brand-changes-photos-wrapper">
+        <div class="brand-changes-photos swiper">
+            <div class="swiper-wrapper">
+                {{#items}}
+                    <div class="brand-changes-photo swiper-slide">
+                        {{#image}}
+                            <img src="{{src}}" alt="{{alt}}" loading="lazy" class="brand-changes-photo__img">
+                        {{/image}}
+                    </div>
+                {{/items}}
+            </div>
+        </div>
+    </div>
+{{/issetItems}}

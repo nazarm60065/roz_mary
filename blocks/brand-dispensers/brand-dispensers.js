@@ -36,6 +36,7 @@ export class BrandDispensers {
 
     attachEvents() {
         window.addEventListener('scroll', this.scrollHandler.bind(this), {passive: true})
+        window.addEventListener('resize', this.resizeHandler.bind(this))
     }
 
     scrollHandler() {
@@ -53,6 +54,15 @@ export class BrandDispensers {
         } else {
 
         }
+    }
+
+    resizeHandler() {
+        clearTimeout(this.resizeTimer)
+
+        this.resizeTimer = setTimeout(() => {
+            this.prepareWrapperHeight()
+            this.scrollHandler()
+        }, 250)
     }
 
     calculateProgress(progress, progressPath) {
