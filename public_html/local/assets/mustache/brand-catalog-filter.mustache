@@ -1,0 +1,10 @@
+{{#issetItems}}
+    <div class="brand-catalog-filters">
+        {{#items}}
+            <div class="brand-catalog-filter">
+                <button class="brand-catalog-filter__button{{#active}} brand-catalog-filter__button_active{{/active}}"
+                        type="button" data-filter="{{filter}}">{{{title}}}</button>
+            </div>
+        {{/items}}
+    </div>
+{{/issetItems}}

@@ -44,6 +44,34 @@ $pageConfig = [
             </div>
         </div>
     </section>
+    <section class="brand-catalog">
+        <div class="container">
+            <?= $mustache->render('brand-catalog-filter', include $_SERVER['DOCUMENT_ROOT'] . '/context/brand/catalog/filter.php') ?>
+            <div class="brand-catalog-info">
+                <div class="brand-catalog-consul">
+                    <div class="brand-catalog-consul__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 32 32">
+                            <rect width="32" height="32" fill="#F4F4F4" rx="6"/>
+                            <path fill="#9484C1" fill-rule="evenodd"
+                                  d="M13.764 12.064c-.155-.372-.272-.386-.507-.396-.08-.004-.17-.009-.268-.009-.306 0-.626.09-.819.287-.235.24-.818.8-.818 1.947 0 1.148.837 2.258.95 2.413.117.155 1.632 2.544 3.982 3.518 1.839.762 2.384.691 2.803.602.61-.132 1.377-.583 1.57-1.129.193-.545.193-1.011.136-1.11-.056-.099-.211-.155-.446-.273-.235-.117-1.378-.681-1.594-.757-.212-.08-.414-.051-.574.174-.225.316-.446.635-.625.828-.141.15-.371.17-.564.09-.259-.108-.983-.363-1.876-1.157-.692-.616-1.162-1.383-1.298-1.613-.136-.236-.014-.372.094-.499.118-.146.23-.25.348-.386.118-.136.183-.207.259-.367.08-.155.023-.315-.033-.432-.057-.118-.527-1.266-.72-1.731ZM15.998 8C11.588 8 8 11.588 8 16c0 1.75.564 3.372 1.523 4.689l-.996 2.972 3.075-.983a7.937 7.937 0 0 0 4.4 1.322C20.412 24 24 20.411 24 16s-3.587-8-7.998-8h-.004Z"
+                                  clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <div class="brand-catalog-consul__text">Консультация по подбору косметики</div>
+                </div>
+                <a href="#" class="brand-catalog-consul__link">
+                    Пройти <em>тест из 5 вопросов</em>, чтобы узнать какие продукты подходят Вашей коже
+                </a>
+            </div>
+            <?= $mustache->render('brand-catalog-slider', include $_SERVER['DOCUMENT_ROOT'] . '/context/brand/catalog/items.php') ?>
+            <div class="brand-catalog-button-container">
+                <a href="" class="button button_filled-violet button_filled-bg brand-catalog__button">
+                    <img src="/local/assets/images/button.jpg" alt="" class="button__bg" loading="lazy">
+                    <span class="button__text">Перейти в раздел</span>
+                </a>
+            </div>
+        </div>
+    </section>
     <section class="brand-section brand-tech">
         <div class="container">
             <div class="brand-tech__text brand-tech__text_top">
