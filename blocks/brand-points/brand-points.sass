@@ -1,24 +1,26 @@
-.brand-changes-points-wrapper
+.brand-points
   margin-top: 32px
+
+.brand-points-wrapper
   padding-bottom: 141%
   position: relative
   z-index: 0
 
-.brand-changes-points
+.brand-points-inner
   +absoluteFluid
 
-.brand-changes-points__img
+.brand-points__img
   width: 100%
   height: 100%
   object-fit: cover
 
-.brand-changes-point
+.brand-point
   position: absolute
   top: 50%
   left: 50%
   transform: translate(-50%, -50%)
 
-.brand-changes-point-marker
+.brand-point-marker
   width: 40px
   height: 40px
   background-color: #FFFFFF3D
@@ -27,18 +29,18 @@
   padding: 8px
   transition: $default-transition
 
-.brand-changes-point_active .brand-changes-point-marker
+.brand-point_active .brand-point-marker
   width: 52px
   height: 52px
   padding: 11px
 
-.brand-changes-point_active .brand-changes-point-marker__icon
+.brand-point_active .brand-point-marker__icon
   width: 26px
   height: 26px
   padding: 7px
 
 
-.brand-changes-point-marker__icon
+.brand-point-marker__icon
   width: 20px
   height: 20px
   background-color: #fff
@@ -48,66 +50,74 @@
   +svg
 
 
-.brand-changes-slider
-  position: absolute
-  z-index: 4
-  display: block
+.brand-points-rail
+  position: relative
+
+.brand-points-stick
+  position: sticky
+  top: 60px
 
 +mq(tablet, max)
-  .brand-changes-point:nth-child(1)
+  .brand-point:nth-child(1)
     margin-top: -40%
     margin-left: -20%
 
-  .brand-changes-point:nth-child(2)
+  .brand-point:nth-child(2)
     margin-top: -32%
     margin-left: 18%
 
-  .brand-changes-point:nth-child(3)
+  .brand-point:nth-child(3)
     margin-top: 12%
     margin-left: 25%
 
-  .brand-changes-point:nth-child(4)
+  .brand-point:nth-child(4)
     margin-left: -28%
     margin-top: 36%
 
+
 +mq(tablet)
-  .brand-changes-points-wrapper
+  .brand-points
+    margin-top: 56px
+
+  .brand-points-wrapper
     padding-bottom: 52.5%
 
-  .brand-changes-point:nth-child(1)
+  .brand-point:nth-child(1)
     margin-top: -15.4%
     margin-left: -12%
 
-  .brand-changes-point:nth-child(2)
+  .brand-point:nth-child(2)
     margin-top: -13.7%
     margin-left: 11.7%
 
-  .brand-changes-point:nth-child(3)
-    margin-left: 12.3%
+  .brand-point:nth-child(3)
+    margin-left: 12.15%
+    margin-top: 7.4%
+
+  .brand-point:nth-child(4)
+    margin-left: -12.2%
     margin-top: 15.4%
 
-  .brand-changes-point:nth-child(4)
-    margin-left: -28%
-    margin-top: 36%
-
 +mq(desktop)
-  .brand-changes-point-marker
+  .brand-points
+    margin-top: 114px
+
+  .brand-point-marker
     width: 56px
     height: 56px
     padding: 12px
 
-  .brand-changes-point-marker__icon
+  .brand-point-marker__icon
     width: 28px
     height: 28px
     padding: 7px
 
-  .brand-changes-point_active .brand-changes-point-marker
+  .brand-point_active .brand-point-marker
     width: 72px
     height: 72px
     padding: 16px
 
-  .brand-changes-point_active .brand-changes-point-marker__icon
+  .brand-point_active .brand-point-marker__icon
     width: 36px
     height: 36px
     padding: 10px
-

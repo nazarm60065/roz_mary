@@ -55,7 +55,7 @@ export class BrandSkinList {
     prepareWrapperHeight() {
         if (this.featureList) {
             this.step = this.content.clientHeight
-            this.rail.style.height = ((this.featureList.length + 2) * this.step) + 'px'
+            this.rail.style.height = ((this.featureList.length + 1) * this.step) + 'px'
         }
     }
 

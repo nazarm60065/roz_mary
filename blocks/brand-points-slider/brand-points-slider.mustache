@@ -1,0 +1,22 @@
+{{#issetItems}}
+    <div class="brand-points-slider swiper">
+        <div class="swiper-wrapper">
+            {{#items}}
+                <div class="brand-points-slide swiper-slide"{{#strMainId}} id="{{.}}"{{/strMainId}}>
+                    {{#image}}
+                        <div class="brand-points-slide-image-container">
+                            <div class="brand-points-slide-image-wrapper">
+                                <div class="brand-points-slide-image">
+                                    <img src="{{src}}" alt="{{alt}}" class="brand-points-slide-image__img" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    {{/image}}
+                    <div class="brand-points-slide__text">
+                        {{{title}}}
+                    </div>
+                </div>
+            {{/items}}
+        </div>
+    </div>
+{{/issetItems}}

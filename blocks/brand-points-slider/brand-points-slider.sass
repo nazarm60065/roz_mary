@@ -1,0 +1,63 @@
+.brand-points-slider
+  position: absolute
+  z-index: 4
+  top: 50%
+  left: 16px
+  right: 16px
+  transform: translate3d(0, -50%, 0)
+  background: #47415A14
+  border: 1px solid #FFFFFF14
+  border-radius: 10px
+  backdrop-filter: blur(16px)
+  overflow: hidden
+  opacity: 0
+  transition: opacity $default-transition, margin $default-transition
+
+.brand-points-slider_active
+  opacity: 1
+
+.brand-points-slide
+  padding: 11px
+  display: flex
+  align-items: center
+  gap: 12px
+  color: #fff
+
+.brand-points-slide-image-container
+  width: 43.7%
+  flex-shrink: 0
+
+.brand-points-slide-image-wrapper
+  position: relative
+  padding-bottom: 100%
+
+.brand-points-slide-image
+  +absoluteFluid
+
+.brand-points-slide-image__img
+  width: 100%
+  height: 100%
+  object-fit: cover
+
+
++mq(tablet)
+  .brand-points-slider
+    width: 260px
+    left: 50%
+    backdrop-filter: blur(10px)
+    transform: translate(-50%, -50%)
+
+  .brand-points-slide
+    font-size: 14px
+
+  .brand-points-slide-image-container
+    display: none
+
++mq(desktop)
+  .brand-points-slider
+    width: 356px
+    transition: margin 0.6s, opacity $default-transition
+
+  .brand-points-slide
+    font-size: 18px
+    padding: 16px
