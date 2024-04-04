@@ -1,0 +1,28 @@
+{{#issetItems}}
+    <div class="brand-notice-list">
+        {{#items}}
+            <div class="brand-notice-card"{{#strMainId}} id="{{.}}"{{/strMainId}}>
+                <div class="brand-notice-card-image-container">
+                    <div class="brand-notice-card-image-wrapper">
+                        <div class="brand-notice-card-image">
+                            {{#image}}
+                                <img src="{{src}}" alt="{{alt}}" class="brand-notice-card-image__img" loading="lazy">
+                            {{/image}}
+                        </div>
+                    </div>
+                </div>
+                <div class="brand-notice-card-content">
+                    {{#title}}
+                        <div class="brand-notice-card__title">{{{.}}}</div>
+                    {{/title}}
+                    {{#text}}
+                        <div class="brand-notice-card__text">{{{.}}}</div>
+                    {{/text}}
+                </div>
+                {{#link}}
+                    <a href="{{.}}" class="link-as-card"></a>
+                {{/link}}
+            </div>
+        {{/items}}
+    </div>
+{{/issetItems}}

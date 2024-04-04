@@ -1,8 +1,8 @@
-.brand-adv-list
+.brand-notice-list
   display: grid
   gap: 6px
 
-.brand-adv-card
+.brand-notice-card
   background-color: #fff
   border-radius: 16px
   overflow: hidden
@@ -22,67 +22,67 @@
     background: #534B6D radial-gradient(75.64% 164.28% at 35.52% 58.21%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%)
     transition: opacity $default-transition
 
-.brand-adv-card:hover:before
+.brand-notice-card:hover:before
   opacity: 1
 
-.brand-adv-card:hover
+.brand-notice-card:hover
   background-color: transparent
   color: #fff
 
-.brand-adv-card-image-container
+.brand-notice-card-image-container
   width: 43.4%
   flex-shrink: 0
 
-.brand-adv-card-image-wrapper
+.brand-notice-card-image-wrapper
   position: relative
   padding-bottom: 100%
   min-height: 100%
   overflow: hidden
   border-radius: 16px
 
-.brand-adv-card-image
+.brand-notice-card-image
   +absoluteFluid
 
-.brand-adv-card-image__img
+.brand-notice-card-image__img
   width: 100%
   height: 100%
   object-fit: cover
 
-.brand-adv-card-content
+.brand-notice-card-content
   padding: 12px 12px 12px 0
 
-.brand-adv-card__title
+.brand-notice-card__title
   font-weight: 500
 
-.brand-adv-card__text
+.brand-notice-card__text
   font-size: 14px
   margin-top: 6px
 
 +mq(tablet)
-  .brand-adv-list
+  .brand-notice-list
     gap: 16px
 
-  .brand-adv-card-image-container
+  .brand-notice-card-image-container
     width: 180px
 
 
 +mq(desktop)
-  .brand-adv-list
+  .brand-notice-list
     grid-template-columns: repeat(2, minmax(0, 1fr))
     gap: 24px
 
-  .brand-adv-card
+  .brand-notice-card
     gap: 24px
 
-  .brand-adv-card-image-container
+  .brand-notice-card-image-container
     width: 212px
 
-  .brand-adv-card-content
+  .brand-notice-card-content
     padding: 24px 24px 32px 0
 
-  .brand-adv-card__title
+  .brand-notice-card__title
     font-size: 24px
 
-  .brand-adv-card__text
+  .brand-notice-card__text
     margin-top: 16px
     font-size: 18px

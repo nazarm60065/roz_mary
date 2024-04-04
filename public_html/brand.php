@@ -333,7 +333,7 @@ $pageConfig = [
                         </div>
                     </div>
                 </div>
-                <button class="brand__anchor brand-dispensers__anchor" type="button" data-src="#adv">
+                <button class="brand__anchor brand-dispensers__anchor" type="button" data-src="#notice">
                     <svg xmlns="http://www.w3.org/2000/svg" width="6" height="11" fill="none" viewBox="0 0 6 11">
                         <path fill="#534B6D"
                               d="M2.788 10.108a.3.3 0 0 0 .424 0l1.91-1.91a.3.3 0 0 0-.425-.424L3 9.471 1.303 7.774a.3.3 0 0 0-.424.425l1.909 1.909ZM2.7.286v9.61h.6V.286h-.6Z"/>
@@ -342,17 +342,17 @@ $pageConfig = [
             </div>
         </div>
     </section>
-    <section class="brand-section brand-adv" id="adv">
+    <section class="brand-section brand-notice" id="notice">
         <div class="container">
-            <div class="brand-adv-top">
-                <div class="brand__title brand-adv__title">Топ 6 причин использовать косметику Roz Mary</div>
-                <a href="#" class="button button_filled-violet button_filled-bg brand-adv__link">
+            <div class="brand-notice-top">
+                <div class="brand__title brand-notice__title">Топ 6 причин использовать косметику Roz Mary</div>
+                <a href="#" class="button button_filled-violet button_filled-bg brand-notice__link">
                     <img src="/local/assets/images/button.jpg" alt="Перейти в каталог" class="button__bg"
                          loading="lazy">
                     <span class="button__text">Перейти в каталог</span>
                 </a>
             </div>
-            <?= $mustache->render('brand-adv-list', include $_SERVER['DOCUMENT_ROOT'] . '/context/brand/adv/cards.php') ?>
+            <?= $mustache->render('brand-notice-list', include $_SERVER['DOCUMENT_ROOT'] . '/context/brand/notice/cards.php') ?>
         </div>
     </section>
 
