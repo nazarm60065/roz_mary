@@ -8,6 +8,7 @@ export class BrandDispensers {
             bottle: '.brand-dispensers-bottle',
             bottleTop: '.brand-dispensers-bottle-top',
             bottleMiddle: '.brand-dispensers-bottle-middle',
+            bottleBottom: '.brand-dispensers-bottle-bottom',
         }
 
         this.classes = {}
@@ -31,7 +32,11 @@ export class BrandDispensers {
     }
 
     prepareWrapperHeight() {
-        this.rail.style.height = (this.content.clientHeight * 2) + 'px'
+        if (window.innerWidth < 768) {
+            this.rail.style.height = (this.wrapper.clientHeight * 2) + 'px'
+        } else {
+            this.rail.style.height = (this.wrapper.clientHeight) + 'px'
+        }
     }
 
     attachEvents() {
@@ -47,12 +52,17 @@ export class BrandDispensers {
             wrapperViewportOffsetBottom = wrapperViewportOffsetTop + wrapperViewportOffset.height
 
         if ((viewportOffsetTop >= wrapperViewportOffsetTop) && (viewportOffsetBottom <= wrapperViewportOffsetBottom)) {
-            const progress = Math.floor((viewportOffsetTop - wrapperViewportOffsetTop) / wrapperViewportOffset.height * 100) / 100
-            const progressPath = Math.floor(this.content.clientHeight * progress)
+            const progress = Math.floor((viewportOffsetTop - wrapperViewportOffsetTop) / (wrapperViewportOffset.height - window.innerHeight) * 100) / 100
 
-            this.calculateProgress(progress, progressPath)
+            this.calculateProgress(progress)
         } else {
+            if (viewportOffsetTop < wrapperViewportOffsetTop) {
+                this.calculateProgress(0)
+            }
 
+            if (viewportOffsetBottom > wrapperViewportOffsetBottom) {
+                this.calculateProgress(1)
+            }
         }
     }
 
@@ -65,29 +75,33 @@ export class BrandDispensers {
         }, 250)
     }
 
-    calculateProgress(progress, progressPath) {
-        this.moveQuote(progressPath)
+    calculateProgress(progress) {
+        this.moveQuote(progress)
         this.moveBottleTop(progress)
         this.moveBottleMiddle(progress)
     }
 
     moveQuote(progress) {
         if (this.quote) {
-            const coef = 0.6
+            let path = (this.content.clientHeight - this.quote.clientHeight) * progress
 
-            this.quote.style.transform = `translate3d(0,${coef * progress}px,0)`
+            if (window.innerWidth < 1280) path /= 2
+
+            this.quote.style.transform = `translate3d(0,${path}px,0)`
         }
     }
 
     moveBottleTop(progress) {
         if (this.bottleTopList.length) {
-            const coef = 0.93
 
             this.bottleTopList.forEach(item => {
-                const bottle = item.closest(this.selectors.bottle)
+                const bottle = item.closest(this.selectors.bottle),
+                  bottom = bottle.querySelector(this.selectors.bottleBottom)
+
+                  let path = (bottle.clientHeight - bottom.clientHeight - (item.clientHeight * 0.9)) * progress
 
                 if (bottle) {
-                    item.style.transform = `translate3d(0,${bottle.clientHeight * coef * progress}px,0)`
+                    item.style.transform = `translate3d(0,${path}px,0)`
                 }
             })
         }
@@ -95,9 +109,14 @@ export class BrandDispensers {
 
     moveBottleMiddle(progress) {
         if (this.bottleMiddleList.length) {
-            const coef = 1.8
+            this.bottleMiddleList.forEach((item, index) => {
+                const bottle = item.closest(this.selectors.bottle),
+                  bottom = bottle.querySelector(this.selectors.bottleBottom)
 
-            this.bottleMiddleList.forEach(item => item.style.transform = `translate3d(0,${100 * coef * progress}%,0)`)
+                let path = (bottle.clientHeight - bottom.clientHeight - item.offsetTop - (item.clientHeight * 0.5)) * progress
+
+                item.style.transform = `translate3d(0,${path}px,0)`
+            })
         }
     }
 }

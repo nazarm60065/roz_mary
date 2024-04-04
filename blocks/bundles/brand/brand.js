@@ -8,6 +8,7 @@ import {BrandDispensers} from "../../brand-dispensers/brand-dispensers"
 import brandTechSlider from "../../brand-tech-slider/brand-tech-slider"
 import {BrandChangesList} from "../../brand-changes-list/brand-changes-list"
 import {BrandPoints} from "../../brand-points/brand-points"
+import {BrandCatalogSlider} from "../../brand-catalog-slider/brand-catalog-slider"
 
 import './brand.sass'
 
@@ -15,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const anchorList = document.querySelectorAll('.brand__anchor')
 
     new BrandSkinList()
+    new BrandCatalogSlider()
     brandTechSlider()
     new BrandDispensers()
     new BrandChangesList()

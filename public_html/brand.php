@@ -57,11 +57,13 @@ $pageConfig = [
                                   clip-rule="evenodd"/>
                         </svg>
                     </div>
-                    <div class="brand-catalog-consul__text">Консультация по подбору косметики</div>
+                    <div class="brand-catalog-consul__text">Консультация <br class="mobile-hide tablet-show">по подбору косметики</div>
                 </div>
-                <a href="#" class="brand-catalog-consul__link">
-                    Пройти <em>тест из 5 вопросов</em>, чтобы узнать какие продукты подходят Вашей коже
-                </a>
+                <div class="brand-catalog-consul-link-container">
+                    <a href="#" class="brand-catalog-consul__link">
+                        Пройти <em>тест из 5 вопросов</em>, чтобы узнать какие продукты подходят Вашей коже
+                    </a>
+                </div>
             </div>
             <?= $mustache->render('brand-catalog-slider', include $_SERVER['DOCUMENT_ROOT'] . '/context/brand/catalog/items.php') ?>
             <div class="brand-catalog-button-container">
@@ -233,6 +235,7 @@ $pageConfig = [
                                         </div>
                                     </div>
                                 </div>
+                                <div class="brand-dispensers-bottle__text">25мл</div>
                             </div>
                             <div class="brand-dispensers-bottle brand-dispensers-bottle_md">
                                 <div class="brand-dispensers-bottle-container">
@@ -263,6 +266,7 @@ $pageConfig = [
                                         </div>
                                     </div>
                                 </div>
+                                <div class="brand-dispensers-bottle__text">50мл</div>
                             </div>
                             <div class="brand-dispensers-bottle brand-dispensers-bottle_lg">
                                 <div class="brand-dispensers-bottle-container">
@@ -293,6 +297,7 @@ $pageConfig = [
                                         </div>
                                     </div>
                                 </div>
+                                <div class="brand-dispensers-bottle__text">100мл</div>
                             </div>
                             <div class="brand-dispensers-bottle brand-dispensers-bottle_xl">
                                 <div class="brand-dispensers-bottle-container">
@@ -323,6 +328,7 @@ $pageConfig = [
                                         </div>
                                     </div>
                                 </div>
+                                <div class="brand-dispensers-bottle__text">150мл</div>
                             </div>
                         </div>
                     </div>

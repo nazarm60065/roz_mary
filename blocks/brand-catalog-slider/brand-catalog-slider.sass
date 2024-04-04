@@ -10,10 +10,18 @@
   +absoluteFluid
   z-index: -1
 
+.brand-catalog-slider-bg__img
+  width: 100%
+  height: 100%
+  object-fit: cover
+
 .brand-catalog-slider
-  width: 224px
+  width: 100%
   height: 100%
   overflow: visible
+  transition: opacity $default-transition
+  &_hide
+    opacity: 0
 
 .brand-catalog-slide
   border-radius: 32px
@@ -23,14 +31,16 @@
   flex-direction: column
   justify-content: flex-end
 
-.brand-catalog-slide-hint-icon-container
-  flex-shrink: 0
+
+.brand-catalog-slide-img-container
+  position: relative
+  max-height: 300px
 
 .brand-catalog-slide__img
   width: auto
   height: auto
   max-width: 100%
-  max-height: 300px
+  max-height: 100%
 
 .brand-catalog-slide-hint-icon-container
   height: 32px
@@ -84,3 +94,72 @@
 
 .brand-catalog-slider__arrow_lock
   display: none
+
++mq(tablet, max)
+  .brand-catalog-slider
+    width: 224px
+
+  .brand-catalog-slide
+    transform-origin: center bottom
+    transition: transform $default-transition
+
+  .brand-catalog-slide.swiper-slide-prev
+    transform: scale(0.8) translateX(110px)
+
+  .brand-catalog-slide.swiper-slide-next
+    transform: scale(0.8) translateX(-110px)
+
+  .brand-catalog-slide.swiper-slide-active
+    transform: scale(1)
+
+  .brand-catalog-slide-hint-icon-container
+    opacity: 0
+    transition: opacity $default-transition
+
+  .brand-catalog-slide.swiper-slide-active .brand-catalog-slide-hint-icon-container
+    opacity: 1
+
+  .brand-catalog-hint
+    opacity: 0
+    transition: opacity $default-transition
+
+  .brand-catalog-slide.swiper-slide-active .brand-catalog-hint
+    opacity: 1
+
++mq(tablet)
+  .brand-catalog-slider-wrapper
+    height: 600px
+    margin-top: 48px
+
+  .brand-catalog-slider
+    padding: 0 60px
+
+  .brand-catalog-slide
+    width: auto
+
+  .brand-catalog-slide-img-container
+    max-height: 400px
+    max-width: 200px
+
+  .brand-catalog-slider__arrow
+    top: 32px
+    left: auto
+    bottom: auto
+
+  .brand-catalog-slider__arrow_prev
+    right: 112px
+
+  .brand-catalog-slider__arrow_next
+    right: 32px
+
++mq(desktop)
+  .brand-catalog-slider-wrapper
+    margin-top: 56px
+    height: 805px
+
+  .brand-catalog-slide
+    padding: 0 0 40px
+
+  .brand-catalog-slide-img-container
+    max-width: 300px
+    max-height: 550px

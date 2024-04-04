@@ -57,19 +57,19 @@ export class BrandPoints {
       'desktop': [
         {
           top: -21,
-          left: 0,
+          left: 2,
         },
         {
-          top: -8,
-          left: 3,
+          top: -7,
+          left: 1,
         },
         {
           top: 7.5,
-          left: -3,
+          left: -6,
         },
         {
           top: 22,
-          left: -3.5,
+          left: -1.5,
         },
       ],
     }
