@@ -1,0 +1,231 @@
+.catalog-card
+  position: relative
+  padding: 4px
+  border-radius: 8px
+  overflow: hidden
+  display: flex
+  flex-direction: column
+
+.catalog-card-image-wrapper
+  padding-bottom: 100%
+  position: relative
+  background-color: #fff
+  border-radius: 8px
+  overflow: hidden
+  flex-shrink: 0
+
+.catalog-card-image
+  +absoluteFluid
+  padding-top: 32px
+  display: flex
+  align-items: flex-end
+  justify-content: center
+
+.catalog-card-image__img
+  width: auto
+  height: auto
+  max-width: 100%
+  max-height: 100%
+
+.catalog-card-content
+  padding: 8px 4px 0
+  height: 100%
+  min-height: 0
+  display: flex
+  flex-direction: column
+
+.catalog-card-price
+  width: 100%
+  margin-bottom: 4px
+  display: flex
+  align-items: center
+  gap: 8px
+
+.catalog-card-price__base
+  font-weight: 700
+  font-size: 14px
+
+.catalog-card-price__old
+  font-size: 12px
+  padding-top: 2px
+
+.catalog-card-price__discount
+  font-weight: 500
+  font-size: 10px
+  padding: 1px 4px
+  border-radius: 2px
+
+.catalog-card__title
+  width: 100%
+  font-weight: 600
+  font-size: 14px
+  min-height: 36px
+
+.catalog-card__text
+  width: 100%
+  margin-top: 2px
+  opacity: 0.9
+  font-size: 8px
+
+.catalog-card__volume
+  width: 100%
+  margin-top: 8px
+  font-size: 6px
+  opacity: .48
+
+  b
+    font-weight: 600
+
+.catalog-card-bottom
+  width: calc(100% + 8px)
+  margin: auto -4px 0
+
+.catalog-card-to-cart
+  margin-top: 10px
+
+.catalog-card-to-cart__button
+  width: 100%
+  font-weight: 500
+  padding: 14px
+
+.catalog-card-labels
+  position: absolute
+  top: 4px
+  left: 4px
+  right: 4px
+  display: flex
+  flex-wrap: wrap
+  gap: 4px
+
+.catalog-card-label
+  font-weight: 500
+  font-size: 8px
+  border-radius: 48px
+  padding: 4px 8px
+
+.catalog-card-label:nth-child(odd)
+  background-color: #9484C1
+  color: #fff
+
+.catalog-card-label:nth-child(even)
+  background-color: #F6F6F7
+  color: #9484C1
+
++mq(tablet, max)
+  .catalog-card:nth-child(4n-3),
+  .catalog-card:nth-child(4n)
+    background-color: #F8F8F8
+
+    .catalog-card-price__old
+      color: $main-color40
+      +oldPrice($main-color40)
+
+    .catalog-card-price__discount
+      background-color: $violet-color
+      color: #fff
+
+  .catalog-card:nth-child(4n-2),
+  .catalog-card:nth-child(4n-1)
+    background-color: $violet-color
+    color: #fff
+
+    .catalog-card-price__discount
+      background-color: #fff
+      color: $violet-color
+
+    .catalog-card-price__old
+      color: #FFFFFF66
+      +oldPrice(#FFFFFF66)
+
++mq(tablet)
+  .catalog-card:nth-child(6n-5),
+  .catalog-card:nth-child(6n-3),
+  .catalog-card:nth-child(6n-1)
+    background-color: #F8F8F8
+
+    .catalog-card-price__old
+      color: $main-color40
+      +oldPrice($main-color40)
+
+    .catalog-card-price__discount
+      background-color: $violet-color
+      color: #fff
+
+  .catalog-card:nth-child(6n-4),
+  .catalog-card:nth-child(6n-2),
+  .catalog-card:nth-child(6n)
+    background-color: $violet-color
+    color: #fff
+
+    .catalog-card-price__discount
+      background-color: #fff
+      color: $violet-color
+
+    .catalog-card-price__old
+      color: #FFFFFF66
+      +oldPrice(#FFFFFF66)
+
++mq(desktop, max)
+  .catalog-card__volume_desktop
+    display: none
+
++mq(desktop)
+  .catalog-card
+    padding: 8px 8px 24px
+
+  .catalog-card-image-wrapper
+    padding-bottom: 109%
+
+  .catalog-card-image
+    padding-top: 74px
+    align-items: center
+
+  .catalog-card-labels
+    top: 8px
+    left: 8px
+    right: 8px
+    gap: 8px
+
+  .catalog-card-label
+    font-size: 18px
+    padding: 4px 14px
+
+  .catalog-card-content
+    padding: 24px 16px 0
+
+  .catalog-card-price
+    gap: 16px
+    margin-bottom: 16px
+
+  .catalog-card-price__base
+    font-size: 24px
+
+  .catalog-card-price__old
+    font-size: 18px
+
+  .catalog-card-price__discount
+    font-size: 16px
+    padding: 4px 14px
+
+  .catalog-card__title
+    font-size: 24px
+
+  .catalog-card__text
+    font-size: 16px
+    margin-top: 8px
+
+  .catalog-card__volume_mobile
+    display: none
+
+  .catalog-card__volume
+    font-size: 14px
+
+  .catalog-card-bottom
+    margin-left: 0
+    margin-right: 0
+
+  .catalog-card-to-cart
+    margin-top: 24px
+
+  .catalog-card-to-cart__button
+    padding: 17px 17px 18px

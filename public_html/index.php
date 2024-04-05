@@ -11,6 +11,7 @@
 <h1>Проект roz_mary</h1>
     <ul>
         <li><a href="brand.php">Бренд</a></li>
+        <li><a href="catalog.php">Каталог</a></li>
     </ul>
 </body>
 </html>

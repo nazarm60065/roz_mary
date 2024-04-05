@@ -1,0 +1,67 @@
+@import '../../variables/variables'
+@import '../../mixins/mixins'
+@import '../../catalog-filter/catalog-filter'
+@import '../../catalog-list/catalog-list'
+@import '../../catalog-card/catalog-card'
+
+.catalog
+  padding-bottom: 56px
+
+.catalog-top
+  margin-top: 16px
+  margin-bottom: 32px
+  position: relative
+  z-index: 0
+
+.catalog-jumbo
+  line-height: 0
+  border-radius: 16px
+  overflow: hidden
+
+.catalog-jumbo__img
+  width: 100%
+  height: auto
+
+.catalog__anchor
+  width: 24px
+  height: 24px
+  border-radius: 50%
+  background-color: $violet-color
+  position: absolute
+  top: 100%
+  left: 50%
+  margin-top: -12px
+  margin-left: -12px
+  padding: 7px
+  +svg
+
++mq(desktop, max)
+  .catalog__welcome
+    display: none
+
++mq(desktop)
+  .catalog
+    padding-bottom: 128px
+
+  .catalog-title-container
+    display: flex
+    justify-content: space-between
+    margin-top: 48px
+    margin-bottom: 24px
+
+  .catalog__title
+    margin: 0
+
+  .catalog__welcome
+    font-size: 24px
+    font-weight: 500
+
+  .catalog__anchor
+    width: 56px
+    height: 56px
+    margin-top: -28px
+    margin-left: -28px
+    padding: 16px
+
+  .catalog-top
+    margin-bottom: 100px

@@ -1,0 +1,31 @@
+.catalog-filters
+  display: flex
+  flex-wrap: wrap
+  gap: 8px
+  margin-bottom: 32px
+
+.catalog-filter__button
+  font-size: 14px
+  font-weight: 500
+  padding: 10px 15px
+  border: 1px solid #9484C1
+  border-radius: 40px
+  color: #9484C1
+  transition: color $default-transition, background-color $default-transition, border $default-transition
+
+.catalog-filter__button_active
+  background-color: #9484C1
+  color: #fff
+
++mq(tablet)
+  .catalog-filters
+    margin-bottom: 48px
+
++mq(desktop)
+  .catalog-filters
+    gap: 16px
+    margin-bottom: 56px
+
+  .catalog-filter__button
+    font-size: 24px
+    padding: 12px 40px

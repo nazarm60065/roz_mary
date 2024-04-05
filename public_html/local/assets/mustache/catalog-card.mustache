@@ -1,0 +1,75 @@
+{{#items}}
+    <div class="catalog-card"{{#strMainId}} id="{{.}}"{{/strMainId}}{{#filter}} data-filter="{{.}}"{{/filter}}>
+        <div class="catalog-card-image-wrapper">
+            <div class="catalog-card-image{{^image}} catalog-card-image_no-image{{/image}}">
+                {{#image}}
+                    <picture class="catalog-card-image__picture">
+                        {{#mobileSrc}}
+                            <source media="(max-width: 767px)" srcset="{{.}}">
+                        {{/mobileSrc}}
+                        <img src="{{src}}" alt="{{alt}}" class="catalog-card-image__img" loading="lazy">
+                    </picture>
+                {{/image}}
+                {{^image}}
+                    <img src="/local/assets/images/logo.png" width="84" height="104" alt="{{title}}"
+                         class="catalog-card-image__no-img" loading="lazy">
+                {{/image}}
+            </div>
+            {{#issetLabels}}
+                <div class="catalog-card-labels">
+                    {{#labels}}
+                        <div class="catalog-card-label">{{{text}}}</div>
+                    {{/labels}}
+                </div>
+            {{/issetLabels}}
+        </div>
+        <div class="catalog-card-content">
+            {{#price}}
+                <div class="catalog-card-price">
+                    {{#value}}
+                        <div class="catalog-card-price__base">
+                            <span class="catalog-card-price__value">{{{valueFormatted}}}</span>
+                            <span class="catalog-card-price__currency">{{currency}}</span>
+                        </div>
+                    {{/value}}
+                    {{#oldValue}}
+                        <div class="catalog-card-price__old">
+                            <span class="catalog-card-price__value">{{{oldValueFormatted}}}</span>
+                            <span class="catalog-card-price__currency">{{currency}}</span>
+                        </div>
+                    {{/oldValue}}
+                    {{#discount}}
+                        <div class="catalog-card-price__discount">{{{.}}}</div>
+                    {{/discount}}
+                </div>
+            {{/price}}
+            {{#title}}
+                <div class="catalog-card-title-container">
+                    <span class="catalog-card__title">{{{.}}}</span>
+                    {{#volume}}
+                        <span class="catalog-card__volume catalog-card__volume_desktop">{{{.}}}</span>
+                    {{/volume}}
+                </div>
+            {{/title}}
+            {{#text}}
+                <div class="catalog-card__text">{{{.}}}</div>
+            {{/text}}
+            {{#volume}}
+                <div class="catalog-card__volume catalog-card__volume_mobile"><b>Объем: </b>{{{.}}}</div>
+            {{/volume}}
+            <div class="catalog-card-bottom">
+                {{#canBuy}}
+                    <div class="catalog-card-to-cart">
+                        <button class="button button_filled-bg button_filled-violet catalog-card-to-cart__button" type="button" data-product-id="{{id}}">
+                            <img src="/local/assets/images/button.jpg" alt="" class="button__bg" loading="lazy">
+                            <span class="button__text">В корзину</span>
+                        </button>
+                    </div>
+                {{/canBuy}}
+            </div>
+        </div>
+        {{#detailPageUrl}}
+            <a href="{{.}}" class="link-as-card"></a>
+        {{/detailPageUrl}}
+    </div>
+{{/items}}
