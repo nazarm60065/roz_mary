@@ -60,6 +60,9 @@
             <div class="catalog-card-bottom">
                 {{#canBuy}}
                     <div class="catalog-card-to-cart">
+                        <div class="catalog-card-counter">
+                            {{>counter}}
+                        </div>
                         <button class="button button_filled-bg button_filled-violet catalog-card-to-cart__button" type="button" data-product-id="{{id}}">
                             <img src="/local/assets/images/button.jpg" alt="" class="button__bg" loading="lazy">
                             <span class="button__text">В корзину</span>

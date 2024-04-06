@@ -1,5 +1,8 @@
+@import '../counter/counter'
+
 .catalog-card
   position: relative
+  z-index: 0
   padding: 4px
   border-radius: 8px
   overflow: hidden
@@ -15,7 +18,11 @@
   flex-shrink: 0
 
 .catalog-card-image
-  +absoluteFluid
+  position: absolute
+  top: 32px
+  left: 0
+  right: 0
+  bottom: 0
   padding-top: 32px
   display: flex
   align-items: flex-end
@@ -77,6 +84,8 @@
     font-weight: 600
 
 .catalog-card-bottom
+  position: relative
+  z-index: 1
   width: calc(100% + 8px)
   margin: auto -4px 0
 
@@ -124,6 +133,11 @@
       background-color: $violet-color
       color: #fff
 
+    .counter
+      background-color: #fff
+      border: 1px solid #51515129
+      color: $main-color
+
   .catalog-card:nth-child(4n-2),
   .catalog-card:nth-child(4n-1)
     background-color: $violet-color
@@ -136,6 +150,10 @@
     .catalog-card-price__old
       color: #FFFFFF66
       +oldPrice(#FFFFFF66)
+    .counter
+      background-color: $violet-color
+      border: 1px solid #ffffff29
+      color: #fff
 
 +mq(tablet)
   .catalog-card:nth-child(6n-5),
@@ -151,6 +169,11 @@
       background-color: $violet-color
       color: #fff
 
+    .counter
+      background-color: #fff
+      border: 1px solid #51515129
+      color: $main-color
+
   .catalog-card:nth-child(6n-4),
   .catalog-card:nth-child(6n-2),
   .catalog-card:nth-child(6n)
@@ -165,7 +188,45 @@
       color: #FFFFFF66
       +oldPrice(#FFFFFF66)
 
+    .counter
+      background-color: $violet-color
+      border: 1px solid #ffffff29
+      color: #fff
+
 +mq(desktop, max)
+  .catalog-card-to-cart
+    position: relative
+    height: 48px
+
+  .catalog-card-to-cart_show-counter .catalog-card-counter
+    opacity: 1
+    pointer-events: auto
+    z-index: 1
+
+  .catalog-card-to-cart_show-counter .catalog-card-to-cart__button
+    opacity: 0
+    pointer-events: none
+    z-index: -1
+
+  .catalog-card-counter
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    opacity: 0
+    pointer-events: none
+    z-index: -1
+    transition: opacity $default-transition
+
+  .catalog-card-to-cart__button
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    transition: opacity $default-transition
+
   .catalog-card__volume_desktop
     display: none
 
@@ -177,7 +238,7 @@
     padding-bottom: 109%
 
   .catalog-card-image
-    padding-top: 74px
+    top: 74px
     align-items: center
 
   .catalog-card-labels
@@ -226,6 +287,15 @@
 
   .catalog-card-to-cart
     margin-top: 24px
+    display: flex
+    justify-content: space-between
+    gap: 16px
+
+  .catalog-card-counter
+    width: 100px
+    flex-shrink: 0
+    height: auto
 
   .catalog-card-to-cart__button
+    width: 300px
     padding: 17px 17px 18px
