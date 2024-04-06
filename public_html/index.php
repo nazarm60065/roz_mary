@@ -12,6 +12,7 @@
     <ul>
         <li><a href="brand.php">Бренд</a></li>
         <li><a href="catalog.php">Каталог</a></li>
+        <li><a href="catalog-detail.php">Детальная Каталога</a></li>
     </ul>
 </body>
 </html>

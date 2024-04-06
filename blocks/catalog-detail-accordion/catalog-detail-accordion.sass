@@ -1,0 +1,58 @@
+.catalog-detail-accordion
+  margin-top: 60px
+
+.catalog-detail-accordion-item
+  border-bottom: 1px solid #E6E6E6
+
+.catalog-detail-accordion-item__button
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding: 16px 0
+  font-weight: 500
+
+.catalog-detail-accordion-item__button-icon
+  margin-left: 10px
+  flex-shrink: 0
+  width: 16px
+  height: 16px
+  position: relative
+
+.catalog-detail-accordion-item__button-icon:before,
+.catalog-detail-accordion-item__button-icon:after
+  content: ''
+  position: absolute
+  background-color: #B7B7B7
+
+.catalog-detail-accordion-item__button-icon:before
+  top: 50%
+  left: 0
+  margin-top: -1px
+  height: 2px
+  width: 100%
+
+.catalog-detail-accordion-item__button-icon:after
+  top: 0
+  left: 50%
+  margin-left: -1px
+  width: 2px
+  height: 100%
+  transition: transform $default-transition
+
+.catalog-detail-accordion-hidden
+  display: none
+
+.catalog-detail-accordion-item_opened .catalog-detail-accordion-item__button-icon:after
+  transform: rotate(90deg)
+
+.catalog-detail-accordion-panel
+  padding: 16px 0
+
++mq(desktop, max)
+  .catalog-detail-accordion-panels
+    display: none
+
++mq(desktop)
+  .catalog-detail-accordion
+    display: none

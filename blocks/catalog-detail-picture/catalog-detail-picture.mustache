@@ -1,0 +1,12 @@
+{{#image}}
+    <div class="catalog-detail-picture">
+        <picture class="catalog-detail-picture__picture">
+            {{#mobileSrc}}
+                <source media="(max-width: 767px)"
+                        srcset="{{.}}">
+            {{/mobileSrc}}
+            <img src="{{src}}" alt="{{alt}}"
+                 class="catalog-detail-picture__img" loading="lazy">
+        </picture>
+    </div>
+{{/image}}

@@ -1,0 +1,22 @@
+{{#issetItems}}
+    <div class="catalog-detail-tab-wrapper">
+        <div class="catalog-detail-tab-list">
+            {{#items}}
+                <div class="catalog-detail-tab-item">
+                    <button class="catalog-detail-tab-item__button"
+                        {{#tab}} data-tab="{{.}}"{{/tab}} type="button">{{{title}}}</button>
+                </div>
+            {{/items}}
+        </div>
+        <div class="catalog-detail-tab-panels">
+            {{#items}}
+                <div class="catalog-detail-tab-panel"{{#tab}} data-tab="{{.}}"{{/tab}}>
+                    {{#text}}
+                        <div class="article">{{{.}}}</div>
+                    {{/text}}
+                    {{>catalog-detail-docs}}
+                </div>
+            {{/items}}
+        </div>
+    </div>
+{{/issetItems}}

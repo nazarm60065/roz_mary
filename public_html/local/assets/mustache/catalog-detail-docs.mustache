@@ -1,0 +1,14 @@
+{{#issetDocs}}
+    <div class="catalog-docs">
+        {{#docs}}
+            <div class="catalog-doc">
+                <div class="catalog-doc-image">
+                    <img src="{{src}}" alt="{{alt}}" class="catalog-doc-image__img" loading="lazy">
+                </div>
+                {{#realSrc}}
+                    <a href="{{.}}" class="link-as-card" data-fancybox></a>
+                {{/realSrc}}
+            </div>
+        {{/docs}}
+    </div>
+{{/issetDocs}}

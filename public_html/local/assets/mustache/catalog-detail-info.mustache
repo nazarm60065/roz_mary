@@ -1,0 +1,55 @@
+<div class="catalog-detail-info">
+    {{#issetLabels}}
+        <div class="catalog-detail-labels">
+            {{#labels}}
+                <div class="catalog-detail__label">
+                    {{{text}}}
+                </div>
+            {{/labels}}
+        </div>
+    {{/issetLabels}}
+    <div class="catalog-detail-title-container">
+        <h1 class="catalog-detail__title">{{{title}}}</h1>
+        {{#volume}}
+            <div class="catalog-detail__volume">Объем: {{{.}}}</div>
+        {{/volume}}
+    </div>
+    {{#features}}
+        <div class="catalog-detail-feature">
+            {{#title}}
+                <div class="catalog-detail-feature__title">{{{.}}}:</div>
+            {{/title}}
+            {{#text}}
+                <div class="catalog-detail-feature__text">{{{.}}}</div>
+            {{/text}}
+        </div>
+    {{/features}}
+    <div class="catalog-detail-price-and-counter">
+        {{#price}}
+            <div class="catalog-detail-price">
+                {{#value}}
+                    <div class="catalog-detail-price__base">
+                        <span class="catalog-detail-price__value">{{{valueFormatted}}}</span>
+                        <span class="catalog-detail-price__currency">{{currency}}</span>
+                    </div>
+                {{/value}}
+                {{#oldValue}}
+                    <div class="catalog-detail-price__old">
+                        <span class="catalog-detail-price__value">{{{oldValueFormatted}}}</span>
+                        <span class="catalog-detail-price__currency">{{currency}}</span>
+                    </div>
+                {{/oldValue}}
+                {{#discount}}
+                    <div class="catalog-detail-price__discount">{{{.}}}</div>
+                {{/discount}}
+            </div>
+        {{/price}}
+        <div class="catalog-detail-counter">
+            {{>counter}}
+        </div>
+        <button class="button button_filled-violet button_filled-bg catalog-detail__to-cart" type="button">
+            <img src="/local/assets/images/button-long.png" alt="В корзину" class="button__bg" loading="lazy">
+            <span class="button__text">В корзину</span>
+        </button>
+    </div>
+</div>

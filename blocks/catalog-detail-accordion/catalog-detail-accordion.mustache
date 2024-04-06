@@ -1,0 +1,21 @@
+{{#issetItems}}
+    <div class="catalog-detail-accordion">
+        {{#items}}
+            <div class="catalog-detail-accordion-item">
+                <button class="catalog-detail-accordion-item__button"
+                        type="button">
+                    <span class="catalog-detail-accordion-item__button-text">{{{title}}}</span>
+                    <span class="catalog-detail-accordion-item__button-icon"></span>
+                </button>
+                <div class="catalog-detail-accordion-hidden">
+                    <div class="catalog-detail-accordion-panel">
+                        {{#text}}
+                            <div class="article">{{{.}}}</div>
+                        {{/text}}
+                        {{>catalog-detail-docs}}
+                    </div>
+                </div>
+            </div>
+        {{/items}}
+    </div>
+{{/issetItems}}

@@ -1,0 +1,172 @@
+@import '../../variables/variables'
+@import '../../mixins/mixins'
+@import '../../tab/tab'
+@import '../../counter/counter'
+@import '../../article/article'
+@import '../../catalog-detail-picture/catalog-detail-picture'
+@import '../../catalog-detail-accordion/catalog-detail-accordion'
+@import '../../catalog-detail-tab/catalog-detail-tab'
+@import '../../catalog-detail-docs/catalog-detail-docs'
+
+.catalog-detail
+  padding-top: 24px
+
+.catalog-detail-labels
+  display: flex
+  gap: 4px
+  margin-bottom: 8px
+
+.catalog-detail__label
+  font-size: 8px
+  font-weight: 500
+  padding: 4px 8px
+  border-radius: 48px
+
+.catalog-detail__label:nth-child(odd)
+  background-color: $violet-color
+  color: #fff
+
+.catalog-detail__label:nth-child(even)
+  background-color: #F6F6F7
+  color: #9484C1
+
+.catalog-detail-title-container
+  margin-bottom: 24px
+
+.catalog-detail__title
+  font-size: 24px
+  font-weight: 500
+  margin: 0
+
+.catalog-detail__volume
+  color: $main-color40
+  font-size: 14px
+  margin-top: 8px
+
+.catalog-detail-feature__title
+  font-weight: 500
+  margin-bottom: 4px
+
+.catalog-detail-feature__text
+  font-size: 14px
+  color: $main-color90
+  margin-bottom: 16px
+
+.catalog-detail-feature p
+  margin: 10px 0
+
+  &:first-child
+    margin-top: 0
+
+  &:last-child
+    margin-bottom: 0
+
+.catalog-detail-price-and-counter
+  margin-top: 24px
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  justify-content: space-between
+
+.catalog-detail-price
+  white-space: nowrap
+  display: flex
+  align-items: center
+  gap: 16px
+  flex-shrink: 0
+
+.catalog-detail-price__base
+  font-size: 24px
+  font-weight: 700
+
+.catalog-detail-price__old
+  color: $main-color40
+  +oldPrice($main-color40)
+
+.catalog-detail-price__discount
+  color: #fff
+  font-size: 12px
+  font-weight: 500
+  padding: 4px 6px
+  background-color: $violet-color
+  border-radius: 2px
+
+.catalog-detail-counter
+  margin-left: 16px
+  width: 104px
+  height: 56px
+  flex-shrink: 0
+
+.catalog-detail__to-cart
+  width: 100%
+  font-weight: 500
+  padding: 17px 17px 18px
+  margin-top: 24px
+
+
++mq(tablet)
+  .catalog-detail-labels
+    gap: 8px
+
+  .catalog-detail-top
+    display: flex
+    gap: 20px
+
+  .catalog-detail__label
+    font-size: 12px
+    padding: 4px 12px
+
++mq(desktop)
+  .catalog-detail
+    padding-top: 48px
+
+  .catalog-detail-top
+    gap: 40px
+
+  .catalog-detail-info
+    flex: 1
+
+  .catalog-detail-labels
+    margin-bottom: 16px
+
+  .catalog-detail__label
+    font-size: 18px
+    padding: 5px 15px
+
+  .catalog-detail-title-container
+    margin-bottom: 32px
+
+  .catalog-detail__title
+    font-size: 44px
+
+  .catalog-detail__volume
+    margin-top: 8px
+    font-size: 16px
+
+  .catalog-detail-feature__title
+    font-size: 18px
+    margin-bottom: 8px
+
+  .catalog-detail-feature__text
+    font-size: 18px
+
+  .catalog-detail-price-and-counter
+    margin-top: 28px
+
+  .catalog-detail-price__base
+    font-size: 32px
+
+  .catalog-detail-price__old
+    font-size: 20px
+
+  .catalog-detail-price__discount
+    font-size: 16px
+    padding: 4px 14px
+    border-top: 4px
+
+
+  .catalog-detail-counter
+    width: 208px
+
+  .catalog-detail__to-cart
+    margin-top: 30px

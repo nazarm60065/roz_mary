@@ -1,0 +1,6 @@
+import '../../catalog-detail-picture/catalog-detail-picture.mustache'
+import './catalog-detail-top.mustache'
+import './catalog-detail-info.mustache'
+import '../../catalog-detail-docs/catalog-detail-docs.mustache'
+import '../../catalog-detail-tab/catalog-detail-tab.mustache'
+import '../../catalog-detail-accordion/catalog-detail-accordion.mustache'
