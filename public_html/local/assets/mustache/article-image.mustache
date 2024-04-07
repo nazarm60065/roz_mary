@@ -1,0 +1,14 @@
+{{#image}}
+    <div class="article-image">
+        <picture class="article-image__picture">
+            {{#mobileSrc}}
+                <source media="(max-width: 767px)" srcset="{{.}}">
+            {{/mobileSrc}}
+            <img src="{{src}}" width="{{width}}" height="{{height}}" alt="{{alt}}" class="article-image__img"
+                 loading="lazy">
+        </picture>
+        {{#realSrc}}
+            <a href="{{.}}" class="link-as-card" data-fancybox></a>
+        {{/realSrc}}
+    </div>
+{{/image}}

@@ -1,0 +1,14 @@
+{{#issetItems}}
+    <div class="delivery-list">
+        {{#items}}
+            <div class="delivery-list-item"{{#strMainId}} id="{{.}}"{{/strMainId}}>
+                {{#title}}
+                    <div class="delivery-list-item__title">{{{.}}}</div>
+                {{/title}}
+                {{#text}}
+                    <div class="delivery-list-item__text article">{{{.}}}</div>
+                {{/text}}
+            </div>
+        {{/items}}
+    </div>
+{{/issetItems}}

@@ -4,5 +4,6 @@ module.exports = {
   'bundle-catalog': './blocks/bundles/catalog/catalog',
   'bundle-catalog-detail': './blocks/bundles/catalog-detail/catalog-detail',
   'bundle-partner': './blocks/bundles/partner/partner',
+  'bundle-delivery': './blocks/bundles/delivery/delivery',
   'bundle-error': './blocks/bundles/error/error',
 }

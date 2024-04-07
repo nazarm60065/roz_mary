@@ -14,6 +14,7 @@
         <li><a href="catalog.php">Каталог</a></li>
         <li><a href="catalog-detail.php">Детальная Каталога</a></li>
         <li><a href="partner-lk.php">Кабинет партнера</a></li>
+        <li><a href="delivery.php">Доставка</a></li>
         <li><a href="404.php">Страница ошибки</a></li>
     </ul>
 </body>

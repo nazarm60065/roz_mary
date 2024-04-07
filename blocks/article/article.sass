@@ -1,3 +1,5 @@
+@import '../article-image/article-image'
+
 .article
   font-size: 14px
   font-weight: 400
@@ -5,6 +7,7 @@
   color: $main-color90
 
 .article p
+  margin: 24px 0
   &:first-child
     margin-top: 0
   &:last-child
@@ -61,6 +64,9 @@
 
 .article ol li:nth-child(n + 10)
   padding-left: 24px
+
+.article .nowrap
+  white-space: nowrap
 
 +mq(desktop)
   .article

@@ -1,0 +1,39 @@
+@import '../../variables/variables'
+@import '../../mixins/mixins'
+@import '../../article/article'
+@import '../../delivery-list/delivery-list'
+
+.delivery
+  padding-bottom: 60px
+
+.delivery__title
+  margin-bottom: 0
+
+.delivery-payment
+  margin-top: 32px
+
+.delivery-payment__title
+  margin: 0 0 16px
+  font-size: 28px
+  font-weight: 500
+
++mq(desktop, max)
+  .delivery__title
+    font-size: 28px
+
++mq(tablet)
+  .delivery
+    padding-bottom: 80px
+
+  .delivery-payment
+    margin-top: 48px
+
++mq(desktop)
+  .delivery
+    padding-bottom: 128px
+
+  .delivery-payment
+    margin-top: 56px
+
+  .delivery-payment__title
+    font-size: 44px
