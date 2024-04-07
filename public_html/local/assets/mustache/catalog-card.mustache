@@ -1,5 +1,6 @@
 {{#items}}
-    <div class="catalog-card"{{#strMainId}} id="{{.}}"{{/strMainId}}{{#filter}} data-filter="{{.}}"{{/filter}}>
+    <div class="catalog-card{{#isSlider}} swiper-slide{{/isSlider}}"{{#strMainId}}
+         id="{{.}}"{{/strMainId}}{{#filter}} data-filter="{{.}}"{{/filter}}>
         <div class="catalog-card-image-wrapper">
             <div class="catalog-card-image{{^image}} catalog-card-image_no-image{{/image}}">
                 {{#image}}
@@ -63,7 +64,8 @@
                         <div class="catalog-card-counter">
                             {{>counter}}
                         </div>
-                        <button class="button button_filled-bg button_filled-violet catalog-card-to-cart__button" type="button" data-product-id="{{id}}">
+                        <button class="button button_filled-bg button_filled-violet catalog-card-to-cart__button"
+                                type="button" data-product-id="{{id}}">
                             <img src="/local/assets/images/button.jpg" alt="" class="button__bg" loading="lazy">
                             <span class="button__text">В корзину</span>
                         </button>

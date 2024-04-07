@@ -20,6 +20,7 @@ $pageConfig = [
             <?= $mustache->render('catalog-detail-top', include $_SERVER['DOCUMENT_ROOT'] . '/context/catalog-detail/info.php') ?>
             <?= $mustache->render('catalog-detail-accordion', include $_SERVER['DOCUMENT_ROOT'] . '/context/catalog-detail/accordion.php') ?>
             <?= $mustache->render('catalog-detail-tab', include $_SERVER['DOCUMENT_ROOT'] . '/context/catalog-detail/accordion.php') ?>
+            <?= $mustache->render('catalog-slider', include $_SERVER['DOCUMENT_ROOT'] . '/context/catalog-detail/similar.php') ?>
         </div>
     </div>
 <? include 'include/footer.php';

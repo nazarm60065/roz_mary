@@ -7,9 +7,12 @@
 @import '../../catalog-detail-accordion/catalog-detail-accordion'
 @import '../../catalog-detail-tab/catalog-detail-tab'
 @import '../../catalog-detail-docs/catalog-detail-docs'
+@import '../../catalog-card/catalog-card'
+@import '../../catalog-slider/catalog-slider'
 
 .catalog-detail
   padding-top: 24px
+  padding-bottom: 60px
 
 .catalog-detail-labels
   display: flex
@@ -105,6 +108,9 @@
 
 
 +mq(tablet)
+  .catalog-detail
+    padding-bottom: 80px
+
   .catalog-detail-labels
     gap: 8px
 
@@ -119,6 +125,7 @@
 +mq(desktop)
   .catalog-detail
     padding-top: 48px
+    padding-bottom: 128px
 
   .catalog-detail-top
     gap: 40px

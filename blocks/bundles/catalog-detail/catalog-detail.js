@@ -4,7 +4,8 @@ import {Counter} from "../../counter/counter"
 import catalogDetailTab from "../../catalog-detail-tab/catalog-detail-tab"
 import catalogDetailAccordion from "../../catalog-detail-accordion/catalog-detail-accordion"
 import {fbInitAll} from 'custom-fancybox/custom-fancybox'
-
+import 'swiper/css'
+import catalogSlider from '../../catalog-slider/catalog-slider'
 
 import './catalog-detail.sass'
 
@@ -13,18 +14,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   new Counter({
     selectors: {
-      wrapper: '.catalog-detail-price-and-counter',
-      toCart: '.catalog-detail__to-cart',
+      wrapper: '.catalog-detail-price-and-counter,.catalog-card-to-cart',
+      toCart: '.catalog-detail__to-cart,.catalog-card-to-cart__button',
       counter: '.counter',
       minusBtn: '.counter__btn_minus',
       plusBtn: '.counter__btn_plus',
       control: '.counter__control',
     },
     classes: {
-      wrapperCounterShow: 'catalog-detail-price-and-counter_show-counter'
+      wrapperCounterShow: 'catalog-card-to-cart_show-counter'
     }
   })
   fbInitAll()
+  catalogSlider()
 
   check()
   window.addEventListener('resize', () => {

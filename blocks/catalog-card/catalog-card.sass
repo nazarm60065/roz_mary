@@ -8,6 +8,7 @@
   overflow: hidden
   display: flex
   flex-direction: column
+  height: auto
 
 .catalog-card-image-wrapper
   padding-bottom: 100%
@@ -19,11 +20,15 @@
 
 .catalog-card-image
   position: absolute
-  top: 32px
+  top: 0
   left: 0
   right: 0
   bottom: 0
   padding-top: 32px
+
+.catalog-card-image__picture
+  width: 100%
+  height: 100%
   display: flex
   align-items: flex-end
   justify-content: center
@@ -238,7 +243,7 @@
     padding-bottom: 109%
 
   .catalog-card-image
-    top: 74px
+    padding-top: 74px
     align-items: center
 
   .catalog-card-labels

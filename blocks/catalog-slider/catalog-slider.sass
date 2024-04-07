@@ -1,0 +1,83 @@
+.catalog-slider-wrapper
+  margin-top: 60px
+  position: relative
+
+.catalog-slider__title
+  font-size: 24px
+  font-weight: 500
+  margin: 0 0 32px
+
+.catalog-slider-pagination
+  width: 100%
+  display: block
+  margin-top: 32px
+  height: 4px
+  border-radius: 4px
+  background-color: #F4F4F4
+
+  .swiper-pagination-progressbar-fill
+    display: block
+    height: 100%
+    border-radius: 4px
+    background-color: $violet-color
+    transform-origin: left center
+
+.catalog-slider-pagination_lock
+  display: none
+
++mq(desktop, max)
+  .catalog-slider__arrow
+    display: none
+
++mq(desktop)
+  .catalog-slider-wrapper
+    margin-top: 128px
+
+  .catalog-slider__title
+    font-size: 44px
+    margin-bottom: 56px
+    padding-right: 150px
+
+  .catalog-slider-pagination
+    display: none
+
+  .catalog-slider__arrow
+    position: absolute
+    width: 56px
+    height: 56px
+    border-radius: 6px
+    overflow: hidden
+    top: 6px
+    padding: 12px
+    display: flex
+    align-items: center
+    justify-content: center
+    z-index: 4
+    background-color: #e9e9e9
+    +svg
+
+    img
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      z-index: -1
+      transition: opacity $default-transition
+
+  .catalog-slider__arrow path
+    transition: fill $default-transition
+
+  .catalog-slider__arrow_prev
+    right: 72px
+    img
+      transform: scale(-1)
+
+  .catalog-slider__arrow_next
+    right: 0
+
+  .catalog-slider__arrow_disabled img
+    opacity: 0
+
+  .catalog-slider__arrow_disabled path
+    fill: $violet-color
