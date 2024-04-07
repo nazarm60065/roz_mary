@@ -1,0 +1,178 @@
+@import '../../variables/variables'
+@import '../../mixins/mixins'
+
+.partner
+  padding-top: 24px
+  padding-bottom: 80px
+
+.partner-top
+  margin-bottom: 16px
+  display: flex
+  justify-content: space-between
+
+.partner__title
+  margin: 0
+
+.partner-logout
+  padding-top: 10px
+  margin-left: 10px
+
+.partner-logout__link
+  color: #9484C1
+  font-weight: 500
+  font-size: 14px
+  border-bottom: 1px solid
+
+.partner__text
+  color: $main-color90
+  margin-bottom: 16px
+  b
+    font-weight: 500
+
+.partner-share
+  margin-bottom: 32px
+
+.partner-share__title
+  font-weight: 500
+  margin-bottom: 14px
+
+.partner-share-group
+  position: relative
+
+.partner-share__control
+  border: 1px solid #D9D9D9
+  padding: 13px 120px 13px 15px
+  color: #326FDC
+  border-radius: 8px
+
+.partner-share__copy
+  position: absolute
+  right: 0
+  top: 0
+  bottom: 0
+  width: 120px
+  font-size: 14px
+  font-weight: 500
+
+
+.partner-info-header
+  display: none
+
++mq(tablet, max)
+  .partner-stats
+    margin-bottom: 24px
+    &:last-child
+      margin-bottom: 0
+
+  .partner-stats__title
+    font-size: 14px
+    font-weight: 500
+    color: #B7B7B7
+    margin-bottom: 14px
+
+  .partner-stats__text
+    font-size: 18px
++mq(tablet)
+  .partner-share
+    margin-bottom: 48px
+
+  .partner-info-header
+    display: flex
+    gap: 32px
+    font-weight: 500
+    color: #B7B7B7
+    padding-bottom: 16px
+    border-bottom: 1px solid #D9D9D9
+
+  .partner-info-cell
+    width: 33%
+
+  .partner-info-cell:first-child
+    margin-right: auto
+
+  .partner-info-cell:last-child
+    text-align: right
+
+  .partner-info-stats
+    display: flex
+    gap: 32px
+    padding: 16px 0
+    border-bottom: 1px solid #D9D9D9
+
+  .partner-stats
+    width: 33%
+
+  .partner-stats:first-child
+    margin-right: auto
+
+  .partner-stats:last-child
+    text-align: right
+
+  .partner-stats__title
+    display: none
+
++mq(desktop)
+  .partner
+    padding-top: 48px
+    padding-bottom: 128px
+
+  .partner-top
+    margin-bottom: 24px
+
+  .partner-logout
+    padding-top: 18px
+
+  .partner-logout__link
+    font-size: 16px
+
+  .partner__text
+    font-size: 18px
+    width: 760px
+    margin-bottom: 24px
+
+  .partner-share
+    width: 550px
+    margin-bottom: 56px
+
+  .partner-share__title
+    font-size: 18px
+    margin-bottom: 26px
+
+  .partner-share__control
+    padding: 9px 15px
+    font-size: 24px
+
+  .partner-share__copy
+    font-size: 16px
+
+  .partner-info
+    font-size: 18px
+
+  .partner-info-header
+    padding: 0 0 24px
+    gap: 64px
+
+  .partner-info-cell
+    flex-shrink: 0
+    width: auto
+
+  .partner-info-cell:nth-child(2)
+    width: 160px
+
+  .partner-info-cell:nth-child(3)
+    width: 360px
+
+  .partner-info-stats
+    padding: 24px 0
+    gap: 64px
+
+  .partner-stats
+    font-size: 24px
+    flex-shrink: 0
+    width: auto
+
+  .partner-stats:nth-child(2)
+    width: 160px
+
+  .partner-stats:nth-child(3)
+    width: 360px

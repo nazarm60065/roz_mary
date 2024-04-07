@@ -1,0 +1,41 @@
+@import '../../variables/variables'
+@import '../../mixins/mixins'
+
+.error
+  padding: 200px 0 300px
+
+.error-image
+  max-width: 776px
+  margin: auto
+  width: 100%
+
+.error-image__picture
+  display: block
+  width: 100%
+  height: 100%
+
+.error-image__img
+  width: auto
+  height: auto
+  max-width: 100%
+
+.error-content
+  margin-top: 32px
+  b
+    font-weight: 500
+
+  a
+    color: #9484C1
+    border-bottom: 1px solid
+    transition: $default-transition
+    &:hover
+      border-bottom-color: transparent
+
++mq(desktop)
+  .error
+    padding: 128px 0
+
+  .error-content
+    margin-top: 48px
+    font-size: 18px
+    text-align: center
