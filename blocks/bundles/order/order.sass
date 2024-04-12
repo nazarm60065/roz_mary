@@ -1,0 +1,177 @@
+@import '../../variables/variables'
+@import '../../mixins/mixins'
+
+.order-wrapper
+  border-top: 1px solid #D9D9D9
+  padding-top: 16px
+
+
+.order-section
+  margin-bottom: 32px
+
+.order-section__title
+  font-size: 16px
+  font-weight: 500
+  margin-bottom: 14px
+
+.order-props-fields
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  gap: 8px
+
+.order-props-group
+  width: 100%
+
+.order-props-group-FIRST_NAME,
+.order-props-group-LAST_NAME
+  width: calc(50% - 4px)
+
+.order-props-group-FLAT,
+.order-props-group-BUILDING,
+.order-props-group-ZIP
+  width: calc(33.33% - 6px)
+
+.order-props__control
+  font-family: inherit
+  font-size: 16px
+  font-weight: 400
+  border-radius: 8px
+  border: 1px solid #D9D9D9
+  padding: 18px 15px 19px 15px
+  &::placeholder
+    font-size: 12px
+    color: #939393
+
+.order-props__control_textarea
+  height: 96px
+  resize: vertical
+  margin-top: 8px
+
+.order-props-checkbox
+  position: relative
+  display: flex
+  gap: 6px
+  font-size: 14px
+  font-weight: 400
+
+.order-props-checkbox__marker
+  margin-top: 3px
+  width: 14px
+  height: 14px
+  border: 1px solid #D9D9D9
+  border-radius: 2px
+  transition: $default-transition
+  +svg
+
+.order-props-checkbox input
+  position: absolute
+  top: 0
+  left: 0
+  width: 0
+  height: 0
+  opacity: 0
+  visibility: hidden
+  z-index: -1
+
+.order-props-checkbox input[type="checkbox"]:checked ~ .order-props-checkbox__marker
+  border-color: #9484C1
+  background-color: #9484C1
+
+.order-delivery-list
+  padding: 14px
+  border-radius: 12px
+  background-color: #F7F7F7
+  display: grid
+  grid-template-columns: repeat(2, minmax(0, 1fr))
+  gap: 8px
+
+.order-delivery-list-item
+  position: relative
+  border-radius: 8px
+  border: 2px solid #D3D3D3
+  background-color: #fff
+  padding: 16px
+  text-align: center
+  transition: $default-transition
+  
+.order-delivery-list-item.bx-selected
+  border-color: #9484C1
+
+.order-delivery-list-item.bx-selected .order-delivery-list-item-image path
+  fill: #9484C1
+
+.order-item-hidden
+  position: absolute
+  top: 0
+  left: 0
+  width: 0
+  height: 0
+  opacity: 0
+  visibility: hidden
+  z-index: -1
+
+.order-delivery-list-item-image
+  width: 60px
+  height: 43px
+  margin: 0 auto 8px
+  +svg
+
+.order-delivery-list-item__text
+  font-size: 14px
+  font-weight: 500
+
+.order-delivery-company
+  background-color: #fff
+  padding: 8px 0
+  display: flex
+  gap: 4px
+  font-size: 12px
+  font-weight: 400
+
+.order-delivery-company__star
+  width: 8px
+  height: 8px
+  flex-shrink: 0
+  margin-top: 4px
+  +svg
+
+.order-section__note
+  font-size: 12px
+  font-weight: 400
+  margin-bottom: 8px
+  
+.order-payment-list-item
+  padding: 18px 16px
+  border: 1px solid #D9D9D9
+  background-color: #fff
+  display: flex
+  gap: 8px
+  font-size: 14px
+  font-weight: 400
+  border-radius: 8px
+  margin-bottom: 16px
+  transition: $default-transition
+  &:last-child
+    margin-bottom: 0
+
+.order-payment-list-item.bx-selected
+  border-color: #9484C1
+  background-color: #9484C133
+
+.order-payment-list-item.bx-selected .order-payment-list-item__marker
+  border-color: #9484C1
+
+.order-payment-list-item__marker
+  margin-top: 2px
+  width: 16px
+  height: 16px
+  border-radius: 50%
+  border: 5px solid #D9D9D9
+  background-color: #fff
+  transition: $default-transition
+
+.order-payment-fields
+  background-color: #F8F8F8
+  padding: 16px
+  border-radius: 0 0 10px 10px

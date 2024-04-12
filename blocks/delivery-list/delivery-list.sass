@@ -7,9 +7,16 @@
   font-weight: 500
   margin-bottom: 14px
 
++mq(desktop, max)
+  .delivery-list-item-frame
+    display: none
+
 +mq(desktop)
   .delivery-list-item
     padding: 24px 0
+    display: flex
+    justify-content: space-between
+    gap: 40px
 
   .delivery-list-item__title
     font-size: 32px
@@ -18,3 +25,12 @@
 
   .delivery-list-item__text
     max-width: 540px
+
+  .delivery-list-item-frame
+    width: 346px
+    flex-shrink: 0
+    height: auto
+    background-color: #F8F8F8
+    border-radius: 16px
+    overflow: hidden
+    min-height: 140px

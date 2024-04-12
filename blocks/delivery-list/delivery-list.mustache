@@ -2,12 +2,17 @@
     <div class="delivery-list">
         {{#items}}
             <div class="delivery-list-item"{{#strMainId}} id="{{.}}"{{/strMainId}}>
-                {{#title}}
-                    <div class="delivery-list-item__title">{{{.}}}</div>
-                {{/title}}
-                {{#text}}
-                    <div class="delivery-list-item__text article">{{{.}}}</div>
-                {{/text}}
+                <div class="delivery-list-item-content">
+                    {{#title}}
+                        <div class="delivery-list-item__title">{{{.}}}</div>
+                    {{/title}}
+                    {{#text}}
+                        <div class="delivery-list-item__text article">{{{.}}}</div>
+                    {{/text}}
+                </div>
+                <div class="delivery-list-item-frame">
+
+                </div>
             </div>
         {{/items}}
     </div>

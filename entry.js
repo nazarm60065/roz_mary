@@ -6,5 +6,6 @@ module.exports = {
   'bundle-partner': './blocks/bundles/partner/partner',
   'bundle-delivery': './blocks/bundles/delivery/delivery',
   'bundle-basket': './blocks/bundles/basket/basket',
+  'bundle-order': './blocks/bundles/order/order',
   'bundle-error': './blocks/bundles/error/error',
 }
