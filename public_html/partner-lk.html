@@ -1,0 +1,242 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Кабинет партнера</title>            <style>@font-face{font-display:swap;font-family:Onest;font-style:normal;font-weight:300;src:local("Onest"),url(/local/assets/local/fonts/Onest-Light.ttf) format("truetype")}@font-face{font-display:swap;font-family:Onest;font-style:normal;font-weight:400;src:local("Onest"),url(/local/assets/local/fonts/Onest-Regular.ttf) format("truetype")}@font-face{font-display:swap;font-family:Onest;font-style:normal;font-weight:500;src:local("Onest"),url(/local/assets/local/fonts/Onest-Medium.ttf) format("truetype")}@font-face{font-display:swap;font-family:Onest;font-style:normal;font-weight:600;src:local("Onest"),url(/local/assets/local/fonts/Onest-SemiBold.ttf) format("truetype")}@font-face{font-display:swap;font-family:Onest;font-style:normal;font-weight:700;src:local("Onest"),url(/local/assets/local/fonts/Onest-Bold.ttf) format("truetype")}@font-face{font-display:swap;font-family:Onest;font-style:normal;font-weight:800;src:local("Onest"),url(/local/assets/local/fonts/Onest-ExtraBold.ttf) format("truetype")}@font-face{font-display:swap;font-family:Onest;font-style:normal;font-weight:900;src:local("Onest"),url(/local/assets/local/fonts/Onest-Black.ttf) format("truetype")}*,:after,:before{box-sizing:border-box}a{color:inherit;outline:none;text-decoration:none}ol,ul{list-style-type:none;margin:0;padding:0}button{color:inherit;cursor:pointer;font-family:inherit;font-size:inherit;font-weight:inherit;padding:0;text-transform:inherit}button,input,textarea{background-color:transparent;border:none;outline:none}input,textarea{display:block;font-family:Onest,Arial,sans-serif;width:100%}.link-as-card{bottom:0;height:100%;left:0;position:absolute;right:0;top:0;width:100%}.page{background-color:#fff;color:#3e3e3e;font-family:Onest,Arial,sans-serif;font-size:16px;font-style:normal;font-weight:400;line-height:1.3;margin:0;padding:0}.mobile-hide{display:none}.mobile-show{display:inline}.page__title{font-size:28px;font-weight:500;margin:24px 0 16px}@media only screen and (max-width:767px){.tablet-only{display:none}}@media only screen and (min-width:768px){.tablet-hide{display:none}.tablet-show{display:inline}.tablet-block,.tablet-only{display:block}}@media only screen and (max-width:1279px){.desktop-only{display:none}}@media only screen and (min-width:1280px){.desktop-hide,.tablet-only{display:none}.desktop-show{display:inline}.page__title{font-size:44px;font-weight:500;margin-bottom:24px;margin-top:48px}}.button{border-radius:8px;text-align:center}.button_filled-bg{overflow:hidden;position:relative;z-index:0}.button__bg{height:100%;left:0;position:absolute;top:0;width:100%;z-index:-1}.button_filled-violet{background-blend-mode:luminosity,normal;background-color:#998bc4;color:#fff}.container,.container-fluid{margin-left:auto;margin-right:auto;max-width:428px;padding-left:24px;padding-right:24px;width:100%}@media only screen and (min-width:768px){.container,.container-fluid{max-width:1024px;padding-left:32px;padding-right:32px}}@media only screen and (min-width:1280px){.container,.container-fluid{max-width:1500px;padding-left:30px;padding-right:30px}}@media only screen and (min-width:1920px){.container,.container-fluid{padding-left:30px;padding-right:30px}}.header{margin-bottom:22px;padding:26px 0}@media(max-width:1200px){.header{display:none}}.header-mobile{display:none;margin-bottom:17px;padding:24px 0}@media(max-width:1200px){.header-mobile{display:block}}.free-devilery{align-items:center;background-color:#5a5276;color:#fff;display:flex;gap:8px;height:74px;justify-content:center}@media(max-width:767px){.free-devilery{padding:0 24px}}.free-devilery strong{font-size:18px;font-weight:500}@media(max-width:767px){.free-devilery strong{font-size:14px}}.logo{align-items:center;display:flex;gap:14px}.logo__title{color:#3e3e3e;font-size:44px;font-weight:500}@media(max-width:1025px){.logo__title{font-size:28px}.logo img{width:27px}}.header-grid{align-items:center;display:grid;gap:40px;grid-template-columns:260px minmax(auto,1077px);margin-bottom:31px}.header-grid,.header-head{justify-content:space-between}.header-head{display:flex;margin-bottom:15px}@media(max-width:1200px){.contacts-head{display:inline-block;margin-bottom:24px;margin-left:0}}.contacts-phone{align-items:center;color:#3e3e3e;display:flex;gap:9px;margin-bottom:4px}.contacts-phone svg{fill:#9484c1}.contacts-phone span{font-size:20px;font-weight:500}.contacts-date{border-bottom:1px dashed rgba(62,62,62,.5);font-size:12px}.contacts-date strong{font-size:10px}.button-login{align-items:center;border:1px solid;border-radius:8px;color:#9080bf;display:flex;font-size:18px;font-weight:500;height:56px;justify-content:center;margin:0 15px;max-width:310px;width:100%}@media(max-width:1200px){.button-login{font-size:16px;margin:0 auto 16px}}.contacts-right{gap:72px;margin-left:auto}.contacts-right,.social{align-items:center;display:flex}.social{gap:16px;justify-content:space-between}.social__title{font-size:14px;font-weight:300}.social__link{align-items:center;background-color:#f4f4f4;border-radius:8px;color:#9080bf;display:flex;height:42px;justify-content:center;width:42px}@media(max-width:767px){.social__link{height:32px;width:32px}}.social__link svg{height:18px;width:18px}@media(max-width:992px){.social__link svg{height:14px;width:14px}}.social-list{display:flex;gap:8px}.consultation{align-items:center;color:#3e3e3e;display:flex;font-size:18px;gap:14px}@media(max-width:767px){.consultation{font-size:16px}}.consultation__icon{align-items:center;background-color:#f4f4f4;border-radius:8px;color:#9080bf;display:flex;height:42px;justify-content:center;width:42px}@media(max-width:767px){.consultation__icon{height:32px;width:32px}.consultation__icon svg{height:16px;width:16px}}.header__bottom{align-items:center;display:flex;gap:30px;justify-content:space-between;width:100%}.search{max-width:985px}.search,.search__input{position:relative;width:100%}.search__input{background-color:#f8f8f8;border:0;border-radius:8px;height:56px;padding-left:51px;z-index:2}.search__icon{left:24px;position:absolute;top:17px;z-index:5}.search__icon svg{height:16px;width:16px}.header-basket{margin-right:-8px;ont-size:16px;align-items:center;background-color:#998bc4;border:0;border-radius:8px;color:#fff;cursor:pointer;display:flex;font-weight:500;height:56px;justify-content:center;min-width:56px;padding:0 10px;position:relative}@media(max-width:1025px){.header-basket{height:33px;margin-left:0;min-width:auto;padding:0;width:33px}}.header-basket svg{height:21px;width:21px}@media(max-width:1025px){.header-basket svg{height:13px;width:12px}}.header-basket:after{align-items:center;background-color:#5a5276;border-radius:50%;color:#fff;content:attr(data-count);display:flex;font-size:12px;height:16px;justify-content:center;line-height:1;position:absolute;right:-8px;top:50%;transform:translateY(-50%);width:16px}.header-mobile-main{align-items:center;display:flex;justify-content:space-between}.open-menu{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='none'%3E%3Crect width='32' height='32' fill='%23F4F4F4' rx='6'/%3E%3Cpath stroke='%239484C1' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M10 10h12M10 16h12M10 22h12'/%3E%3C/svg%3E");cursor:pointer;height:32px;width:32px}.menu-mobile{background-color:#fff;height:100vh;left:0;position:fixed;top:0;transform:translateX(-100%);transition:.3s;width:100%;z-index:50}.menu-mobile-wrapper{height:100%;overflow:hidden auto;padding:27px 24px}.menu-mobile-title{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='16' fill='none'%3E%3Cpath stroke='%239484C1' stroke-linecap='round' stroke-width='2' d='M13 1 1 15M1 1l12 14'/%3E%3C/svg%3E");background-position:0;background-repeat:no-repeat;cursor:pointer;font-size:14px;line-height:1.3;margin-bottom:20px;padding-left:28px}.menu-mobile .search{margin-bottom:16px;margin-left:0}.mobile-links{margin-bottom:30px}.mobile-links__item:not(:last-child){margin-bottom:8px}.mobile-links__link{color:#3181e0;text-decoration:underline}.copy-text{color:rgba(62,62,62,.5);font-size:10px}.copy-text span{color:rgba(62,62,62,.3)}.up-menu{cursor:pointer;height:32px;min-width:auto;transform:rotate(-90deg);width:32px}.icon{fill:currentColor;stroke:none;height:16px;width:16px}.breadcrumbs{align-items:flex-start;color:rgba(62,62,62,.9);display:flex;flex-wrap:wrap;font-size:12px;line-height:1.37}.breadcrumbs__item:not(.breadcrumbs__item_last){border-bottom:1px solid transparent;transition:.3s}.breadcrumb__del{margin:0 8px}.breadcrumbs__item_last{color:#3e3e3e}@media only screen and (min-width:1280px){.breadcrumbs__item:not(.breadcrumbs__item_last):hover{border-bottom-color:#5a5276;color:#5a5276}}</style><style>.partner{padding-bottom:80px;padding-top:24px}.partner-top{display:flex;justify-content:space-between;margin-bottom:16px}.partner__title{margin:0}.partner-logout{margin-left:10px;padding-top:10px}.partner-logout__link{border-bottom:1px solid;color:#9484c1;font-size:14px;font-weight:500}.partner__text{color:rgba(62,62,62,.9);margin-bottom:16px}.partner__text b{font-weight:500}.partner-share{margin-bottom:32px}.partner-share__title{font-weight:500;margin-bottom:14px}.partner-share-group{position:relative}.partner-share__control{border:1px solid #d9d9d9;border-radius:8px;color:#326fdc;padding:13px 120px 13px 15px}.partner-share__copy{bottom:0;font-size:14px;font-weight:500;position:absolute;right:0;top:0;width:120px}.partner-info-header{display:none}@media only screen and (max-width:767px){.partner-stats{margin-bottom:24px}.partner-stats:last-child{margin-bottom:0}.partner-stats__title{color:#b7b7b7;font-size:14px;font-weight:500;margin-bottom:14px}.partner-stats__text{font-size:18px}}@media only screen and (min-width:768px){.partner-share{margin-bottom:48px}.partner-info-header{border-bottom:1px solid #d9d9d9;color:#b7b7b7;display:flex;font-weight:500;gap:32px;padding-bottom:16px}.partner-info-cell{width:33%}.partner-info-cell:first-child{margin-right:auto}.partner-info-cell:last-child{text-align:right}.partner-info-stats{border-bottom:1px solid #d9d9d9;display:flex;gap:32px;padding:16px 0}.partner-stats{width:33%}.partner-stats:first-child{margin-right:auto}.partner-stats:last-child{text-align:right}.partner-stats__title{display:none}}@media only screen and (min-width:1280px){.partner{padding-bottom:128px;padding-top:48px}.partner-top{margin-bottom:24px}.partner-logout{padding-top:18px}.partner-logout__link{font-size:16px}.partner__text{font-size:18px;margin-bottom:24px;width:760px}.partner-share{margin-bottom:56px;width:550px}.partner-share__title{font-size:18px;margin-bottom:26px}.partner-share__control{font-size:24px;padding:9px 15px}.partner-share__copy{font-size:16px}.partner-info{font-size:18px}.partner-info-header{gap:64px;padding:0 0 24px}.partner-info-cell{flex-shrink:0;width:auto}.partner-info-cell:nth-child(2){width:160px}.partner-info-cell:nth-child(3){width:360px}.partner-info-stats{gap:64px;padding:24px 0}.partner-stats{flex-shrink:0;font-size:24px;width:auto}.partner-stats:nth-child(2){width:160px}.partner-stats:nth-child(3){width:360px}}</style>    </head>
+<body class="page">
+<div class="free-devilery"><img src="/local/assets/images/free-devilery.svg" alt=""/><strong>Бесплатная доставка по
+    России при заказе
+    от 5000 руб.</strong></div>
+<header class="header">
+    <div class="container-fluid">
+        <div class="header-grid">
+            <div class="header-left"><a class="logo" href="#"><img src="/local/assets/images/logo.svg" alt=""/>
+                <div class="logo__title">Roz Mary</div>
+            </a><a class="consultation" href="#">
+                <div class="consultation__icon">
+                    <svg class="icon">
+                        <use xlink:href="/local/assets/images/sprite.svg#whatsapp"></use>
+                    </svg>
+                </div>
+                <span>Консультация <br>по подбору косметики</span></a></div>
+            <div class="header-right">
+                <div class="header-head">
+                    <div class="contacts-head"><a class="contacts-phone" href="tel:+79851448085">
+                        <svg class="icon">
+                            <use xlink:href="/local/assets/images/sprite.svg#phone"></use>
+                        </svg>
+                        <span>+7 (985) 144-80-85</span></a>
+                        <div class="contacts-date"><strong>Режим работы: </strong>С 10:00 до 19:00 по МСК</div>
+                    </div>
+                    <a class="button-login" href="">Кабинет партнера</a>
+                    <div class="social">
+                        <div class="social__title">Присоединяйтесь <br>в социальных сетях:</div>
+                        <ul class="social-list">
+                            <li class="social__item"><a class="social__link" href="#">
+                                <svg class="icon">
+                                    <use xlink:href="/local/assets/images/sprite.svg#vk"></use>
+                                </svg>
+                            </a></li>
+                            <li class="social__item"><a class="social__link" href="#">
+                                <svg class="icon">
+                                    <use xlink:href="/local/assets/images/sprite.svg#inst"></use>
+                                </svg>
+                            </a></li>
+                            <li class="social__item"><a class="social__link" href="#">
+                                <svg class="icon">
+                                    <use xlink:href="/local/assets/images/sprite.svg#tg"></use>
+                                </svg>
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header__bottom">
+                    <div class="search">
+                        <div class="search__icon">
+                            <svg class="icon">
+                                <use xlink:href="/local/assets/images/sprite.svg#search"></use>
+                            </svg>
+                        </div>
+                        <input class="search__input" type="text" placeholder="Поиск по товарам"/>
+                    </div>
+                    <a class="button header-basket" href="#" data-count="1">
+                        <svg class="icon">
+                            <use xlink:href="/local/assets/images/sprite.svg#shopping-cart"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<header class="header-mobile">
+    <div class="container-fluid">
+        <div class="header-mobile-main">
+            <div class="open-menu js-open-menu"></div>
+            <a class="logo" href="#"><img src="/local/assets/images/logo.svg" alt=""/>
+                <div class="logo__title">Roz Mary</div>
+            </a><a class="button header-basket" href="#" data-count="1">
+            <svg class="icon">
+                <use xlink:href="/local/assets/images/sprite.svg#shopping-cart"></use>
+            </svg>
+        </a>
+        </div>
+    </div>
+</header>
+<div class="menu-mobile">
+    <div class="menu-mobile-wrapper">
+        <div class="menu-mobile-title js-close-menu">Меню</div>
+        <div class="search">
+            <div class="search__icon">
+                <svg class="icon">
+                    <use xlink:href="/local/assets/images/sprite.svg#search"></use>
+                </svg>
+            </div>
+            <input class="search__input" type="text" placeholder="Поиск по товарам"/>
+        </div>
+        <ul class="menu">
+            <li class="menu__item"><a class="menu__link" href="#">О бренде</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Вся косметика</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Уход для сухой кожи</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Уход для нормальной кожи</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Для жирной и проблемной кожи</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Антивозрастной уход</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Очищение и тонизация</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Кремы и сыворотки</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Маски и пилинги</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Для тела</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Защита от солнца</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Эфирные масла</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Аромабоксы</a></li>
+            <li class="menu__item menu__item--mobile"><a class="menu__link" href="#"> <strong>Доставка и оплата</strong></a>
+            </li>
+        </ul>
+        <div class="contacts-head"><a class="contacts-phone" href="tel:+79851448085">
+            <svg class="icon">
+                <use xlink:href="/local/assets/images/sprite.svg#phone"></use>
+            </svg>
+            <span>+7 (985) 144-80-85</span></a>
+            <div class="contacts-date"><strong>Режим работы: </strong>С 10:00 до 19:00 по МСК</div>
+        </div>
+        <a class="button-login w-100" href="">Кабинет партнера</a>
+        <div class="mb-2"><a class="consultation mb-1" href="#">
+            <div class="consultation__icon">
+                <svg class="icon">
+                    <use xlink:href="/local/assets/images/sprite.svg#whatsapp"></use>
+                </svg>
+            </div>
+            <span>Консультация по подбору косметики</span></a><a class="consultation"
+                                                                 href="mailto:info@rozmary.shop">
+            <div class="consultation__icon">
+                <svg class="icon">
+                    <use xlink:href="/local/assets/images/sprite.svg#email"></use>
+                </svg>
+            </div>
+            <span>E-mail: info@rozmary.shop</span></a></div>
+        <div class="social mb-3">
+            <div class="social__title">Присоединяйтесь <br>в социальных сетях:</div>
+            <ul class="social-list">
+                <li class="social__item"><a class="social__link" href="#">
+                    <svg class="icon">
+                        <use xlink:href="/local/assets/images/sprite.svg#vk"></use>
+                    </svg>
+                </a></li>
+                <li class="social__item"><a class="social__link" href="#">
+                    <svg class="icon">
+                        <use xlink:href="/local/assets/images/sprite.svg#inst"></use>
+                    </svg>
+                </a></li>
+                <li class="social__item"><a class="social__link" href="#">
+                    <svg class="icon">
+                        <use xlink:href="/local/assets/images/sprite.svg#tg"></use>
+                    </svg>
+                </a></li>
+            </ul>
+        </div>
+        <ul class="mobile-links">
+            <li class="mobile-links__item"><a class="mobile-links__link" href="">Политика конфиденциальности</a></li>
+            <li class="mobile-links__item"><a class="mobile-links__link" href="">Пользовательское соглашение</a></li>
+            <li class="mobile-links__item"><a class="mobile-links__link" href=""> Публичная оферта</a></li>
+        </ul>
+        <div class="row">
+            <div class="col">
+                <div class="copy-text">
+                    <div class="d-block">© 2023 Roz Mary</div>
+                    <span>Все права защищены.</span>
+                </div>
+            </div>
+            <div class="col-auto"><a class="button up-menu">
+                <svg class="icon">
+                    <use xlink:href="/local/assets/images/sprite.svg#arrow-next"></use>
+                </svg>
+            </a></div>
+        </div>
+    </div>
+</div>
+<main class="main">
+    <div class="container">    <nav class="breadcrumbs">
+        <a href="/" class="breadcrumbs__item">
+            Главная страница
+        </a>
+        <span class="breadcrumb__del"><svg xmlns="http://www.w3.org/2000/svg" width="5" height="10" fill="none"><path stroke="#3E3E3E" d="M.5 1 4 5.5l-3.5 4"/></svg></span>
+        <span class="breadcrumbs__item breadcrumbs__item_last">
+                    О бренде
+                </span>
+    </nav>
+        <script type="application/ld+json" data-skip-moving="true">{"@context":"https:\/\/schema.org\/","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"\u0413\u043b\u0430\u0432\u043d\u0430\u044f \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0430","item":"http:\/\/rozmary.local\/"},{"@type":"ListItem","position":2,"name":"\u041e \u0431\u0440\u0435\u043d\u0435\u0434\u0435","item":"http:\/\/rozmary.local\/brand\/"}]}</script>
+    </div>
+    <div class="partner">
+        <div class="container">
+            <div class="partner-top">
+                <h1 class="page__title partner__title">Кабинет партнера</h1>
+                <div class="partner-logout">
+                    <a href="?logout=y" class="partner-logout__link">Выйти</a>
+                </div>
+            </div>
+            <div class="partner__text">
+                <p>Добро пожаловать, Ольга!</p>
+                <p>
+                    Делитесь уникальной ссылкой с вашими друзьями и близкими. <b>10% стоимости от всех заказов,
+                    сделанных по этой ссылке, будут начисляться на Ваш счет.</b>
+                </p>
+            </div>
+            <div class="partner-share">
+                <div class="partner-share__title">Ваша партнерская ссылка:</div>
+                <div class="partner-share-group">
+                    <input type="text" class="partner-share__control" value="https://rozmary.shop/?pk=8447">
+                    <button class="partner-share__copy" type="button">Копировать</button>
+                </div>
+            </div>
+            <div class="partner-info">
+                <div class="partner-info-header">
+                    <div class="partner-info-cell">Доступно к выплате</div>
+                    <div class="partner-info-cell">Всего заработано</div>
+                    <div class="partner-info-cell">Всего заказов сделано по вашей ссылке</div>
+                </div>
+                <div class="partner-info-stats">
+                    <div class="partner-stats">
+                        <div class="partner-stats__title">Доступно к выплате</div>
+                        <div class="partner-stats__text">0 рублей</div>
+                    </div>
+                    <div class="partner-stats">
+                        <div class="partner-stats__title">Всего заработано</div>
+                        <div class="partner-stats__text">0 рублей</div>
+                    </div>
+                    <div class="partner-stats">
+                        <div class="partner-stats__title">Всего заказов сделано по вашей ссылке</div>
+                        <div class="partner-stats__text">0 шт</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src='/local/assets/local/bundle-runtime/bundle-runtime.js'></script>            <script src="/local/assets/local/bundle-common/bundle-common.js" defer data-skip-moving="true"></script>
+    <script src="/local/assets/local/bundle-partner/bundle-partner.js" defer data-skip-moving="true"></script>
+</main>
+</body>
+</html>

@@ -1,5 +1,9 @@
 @import 'default-style.css';
 
+.text-danger {
+  color: #F91D1D;
+}
+
 .basket {
   padding-bottom: 60px;
 }
@@ -264,6 +268,12 @@
   font-size: 16px;
   font-weight: 500;
   height: 50px;
+  transition: border 0.3s;
+}
+
+.form-control:hover,
+.form-control:focus {
+  border-color: #9080BF;
 }
 
 .basket-coupon-block-coupon-btn {
@@ -445,6 +455,10 @@
 }
 
 @media (min-width: 1280px) {
+  .basket__title {
+    margin-bottom: 56px;
+  }
+
   .basket-head {
     color: #B7B7B7;
     font-size: 18px;
