@@ -17,6 +17,7 @@
         <li><a href="delivery.html">Доставка</a></li>
         <li><a href="basket/basket.html">Корзина</a></li>
         <li><a href="order.php">Оформление заказа</a></li>
+        <li><a href="forms.php">Формы и модальные окна</a></li>
         <li><a href="404.html">Страница ошибки</a></li>
     </ul>
 </body>

@@ -1,0 +1,22 @@
+<div class="form-group{{#has_error}} form-group_has-error{{/has_error}}">
+    <label class="form-label">
+        <input name="{{code}}"
+               type="{{#typeInput}}{{.}}{{/typeInput}}{{^typeInput}}text{{/typeInput}}"
+               value="{{value}}"
+            {{#inputmode}} inputmode="{{.}}"{{/inputmode}}{{#html_required}} required{{/html_required}}
+               class="form__control{{#requiredCssClass}} {{.}}{{/requiredCssClass}}{{#maskCssClass}} {{.}}{{/maskCssClass}}{{#additionalCssClass}} {{.}}{{/additionalCssClass}}">
+        {{#placeholder}}<span class="form__placeholder">{{.}}{{#required}}
+            <span class="form__astrix">*</span>{{/required}}</span>{{/placeholder}}
+        {{#has_error}}
+            <span class="form-group__message">
+                <span class="form__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="4" height="4" fill="none">
+                        <path fill="#F91D1D"
+                              d="m2 0 .449 1.382h1.453l-1.175.854.449 1.382L2 2.764l-1.176.854.45-1.382-1.176-.854H1.55L2 0Z"/>
+                    </svg>
+                </span>
+                {{{error_message}}}
+            </span>
+        {{/has_error}}
+    </label>
+</div>

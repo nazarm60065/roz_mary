@@ -1,0 +1,14 @@
+<div class="success-message"{{#id}} id="{{.}}"{{/id}}>
+    {{#title}}
+        <div class="success-message__title">{{{.}}}</div>
+    {{/title}}
+    {{#text}}
+        <div class="success-message__text">{{{.}}}</div>
+    {{/text}}
+    <div class="success-message-close-container">
+        <button class="button button_filled-violet button_filled-bg success-message__close-btn" data-fancybox-close>
+            <img src="/local/assets/images/button.jpg" alt="" class="button__bg" loading="lazy">
+            <span class="button__text">Понятно</span>
+        </button>
+    </div>
+</div>

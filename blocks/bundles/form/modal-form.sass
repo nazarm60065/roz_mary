@@ -1,0 +1,35 @@
+.modal-form
+  display: none
+  position: relative
+  max-width: 380px
+  background-color: #fff
+  border-radius: 16px
+  padding: 16px
+
+.modal-form .f-button.is-close-btn
+  display: none
+
+.modal-form .form__title
+  padding-right: 40px
+
+.modal-form__close
+  position: absolute
+  top: 24px
+  right: 16px
+  width: 24px
+  height: 24px
+  +svg
+
++mq(tablet)
+  .modal-form
+    max-width: 726px
+    padding: 56px
+
+  .modal-form .form__title
+    padding-right: 60px
+
+  .modal-form__close
+    width: 40px
+    height: 40px
+    top: 68px
+    right: 56px

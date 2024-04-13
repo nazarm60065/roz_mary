@@ -1,0 +1,79 @@
+.cart-message
+  position: relative
+  background-color: #fff
+  border-radius: 8px
+  overflow: hidden
+  box-shadow: 12px 14px 97px -47px #645B833D
+  display: flex
+  max-width: 380px
+
+.cart-message-image
+  flex-shrink: 0
+  width: 100px
+  height: 138px
+  background-color: #F8F8F8
+  padding: 8px
+  border-radius: 8px
+  overflow: hidden
+  display: flex
+  align-items: center
+  justify-content: center
+
+.cart-message-image__img
+  width: 100%
+  height: 100%
+  object-fit: contain
+
+.cart-message-content
+  padding: 16px
+
+.cart-message-head
+  display: flex
+  gap: 6px
+  font-size: 12px
+  font-weight: 500
+  margin-bottom: 14px
+
+.cart-message-head__icon
+  width: 10px
+  height: 10px
+  flex-shrink: 0
+  +svg
+
+.cart-message__title
+  font-size: 14px
+  font-weight: 400
+  color: $main-color90
+
+.cart-message__volume
+  margin-top: 8px
+  font-size: 10px
+  font-weight: 400
+  color: $main-color40
+
++mq(tablet)
+  .cart-message
+    max-width: 536px
+
+  .cart-message-image
+    width: 155px
+    height: 155px
+
+  .cart-message-content
+    padding: 24px 22px
+
+  .cart-message-head
+    gap: 8px
+    font-size: 16px
+    margin-bottom: 16px
+
+  .cart-message-head__icon
+    margin-top: 4px
+    width: 12px
+    height: 12px
+
+  .cart-message__title
+    font-size: 16px
+
+  .cart-message__volume
+    font-size: 14px

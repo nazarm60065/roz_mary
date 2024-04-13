@@ -7,5 +7,6 @@ module.exports = {
   'bundle-delivery': './blocks/bundles/delivery/delivery',
   'bundle-basket': './blocks/bundles/basket/basket',
   'bundle-order': './blocks/bundles/order/order',
+  'bundle-form': './blocks/bundles/form/form',
   'bundle-error': './blocks/bundles/error/error',
 }

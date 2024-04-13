@@ -3,7 +3,6 @@ import './templates'
 import {Counter} from "../../counter/counter"
 import catalogDetailTab from "../../catalog-detail-tab/catalog-detail-tab"
 import catalogDetailAccordion from "../../catalog-detail-accordion/catalog-detail-accordion"
-import {fbInitAll} from 'custom-fancybox/custom-fancybox'
 import 'swiper/css'
 import catalogSlider from '../../catalog-slider/catalog-slider'
 

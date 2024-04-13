@@ -1,0 +1,27 @@
+<div class="cart-message"{{#id}} id="{{.}}"{{/id}}>
+    {{#image}}
+        <div class="cart-message-image">
+            <img src="{{.}}" alt="{{title}}" loading="lazy" class="cart-message-image__img">
+        </div>
+    {{/image}}
+    <div class="cart-message-content">
+        <div class="cart-message-head">
+            <div class="cart-message-head__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="none" viewBox="0 0 11 11">
+                    <path fill="#3E3E3E"
+                          d="M3.826 8.8c-.557 0-1.014.495-1.014 1.1 0 .605.457 1.1 1.014 1.1.557 0 1.014-.495 1.014-1.1 0-.605-.457-1.1-1.014-1.1ZM.786 0v1.1h1.013l1.824 4.18-.71 1.32a2.1 2.1 0 0 0-.1.55c0 .605.456 1.1 1.013 1.1h6.082v-1.1h-5.88c-.05 0-.1-.055-.1-.11v-.055l.455-.935h3.75c.406 0 .71-.22.862-.55l1.825-3.575c.101-.11.101-.165.101-.275 0-.33-.202-.55-.506-.55H2.913L2.458 0H.785Zm8.108 8.8c-.557 0-1.014.495-1.014 1.1 0 .605.457 1.1 1.014 1.1.558 0 1.014-.495 1.014-1.1 0-.605-.456-1.1-1.014-1.1Z"/>
+                </svg>
+            </div>
+            <div class="cart-message-head__text">Добавлено в корзину</div>
+        </div>
+        {{#title}}
+            <div class="cart-message__title">{{{.}}}</div>
+        {{/title}}
+        {{#volume}}
+            <div class="cart-message__volume">Объем: {{{.}}}</div>
+        {{/volume}}
+    </div>
+    {{#detailPageUrl}}
+        <a href="{{.}}" class="link-as-card"></a>
+    {{/detailPageUrl}}
+</div>

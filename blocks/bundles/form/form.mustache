@@ -1,0 +1,83 @@
+<form method="post" action="{{action}}" class="form"{{#ajax_component_id}}
+      id="{{.}}"{{/ajax_component_id}}>
+    <div class="form-top">
+        {{#title}}
+            <div class="form__title">{{{.}}}</div>
+        {{/title}}
+        {{#sub_title}}
+            <div class="form__subtitle">{{{.}}}</div>
+        {{/sub_title}}
+    </div>
+    <div class="form-content">
+        {{#form_header}}
+            <div class="form__header">{{{.}}}</div>
+        {{/form_header}}
+        {{#errors}}
+            <div class="form-error">
+                <div class="form-error__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
+                        <path fill="#E80000"
+                              d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20Zm0-18.667a8.667 8.667 0 1 0 0 17.334 8.667 8.667 0 0 0 0-17.334Z"/>
+                        <path fill="#E80000"
+                              d="M10 15.338a1.333 1.333 0 1 1 0-2.666 1.333 1.333 0 0 1 0 2.666ZM10 11.333a.667.667 0 0 1-.666-.666v-6a.667.667 0 0 1 1.333 0v6a.667.667 0 0 1-.666.666Z"/>
+                    </svg>
+                </div>
+                <div class="form-error__text">
+                    {{{.}}}
+                </div>
+            </div>
+        {{/errors}}
+        <div class="form-content-fields">
+            {{#html_fields}}
+                {{{html}}}
+            {{/html_fields}}
+        </div>
+        <div class="form-bottom">
+            {{#user_consent}}
+                <div class="form-group form-uc-wrapper">
+                    <label class="form-label form-uc form-checkbox">
+                        <input type="checkbox"
+                               id="USER_CONSENT_{{ajax_component_id}}" name="USER_CONSENT" value="Y" checked
+                               class="form-checkbox__control form-hidden form-uc__control">
+                        <span class="form-checkbox__marker">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" fill="none" viewBox="0 0 11 8"><path
+                                  fill="#fff" fill-opacity="0"
+                                  d="M9.68 0 4.266 5.379 1.32 2.453 0 3.763 4.265 8 11 1.31 9.68 0Z"/></svg>
+                        </span>
+                        <span class="form-checkbox__text">{{{.}}}</span>
+                    </label>
+                </div>
+            {{/user_consent}}
+            {{#remember}}
+                <div class="form-remember">
+                    <div class="form-group form-remember-group">
+                        <label class="form-label form-checkbox">
+                            <input type="checkbox"
+                                   id="USER_REMEMBER" name="USER_REMEMBER" value="Y" checked
+                                   class="form-checkbox__control form-hidden">
+                            <span class="form-checkbox__marker">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" fill="none"
+                                   viewBox="0 0 11 8"><path
+                                      fill="#fff"
+                                      d="M9.68 0 4.266 5.379 1.32 2.453 0 3.763 4.265 8 11 1.31 9.68 0Z"/></svg>
+                            </span>
+                            <span class="form-checkbox__text">Запомнить меня на этом устройстве</span>
+                        </label>
+                    </div>
+                    {{#forgot_link}}
+                        <a href="{{.}}" class="form__link form__forgot-link">Забыли свой пароль?</a>
+                    {{/forgot_link}}
+                </div>
+            {{/remember}}
+            <div class="form-submit-container">
+                <button class="form__submit button button_filled-bg button_filled-violet" name="submit" type="submit">
+                    <img src="/local/assets/images/button-long.png" alt="" class="button__bg" loading="lazy">
+                    <span class="button__text">{{{submit_text}}}</span>
+                </button>
+            </div>
+            {{#footer_text}}
+                <div class="footer__text">{{{.}}}</div>
+            {{/footer_text}}
+        </div>
+    </div>
+</form>
