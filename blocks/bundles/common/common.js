@@ -6,6 +6,17 @@ import './templates'
 window.loadingAttributePolyfill = loadingAttributePolyfill
 
 document.addEventListener('DOMContentLoaded', () => {
+  const footerUpButton = document.querySelector('.footer-up__button')
+
+  if (footerUpButton) {
+    footerUpButton.addEventListener('click', () => {
+      window.scroll({
+        behavior: 'smooth',
+        top: 0
+      })
+    })
+  }
+
   setTimeout(setCssVariables)
 })
 

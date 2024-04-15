@@ -1,0 +1,502 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Кабинет партнера</title>            <style>@font-face{font-display:swap;font-family:Onest;font-style:normal;font-weight:300;src:local("Onest"),url(/local/assets/local/fonts/Onest-Light.ttf) format("truetype")}@font-face{font-display:swap;font-family:Onest;font-style:normal;font-weight:400;src:local("Onest"),url(/local/assets/local/fonts/Onest-Regular.ttf) format("truetype")}@font-face{font-display:swap;font-family:Onest;font-style:normal;font-weight:500;src:local("Onest"),url(/local/assets/local/fonts/Onest-Medium.ttf) format("truetype")}@font-face{font-display:swap;font-family:Onest;font-style:normal;font-weight:600;src:local("Onest"),url(/local/assets/local/fonts/Onest-SemiBold.ttf) format("truetype")}@font-face{font-display:swap;font-family:Onest;font-style:normal;font-weight:700;src:local("Onest"),url(/local/assets/local/fonts/Onest-Bold.ttf) format("truetype")}@font-face{font-display:swap;font-family:Onest;font-style:normal;font-weight:800;src:local("Onest"),url(/local/assets/local/fonts/Onest-ExtraBold.ttf) format("truetype")}@font-face{font-display:swap;font-family:Onest;font-style:normal;font-weight:900;src:local("Onest"),url(/local/assets/local/fonts/Onest-Black.ttf) format("truetype")}*,:after,:before{box-sizing:border-box}a{color:inherit;outline:none;text-decoration:none}ol,ul{list-style-type:none;margin:0;padding:0}button{color:inherit;cursor:pointer;font-family:inherit;font-size:inherit;font-weight:inherit;padding:0;text-transform:inherit}button,input,textarea{background-color:transparent;border:none;outline:none}input,textarea{display:block;font-family:Onest,Arial,sans-serif;width:100%}.link-as-card{bottom:0;height:100%;left:0;position:absolute;right:0;top:0;width:100%}.page{background-color:#fff;color:#3e3e3e;font-family:Onest,Arial,sans-serif;font-size:16px;font-style:normal;font-weight:400;line-height:1.3;margin:0;padding:0}.mobile-hide{display:none}.mobile-show{display:inline}.page__title{font-size:28px;font-weight:500;margin:24px 0 16px}@media only screen and (max-width:767px){.tablet-only{display:none}}@media only screen and (min-width:768px){.tablet-hide{display:none}.tablet-show{display:inline}.tablet-block,.tablet-only{display:block}}@media only screen and (max-width:1279px){.desktop-only{display:none}}@media only screen and (min-width:1280px){.desktop-hide,.tablet-only{display:none}.desktop-show{display:inline}.page__title{font-size:44px;font-weight:500;margin-bottom:24px;margin-top:48px}}.button{border-radius:8px;text-align:center}.button_filled-bg{overflow:hidden;position:relative;z-index:0}.button__bg{height:100%;left:0;position:absolute;top:0;width:100%;z-index:-1}.button_filled-violet{background-blend-mode:luminosity,normal;background-color:#998bc4;color:#fff}.container,.container-fluid{margin-left:auto;margin-right:auto;max-width:428px;padding-left:24px;padding-right:24px;width:100%}@media only screen and (min-width:768px){.container,.container-fluid{max-width:1024px;padding-left:32px;padding-right:32px}}@media only screen and (min-width:1280px){.container,.container-fluid{max-width:1500px;padding-left:30px;padding-right:30px}}@media only screen and (min-width:1920px){.container,.container-fluid{padding-left:30px;padding-right:30px}}.header{margin-bottom:22px;padding:26px 0}@media(max-width:1200px){.header{display:none}}.header-mobile{display:none;margin-bottom:17px;padding:24px 0}@media(max-width:1200px){.header-mobile{display:block}}.free-devilery{align-items:center;background-color:#5a5276;color:#fff;display:flex;gap:8px;height:74px;justify-content:center}@media(max-width:767px){.free-devilery{padding:0 24px}}.free-devilery strong{font-size:18px;font-weight:500}@media(max-width:767px){.free-devilery strong{font-size:14px}}.logo{align-items:center;display:flex;gap:14px}.logo__title{color:#3e3e3e;font-size:44px;font-weight:500}@media(max-width:1025px){.logo__title{font-size:28px}.logo img{width:27px}}.header-grid{align-items:center;display:grid;gap:40px;grid-template-columns:260px minmax(auto,1077px);margin-bottom:31px}.header-grid,.header-head{justify-content:space-between}.header-head{display:flex;margin-bottom:15px}@media(max-width:1200px){.contacts-head{display:inline-block;margin-bottom:24px;margin-left:0}}.contacts-phone{align-items:center;color:#3e3e3e;display:flex;gap:9px;margin-bottom:4px}.contacts-phone svg{fill:#9484c1}.contacts-phone span{font-size:20px;font-weight:500}.contacts-date{border-bottom:1px dashed rgba(62,62,62,.5);font-size:12px}.contacts-date strong{font-size:10px}.button-login{align-items:center;border:1px solid;border-radius:8px;color:#9080bf;display:flex;font-size:18px;font-weight:500;height:56px;justify-content:center;margin:0 15px;max-width:310px;width:100%}@media(max-width:1200px){.button-login{font-size:16px;margin:0 auto 16px}}.contacts-right{gap:72px;margin-left:auto}.contacts-right,.social{align-items:center;display:flex}.social{gap:16px;justify-content:space-between}.social__title{font-size:14px;font-weight:300}.social__link{align-items:center;background-color:#f4f4f4;border-radius:8px;color:#9080bf;display:flex;height:42px;justify-content:center;width:42px}@media(max-width:767px){.social__link{height:32px;width:32px}}.social__link svg{height:18px;width:18px}@media(max-width:992px){.social__link svg{height:14px;width:14px}}.social-list{display:flex;gap:8px}.consultation{align-items:center;color:#3e3e3e;display:flex;font-size:18px;gap:14px}@media(max-width:767px){.consultation{font-size:16px}}.consultation__icon{align-items:center;background-color:#f4f4f4;border-radius:8px;color:#9080bf;display:flex;height:42px;justify-content:center;width:42px}@media(max-width:767px){.consultation__icon{height:32px;width:32px}.consultation__icon svg{height:16px;width:16px}}.header__bottom{align-items:center;display:flex;gap:30px;justify-content:space-between;width:100%}.search{max-width:985px}.search,.search__input{position:relative;width:100%}.search__input{background-color:#f8f8f8;border:0;border-radius:8px;height:56px;padding-left:51px;z-index:2}.search__icon{left:24px;position:absolute;top:17px;z-index:5}.search__icon svg{height:16px;width:16px}.header-basket{margin-right:-8px;ont-size:16px;align-items:center;background-color:#998bc4;border:0;border-radius:8px;color:#fff;cursor:pointer;display:flex;font-weight:500;height:56px;justify-content:center;min-width:56px;padding:0 10px;position:relative}@media(max-width:1025px){.header-basket{height:33px;margin-left:0;min-width:auto;padding:0;width:33px}}.header-basket svg{height:21px;width:21px}@media(max-width:1025px){.header-basket svg{height:13px;width:12px}}.header-basket:after{align-items:center;background-color:#5a5276;border-radius:50%;color:#fff;content:attr(data-count);display:flex;font-size:12px;height:16px;justify-content:center;line-height:1;position:absolute;right:-8px;top:50%;transform:translateY(-50%);width:16px}.header-mobile-main{align-items:center;display:flex;justify-content:space-between}.open-menu{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='none'%3E%3Crect width='32' height='32' fill='%23F4F4F4' rx='6'/%3E%3Cpath stroke='%239484C1' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M10 10h12M10 16h12M10 22h12'/%3E%3C/svg%3E");cursor:pointer;height:32px;width:32px}.menu-mobile{background-color:#fff;height:100vh;left:0;position:fixed;top:0;transform:translateX(-100%);transition:.3s;width:100%;z-index:50}.menu-mobile-wrapper{height:100%;overflow:hidden auto;padding:27px 24px}.menu-mobile-title{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='16' fill='none'%3E%3Cpath stroke='%239484C1' stroke-linecap='round' stroke-width='2' d='M13 1 1 15M1 1l12 14'/%3E%3C/svg%3E");background-position:0;background-repeat:no-repeat;cursor:pointer;font-size:14px;line-height:1.3;margin-bottom:20px;padding-left:28px}.menu-mobile .search{margin-bottom:16px;margin-left:0}.mobile-links{margin-bottom:30px}.mobile-links__item:not(:last-child){margin-bottom:8px}.mobile-links__link{color:#3181e0;text-decoration:underline}.copy-text{color:rgba(62,62,62,.5);font-size:10px}.copy-text span{color:rgba(62,62,62,.3)}.up-menu{cursor:pointer;height:32px;min-width:auto;transform:rotate(-90deg);width:32px}.icon{fill:currentColor;stroke:none;height:16px;width:16px}.breadcrumbs{align-items:flex-start;color:rgba(62,62,62,.9);display:flex;flex-wrap:wrap;font-size:12px;line-height:1.37}.breadcrumbs__item:not(.breadcrumbs__item_last){border-bottom:1px solid transparent;transition:.3s}.breadcrumb__del{margin:0 8px}.breadcrumbs__item_last{color:#3e3e3e}@media only screen and (min-width:1280px){.breadcrumbs__item:not(.breadcrumbs__item_last):hover{border-bottom-color:#5a5276;color:#5a5276}}.cart-message{background-color:#fff;box-shadow:12px 14px 97px -47px rgba(100,91,131,.239);max-width:380px;position:relative}.cart-message,.cart-message-image{border-radius:8px;display:flex;overflow:hidden}.cart-message-image{align-items:center;background-color:#f8f8f8;flex-shrink:0;height:138px;justify-content:center;padding:8px;width:100px}.cart-message-image__img{height:100%;object-fit:contain;width:100%}.cart-message-content{padding:16px}.cart-message-head{display:flex;font-size:12px;font-weight:500;gap:6px;margin-bottom:14px}.cart-message-head__icon{flex-shrink:0;height:10px;line-height:0;width:10px}.cart-message-head__icon svg{height:100%;width:100%}.cart-message__title{color:rgba(62,62,62,.9);font-size:14px;font-weight:400}.cart-message__volume{color:rgba(62,62,62,.4);font-size:10px;font-weight:400;margin-top:8px}@media only screen and (min-width:768px){.cart-message{max-width:536px}.cart-message-image{height:155px;width:155px}.cart-message-content{padding:24px 22px}.cart-message-head{font-size:16px;gap:8px;margin-bottom:16px}.cart-message-head__icon{height:12px;margin-top:4px;width:12px}.cart-message__title{font-size:16px}.cart-message__volume{font-size:14px}}</style><style>.order{padding:0 0 60px}.order-wrapper{border-top:1px solid #d9d9d9;padding-top:16px}.order-right{margin-top:40px}.order-section{margin-bottom:32px;position:relative;z-index:0}.order-section:last-child{margin-bottom:0}.order-section__title{font-size:16px;font-weight:500;margin-bottom:14px}.order-section__note{font-size:12px;font-weight:400;margin-bottom:8px}.order-error{background-color:#fff0ee;border:1px solid #d9d9d9;border-radius:8px;display:flex;font-size:12px;font-weight:400;gap:8px;margin:8px 0;padding:20px 16px}.order-error__icon{flex-shrink:0;height:16px;line-height:0;width:16px}.order-error__icon svg{height:100%;width:100%}.order-props-fields{display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between}.order-props-group{position:relative;width:100%}.order-props-group-FIRST_NAME,.order-props-group-LAST_NAME{width:calc(50% - 4px)}.order-props-group-BUILDING,.order-props-group-FLAT,.order-props-group-ZIP{width:calc(33.33% - 6px)}.order-props-group-CARD_NUMBER .order-props__control{padding-right:40px}.order-props-group-CARD_NUMBER svg{height:14px;line-height:0;margin-top:-6px;pointer-events:none;position:absolute;right:20px;top:50%;width:12px}.order-props-group-CARD_NUMBER svg svg{height:100%;width:100%}.order-props-group_has-error .order-props__control{border-color:#f91d1d}.order-props__control{background-color:#fff;border:1px solid #d9d9d9;border-radius:8px;font-family:inherit;font-size:16px;font-weight:400;height:56px;padding:20px 15px 10px;width:100%}.order-props-select{position:relative}.order-props-select__control{appearance:none;-webkit-appearance:none;-moz-appearance:none;padding-right:40px}.order-props-select__control:focus{border-color:#998bc4;outline:none}.order-props-select__control:focus+.order-props-select__icon{transform:rotate(180deg)}.order-props-select__icon{height:8px;line-height:0;margin-top:-4px;position:absolute;right:16px;top:50%;transition:transform .3s;width:16px}.order-props-select__icon svg{height:100%;width:100%}.order-props-group_filled .order-props__placeholder,.order-props__control:focus+.order-props__placeholder{font-size:12px;padding-top:4px}.order-props__placeholder{border:1px solid transparent;bottom:0;color:#939393;font-size:12px;height:100%;left:0;padding:20px 15px 19px;pointer-events:none;position:absolute;right:0;top:0;transition:padding .3s,font-size .3s,border .3s;white-space:nowrap;width:100%}.order-props-group-textarea{margin-top:8px}.order-props__control_textarea{height:96px;resize:vertical}.order-props__error{color:#f91d1d;font-size:10px;font-weight:400;margin-top:4px}.order-props-checkbox{display:flex;font-size:14px;font-weight:400;gap:6px;position:relative}.order-props-checkbox__marker{border:1px solid #d9d9d9;border-radius:2px;height:14px;line-height:0;margin-top:3px;transition:.3s;width:14px}.order-props-checkbox__marker svg{height:100%;width:100%}.order-props-checkbox input{height:0;left:0;opacity:0;position:absolute;top:0;visibility:hidden;width:0;z-index:-1}.order-props-checkbox input[type=checkbox]:checked~.order-props-checkbox__marker{background-color:#9484c1;border-color:#9484c1}.order-delivery-list{background-color:#f7f7f7;border-radius:12px;display:grid;gap:8px;grid-template-columns:repeat(2,minmax(0,1fr));padding:14px}.order-delivery-list-item{background-color:#fff;border:2px solid #d3d3d3;border-radius:8px;padding:16px;position:relative;text-align:center;transition:.3s}.order-delivery-list-item.bx-selected{border-color:#9484c1}.order-delivery-list-item.bx-selected .order-delivery-list-item-image path{fill:#9484c1}.order-item-hidden{height:0;left:0;opacity:0;position:absolute;top:0;visibility:hidden;width:0;z-index:-1}.order-delivery-list-item-image{height:43px;line-height:0;margin:0 auto 8px;width:60px}.order-delivery-list-item-image svg{height:100%;width:100%}.order-delivery-list-item__text{font-size:14px;font-weight:500}.order-delivery-company-text-container{background-color:#fff;display:flex;font-size:12px;font-weight:400;gap:4px;padding:8px 0}.order-delivery-company__star{flex-shrink:0;height:8px;line-height:0;margin-top:4px;width:8px}.order-delivery-company__star svg{height:100%;width:100%}.order-delivery-company-list{border:1px solid #d9d9d9;border-radius:8px;margin-top:14px;position:relative;z-index:0}.order-delivery-company-list-item{border-bottom:1px solid #d9d9d9;box-shadow:0 0 1px 0 transparent;display:flex;font-size:14px;font-weight:400;gap:8px;margin-bottom:-1px;padding:18px 16px;position:relative;transition:.3s;z-index:0}.order-delivery-company-list-item:last-child{border-bottom:none}.order-delivery-company-list-item.bx-selected{background-color:rgba(148,132,193,.2);border-color:transparent;border-radius:8px;box-shadow:0 0 0 1px #9484c1;z-index:1}.order-delivery-company-list-item.bx-selected .order-delivery-company-list-item__marker{border-color:#9484c1;border-width:5px;opacity:1}.order-delivery-company-list-item__marker{background-color:#fff;border:1px solid #d9d9d9;border-radius:50%;height:16px;margin-top:2px;transition:.3s;width:16px}.order-payment-list{border:1px solid #d9d9d9;border-radius:8px;position:relative;z-index:0;z-index:1}.order-payment-list-item{background-color:#fff;border-bottom:1px solid #d9d9d9;box-shadow:0 0 0 1px transparent;display:flex;font-size:14px;font-weight:400;gap:8px;padding:18px 16px;position:relative;transition:.3s;z-index:0}.order-payment-list-item:last-child{border-bottom:none}.order-payment-list-item.bx-selected{background-color:rgba(148,132,193,.2);border-color:transparent;border-radius:8px;box-shadow:0 0 0 1px #9484c1;z-index:1}.order-payment-list-item.bx-selected .order-payment-list-item__marker{border-color:#9484c1;border-width:5px;opacity:1}.order-payment-list-item__marker{background-color:#fff;border:1px solid #d9d9d9;border-radius:50%;height:16px;margin-top:2px;transition:.3s;width:16px}.order-payment-fields{background-color:#f8f8f8;border-radius:0 0 10px 10px;display:flex;flex-wrap:wrap;gap:8px;margin-top:-8px;padding:24px 16px 16px}.order__button{font-size:16px;font-weight:500;padding:17px 17px 18px;width:100%}.order-uc{margin-top:8px;position:relative;width:100%}.order-uc a{border-bottom:1px solid;transition:.3s}.order-uc a:hover{border-bottom-color:transparent}.order-total{background-color:#f8f8f8;border-radius:16px;padding:16px}.order-total-top{align-items:center;display:flex;gap:10px;justify-content:space-between;margin-bottom:32px}.order-total__title{font-size:16px;font-weight:500}.order-total__link{border-bottom:1px solid;color:#9484c1;font-size:12px;font-weight:400;transition:.3s}.order-total__link:hover{border-bottom-color:transparent}.order-total-item{display:flex;gap:14px;padding:8px 0}.order-total-item-image{align-items:center;background-color:#fff;border-radius:8px;display:flex;flex-shrink:0;height:100px;justify-content:center;overflow:hidden;padding:5px;width:124px}.order-total-item-image__img{height:100%;object-fit:contain;width:100%}.order-total-item-content{display:flex;flex-direction:column}.order-total-item__title{font-size:12px;font-weight:400}.order-total-item__volume{color:rgba(62,62,62,.4);font-size:8px;font-weight:400;margin-bottom:8px;margin-top:8px}.order-total-item__amount{font-size:8px;font-weight:400;margin-top:auto}.order-total-item__amount b{font-weight:700}.order-total-sum{margin-top:16px}.order-total-sum-item{display:flex;font-size:14px;font-weight:400;gap:10px;justify-content:space-between;margin-top:8px}.order-total-sum-item__value{font-weight:500}.order-total-sum-item.bx-highlighted .order-total-sum-item__value{color:#54aa46}.order-total-sum-item_total{font-size:18px;margin-top:16px}@media only screen and (min-width:1280px){.order{padding-bottom:128px}.order__title{margin-bottom:56px}.order-wrapper{display:flex;gap:40px;padding-top:24px}.order-left{max-width:614px}.order-right{flex-shrink:0;margin-top:50px;position:relative;width:677px}.order-section{margin-bottom:40px}.order-section__title{font-size:20px;margin-bottom:24px}.order-section__note{font-size:14px;margin-bottom:16px}.order-error{font-size:16px;gap:10px;margin:16px 0;padding:22px 24px}.order-error__icon{height:20px;width:20px}.order-props__control{height:67px}.order-props__placeholder{font-size:16px;padding-top:22px}.order-props__error{font-size:14px}.order-delivery-list{gap:16px;padding:24px}.order-delivery-list-item{align-items:center;display:flex;flex-direction:column;justify-content:center;min-height:185px}.order-delivery-list-item-image{height:64px;margin-bottom:16px;width:86px}.order-delivery-list-item__text{font-size:18px}.order-delivery-company-text-container{font-size:14px}.order-delivery-company-list{margin-top:24px}.order-delivery-company-list-item{border-radius:0;font-size:16px;padding:22px 24px}.order-delivery-company-list-item:first-child{border-radius:8px 8px 0 0}.order-delivery-company-list-item:last-child{border-radius:0 0 8px 8px}.order-payment-list-item{border-radius:0;font-size:16px;padding:22px 24px}.order-payment-list-item:last-child{border-radius:0 0 8px 8px}.order-payment-list-item:first-child{border-radius:8px 8px 0 0}.order-payment-fields{border-radius:0 0 10px 10px;gap:10px;padding:22px}.order-props-group-CARD_CCV,.order-props-group-CARD_EXPIRE{width:calc(50% - 5px)}.order-props-group-CARD_NUMBER svg{height:16px;margin-top:-7px;right:24px;width:14px}.order-bottom{margin-top:56px}.order-total{padding:24px;position:sticky;top:60px}.order-total-top{margin-bottom:16px}.order-total__title{font-size:20px}.order-total__link{font-size:16px}.order-total-item{gap:16px}.order-total-item__title{font-size:14px}.order-total-item__amount,.order-total-item__volume{font-size:12px}.order-total-sum{margin-top:32px}.order-total-sum-item{font-size:18px}.order-total-sum-item_total{font-size:24px}}</style>    </head>
+<body class="page">
+<div class="free-devilery"><img src="/local/assets/images/free-devilery.svg" alt=""/><strong>Бесплатная доставка по
+    России при заказе
+    от 5000 руб.</strong></div>
+<header class="header">
+    <div class="container-fluid">
+        <div class="header-grid">
+            <div class="header-left"><a class="logo" href="#"><img src="/local/assets/images/logo.svg" alt=""/>
+                <div class="logo__title">Roz Mary</div>
+            </a><a class="consultation" href="#">
+                <div class="consultation__icon">
+                    <svg class="icon">
+                        <use xlink:href="/local/assets/images/sprite.svg#whatsapp"></use>
+                    </svg>
+                </div>
+                <span>Консультация <br>по подбору косметики</span></a></div>
+            <div class="header-right">
+                <div class="header-head">
+                    <div class="contacts-head"><a class="contacts-phone" href="tel:+79851448085">
+                        <svg class="icon">
+                            <use xlink:href="/local/assets/images/sprite.svg#phone"></use>
+                        </svg>
+                        <span>+7 (985) 144-80-85</span></a>
+                        <div class="contacts-date"><strong>Режим работы: </strong>С 10:00 до 19:00 по МСК</div>
+                    </div>
+                    <a class="button-login" href="">Кабинет партнера</a>
+                    <div class="social">
+                        <div class="social__title">Присоединяйтесь <br>в социальных сетях:</div>
+                        <ul class="social-list">
+                            <li class="social__item"><a class="social__link" href="#">
+                                <svg class="icon">
+                                    <use xlink:href="/local/assets/images/sprite.svg#vk"></use>
+                                </svg>
+                            </a></li>
+                            <li class="social__item"><a class="social__link" href="#">
+                                <svg class="icon">
+                                    <use xlink:href="/local/assets/images/sprite.svg#inst"></use>
+                                </svg>
+                            </a></li>
+                            <li class="social__item"><a class="social__link" href="#">
+                                <svg class="icon">
+                                    <use xlink:href="/local/assets/images/sprite.svg#tg"></use>
+                                </svg>
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header__bottom">
+                    <div class="search">
+                        <div class="search__icon">
+                            <svg class="icon">
+                                <use xlink:href="/local/assets/images/sprite.svg#search"></use>
+                            </svg>
+                        </div>
+                        <input class="search__input" type="text" placeholder="Поиск по товарам"/>
+                    </div>
+                    <a class="button header-basket" href="#" data-count="1">
+                        <svg class="icon">
+                            <use xlink:href="/local/assets/images/sprite.svg#shopping-cart"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<header class="header-mobile">
+    <div class="container-fluid">
+        <div class="header-mobile-main">
+            <div class="open-menu js-open-menu"></div>
+            <a class="logo" href="#"><img src="/local/assets/images/logo.svg" alt=""/>
+                <div class="logo__title">Roz Mary</div>
+            </a><a class="button header-basket" href="#" data-count="1">
+            <svg class="icon">
+                <use xlink:href="/local/assets/images/sprite.svg#shopping-cart"></use>
+            </svg>
+        </a>
+        </div>
+    </div>
+</header>
+<div class="menu-mobile">
+    <div class="menu-mobile-wrapper">
+        <div class="menu-mobile-title js-close-menu">Меню</div>
+        <div class="search">
+            <div class="search__icon">
+                <svg class="icon">
+                    <use xlink:href="/local/assets/images/sprite.svg#search"></use>
+                </svg>
+            </div>
+            <input class="search__input" type="text" placeholder="Поиск по товарам"/>
+        </div>
+        <ul class="menu">
+            <li class="menu__item"><a class="menu__link" href="#">О бренде</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Вся косметика</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Уход для сухой кожи</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Уход для нормальной кожи</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Для жирной и проблемной кожи</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Антивозрастной уход</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Очищение и тонизация</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Кремы и сыворотки</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Маски и пилинги</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Для тела</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Защита от солнца</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Эфирные масла</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Аромабоксы</a></li>
+            <li class="menu__item menu__item--mobile"><a class="menu__link" href="#"> <strong>Доставка и оплата</strong></a>
+            </li>
+        </ul>
+        <div class="contacts-head"><a class="contacts-phone" href="tel:+79851448085">
+            <svg class="icon">
+                <use xlink:href="/local/assets/images/sprite.svg#phone"></use>
+            </svg>
+            <span>+7 (985) 144-80-85</span></a>
+            <div class="contacts-date"><strong>Режим работы: </strong>С 10:00 до 19:00 по МСК</div>
+        </div>
+        <a class="button-login w-100" href="">Кабинет партнера</a>
+        <div class="mb-2"><a class="consultation mb-1" href="#">
+            <div class="consultation__icon">
+                <svg class="icon">
+                    <use xlink:href="/local/assets/images/sprite.svg#whatsapp"></use>
+                </svg>
+            </div>
+            <span>Консультация по подбору косметики</span></a><a class="consultation"
+                                                                 href="mailto:info@rozmary.shop">
+            <div class="consultation__icon">
+                <svg class="icon">
+                    <use xlink:href="/local/assets/images/sprite.svg#email"></use>
+                </svg>
+            </div>
+            <span>E-mail: info@rozmary.shop</span></a></div>
+        <div class="social mb-3">
+            <div class="social__title">Присоединяйтесь <br>в социальных сетях:</div>
+            <ul class="social-list">
+                <li class="social__item"><a class="social__link" href="#">
+                    <svg class="icon">
+                        <use xlink:href="/local/assets/images/sprite.svg#vk"></use>
+                    </svg>
+                </a></li>
+                <li class="social__item"><a class="social__link" href="#">
+                    <svg class="icon">
+                        <use xlink:href="/local/assets/images/sprite.svg#inst"></use>
+                    </svg>
+                </a></li>
+                <li class="social__item"><a class="social__link" href="#">
+                    <svg class="icon">
+                        <use xlink:href="/local/assets/images/sprite.svg#tg"></use>
+                    </svg>
+                </a></li>
+            </ul>
+        </div>
+        <ul class="mobile-links">
+            <li class="mobile-links__item"><a class="mobile-links__link" href="">Политика конфиденциальности</a></li>
+            <li class="mobile-links__item"><a class="mobile-links__link" href="">Пользовательское соглашение</a></li>
+            <li class="mobile-links__item"><a class="mobile-links__link" href=""> Публичная оферта</a></li>
+        </ul>
+        <div class="row">
+            <div class="col">
+                <div class="copy-text">
+                    <div class="d-block">© 2023 Roz Mary</div>
+                    <span>Все права защищены.</span>
+                </div>
+            </div>
+            <div class="col-auto"><a class="button up-menu">
+                <svg class="icon">
+                    <use xlink:href="/local/assets/images/sprite.svg#arrow-next"></use>
+                </svg>
+            </a></div>
+        </div>
+    </div>
+</div>
+<main class="main">
+    <div class="container">    <nav class="breadcrumbs">
+        <a href="/" class="breadcrumbs__item">
+            Главная страница
+        </a>
+        <span class="breadcrumb__del"><svg xmlns="http://www.w3.org/2000/svg" width="5" height="10" fill="none"><path stroke="#3E3E3E" d="M.5 1 4 5.5l-3.5 4"/></svg></span>
+        <span class="breadcrumbs__item breadcrumbs__item_last">
+                    О бренде
+                </span>
+    </nav>
+        <script type="application/ld+json" data-skip-moving="true">{"@context":"https:\/\/schema.org\/","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"\u0413\u043b\u0430\u0432\u043d\u0430\u044f \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0430","item":"http:\/\/rozmary.local\/"},{"@type":"ListItem","position":2,"name":"\u041e \u0431\u0440\u0435\u043d\u0435\u0434\u0435","item":"http:\/\/rozmary.local\/brand\/"}]}</script>
+    </div>
+    <div class="order">
+        <div class="container">
+            <div class="order-top">
+                <h1 class="page__title order__title">Оформление заказа</h1>
+            </div>
+            <div class="order-wrapper">
+                <div class="order-left">
+                    <div class="order-section order-props">
+                        <div class="order-section__title">1. Персональные данные</div>
+                        <div class="order-props-fields">
+                            <div class="order-props-group order-props-group-FIRST_NAME">
+                                <input type="text" class="order-props__control" placeholder="">
+                                <div class="order-props__placeholder">Имя</div>
+                            </div>
+                            <div class="order-props-group order-props-group-LAST_NAME">
+                                <input type="text" class="order-props__control" placeholder="">
+                                <div class="order-props__placeholder">Фамилия</div>
+                            </div>
+                            <div class="order-props-group order-props-group-PHONE">
+                                <input type="text" class="order-props__control" placeholder="">
+                                <div class="order-props__placeholder">Телефон</div>
+                            </div>
+                            <div class="order-props-group order-props-group-EMAIL">
+                                <input type="text" class="order-props__control" placeholder="">
+                                <div class="order-props__placeholder">Email</div>
+                            </div>
+                            <div class="order-props-group order-props-group-SUBSCRIBE">
+                                <label for="soa-property-18" class="order-props-checkbox">
+                                    <input type="hidden" name="ORDER_PROP_18" value="N">
+                                    <input type="checkbox" name="ORDER_PROP_18" id="soa-property-18" value="Y">
+                                    <span class="order-props-checkbox__marker">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24"><path fill="#fff"
+                                                                       d="M20.293 5.293 9 16.586l-4.293-4.293-1.414 1.414L9 19.414 21.707 6.707l-1.414-1.414z"/></svg>
+                                    </span>
+                                    <span class="order-props-checkbox__text">Присылайте мне новости и предложения</span>
+                                </label>
+                            </div>
+                            <div class="order-props-group order-props-group-textarea order-props-group-ORDER_DESCRIPTION">
+                                <textarea id="orderDescription" cols="4"
+                                          class="order-props__control order-props__control_textarea"
+                                          placeholder=""
+                                          name="ORDER_DESCRIPTION"></textarea>
+                                <div class="order-props__placeholder">Добавить примечание к заказу</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-section order-delivery">
+                        <div class="order-section__title">2. Варианты покупки</div>
+                        <div class="order-delivery-list">
+                            <div class="order-delivery-list-item bx-selected">
+                                <input id="ID_DELIVERY_ID_5" name="DELIVERY_ID" type="checkbox"
+                                       class="order-item-hidden" value="5">
+                                <div class="order-delivery-list-item-image">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="56" height="44" fill="none"
+                                         viewBox="0 0 56 44">
+                                        <path fill="#D3D3D3"
+                                              d="M55.755 1.267c0-.7-.568-1.267-1.267-1.267H41.816a1.267 1.267 0 1 0 0 2.534h10.621L47.37 12.672h-8.571L32.812.7 32.8.707A1.255 1.255 0 0 0 31.68 0H1.267C.567 0 0 .566 0 1.267c0 .204.06.39.146.56l-.012.007 6.202 12.404v27.578c0 .7.567 1.267 1.267 1.267h40.549c.7 0 1.267-.566 1.267-1.267V14.238l6.203-12.404-.012-.007c.085-.17.145-.356.145-.56ZM3.317 2.534h27.579l5.068 10.138H8.386L3.317 2.534Zm33.43 36.748c0 .7-.567 1.267-1.267 1.267H8.87V15.206h26.61c.7 0 1.268.566 1.268 1.267v22.809Zm10.138 1.267h-6.336c-.7 0-1.267-.566-1.267-1.267V16.473c0-.7.568-1.267 1.267-1.267h6.336v25.343Z"/>
+                                    </svg>
+                                </div>
+                                <div class="order-delivery-list-item__text">Самовывоз</div>
+                            </div>
+                            <div class="order-delivery-list-item">
+                                <input id="ID_DELIVERY_ID_5" name="DELIVERY_ID" type="checkbox"
+                                       class="order-item-hidden" value="5">
+                                <div class="order-delivery-list-item-image">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="58" height="43" fill="none"
+                                         viewBox="0 0 58 43">
+                                        <path fill="#D3D3D3"
+                                              d="M57.697 24.704c0-.27-.1-.53-.278-.732l-9.747-11.005a1.103 1.103 0 0 0-.826-.372h-7.994c-.61 0-1.104-.494-1.104-1.103V9.074c0-.609-.494-1.103-1.103-1.103h-9.641a1.16 1.16 0 0 1-1.016-.628C23.668 2.979 19.074 0 13.798 0 6.19 0 0 6.19 0 13.797c0 5.046 2.723 9.466 6.775 11.872.351.209.58.58.58.99v9.125c0 .61.493 1.104 1.103 1.104h3.085c.592 0 1.068.47 1.19 1.05.608 2.887 3.175 5.062 6.241 5.062 3.067 0 5.634-2.175 6.242-5.063.122-.578.598-1.05 1.19-1.05h12.239c.591 0 1.068.471 1.19 1.05C40.443 40.825 43.01 43 46.076 43s5.633-2.175 6.241-5.063c.122-.578.599-1.05 1.19-1.05h3.086c.61 0 1.103-.493 1.103-1.103v-11.08ZM2.404 13.797c0-6.282 5.11-11.393 11.393-11.393s11.394 5.11 11.394 11.393-5.111 11.394-11.394 11.394c-6.282 0-11.393-5.111-11.393-11.394Zm16.57 26.8A3.98 3.98 0 0 1 15 36.62a3.98 3.98 0 0 1 3.975-3.975 3.98 3.98 0 0 1 3.976 3.975 3.98 3.98 0 0 1-3.976 3.975Zm16.37-6.113h-9.582c-.466 0-.874-.298-1.083-.715a6.385 6.385 0 0 0-5.704-3.527 6.385 6.385 0 0 0-5.705 3.527c-.209.417-.617.715-1.083.715h-1.325c-.61 0-1.104-.494-1.104-1.104v-4.896c0-.742.72-1.273 1.448-1.134.84.16 1.706.245 2.591.245 7.608 0 13.797-6.19 13.797-13.797 0-.69-.05-1.367-.149-2.03-.105-.713.42-1.393 1.141-1.393h5.655c.609 0 1.103.494 1.103 1.104v23.005Zm10.732 6.112a3.98 3.98 0 0 1-3.975-3.975 3.98 3.98 0 0 1 3.975-3.975 3.98 3.98 0 0 1 3.975 3.975 3.98 3.98 0 0 1-3.975 3.975Zm9.216-7.216c0 .61-.494 1.104-1.103 1.104h-1.325c-.467 0-.875-.298-1.084-.715a6.385 6.385 0 0 0-5.704-3.527 6.385 6.385 0 0 0-5.704 3.527c-.21.417-.617.715-1.084.715h-.436c-.61 0-1.104-.494-1.104-1.104V16.103c0-.61.494-1.104 1.104-1.104h6.912c.316 0 .616.136.826.372l8.425 9.513c.179.202.277.462.277.732v7.764Z"/>
+                                        <path fill="#D3D3D3"
+                                              d="M18.634 16.498a1.104 1.104 0 0 0-.398-1.509l-2.689-1.566A1.103 1.103 0 0 1 15 12.47V6.182c0-.61-.494-1.104-1.103-1.104h-.197c-.61 0-1.104.494-1.104 1.104v7.67c0 .392.209.755.548.953l3.883 2.262a1.103 1.103 0 0 0 1.508-.398l.1-.17Z"/>
+                                    </svg>
+                                </div>
+                                <div class="order-delivery-list-item__text">Доставка</div>
+                            </div>
+                        </div>
+                        <div class="order-delivery-company">
+                            <div class="order-delivery-company-text-container">
+                                <div class="order-delivery-company__star">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="none"
+                                         viewBox="0 0 8 8">
+                                        <path fill="#9484C1"
+                                              d="m4 0 .898 2.764h2.906l-2.35 1.708.897 2.764L4 5.528 1.649 7.236l.898-2.764L.196 2.764h2.906L4 0Z"/>
+                                    </svg>
+                                </div>
+                                <div class="order-delivery-company__text">
+                                    Пункт самовывоза находится по адресу Москва, Проспект Вернадского, 41с1. Офис 428.
+                                    (м.
+                                    Проспект Вернадского, первый вагон из центра). Самовывоз по Москве - бесплатно.
+                                </div>
+                            </div>
+                            <div class="order-delivery-company-list">
+                                <div class="order-delivery-company-list-item bx-selected">
+                                    <div class="order-delivery-company-list-item__marker"></div>
+                                    <div class="order-delivery-company-list-item__text">Московская область (СДЭК) - 350
+                                        руб
+                                    </div>
+                                </div>
+                                <div class="order-delivery-company-list-item">
+                                    <div class="order-delivery-company-list-item__marker"></div>
+                                    <div class="order-delivery-company-list-item__text">Почта России</div>
+                                </div>
+                                <div class="order-delivery-company-list-item">
+                                    <div class="order-delivery-company-list-item__marker"></div>
+                                    <div class="order-delivery-company-list-item__text">Курьер (в пределах МКАД) - 350
+                                        руб.
+                                    </div>
+                                </div>
+                                <div class="order-delivery-company-list-item">
+                                    <div class="order-delivery-company-list-item__marker"></div>
+                                    <div class="order-delivery-company-list-item__text">Курьером (за МКАД) - 500 руб.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-section order-delivery-props">
+                        <div class="order-section__title">3. Адрес доставки</div>
+                        <div class="order-props-fields">
+                            <div class="order-props-group order-props-group-LOCATION">
+                                <div class="order-props-select">
+                                    <select type="text" class="order-props__control order-props-select__control">
+                                        <option value="Россия">Россия</option>
+                                        <option value="Беларусь>">Беларусь</option>
+                                        <option value="Казахстан">Казахстан</option>
+                                    </select>
+                                    <div class="order-props-select__icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" fill="none"
+                                             viewBox="0 0 18 10">
+                                            <path stroke="#3E3E3E" d="m1 1 8 8 8-8"/>
+                                        </svg>
+                                    </div>
+                                    <div class="order-props__placeholder">Местоположение</div>
+                                </div>
+                            </div>
+                            <div class="order-props-group order-props-group_has-error order-props-group-LOCATION">
+                                <input type="text" class="order-props__control" placeholder="">
+                                <div class="order-props__placeholder">Местоположение</div>
+                            </div>
+                            <div class="order-props-group order-props-group_has-error order-props-group-CITY">
+                                <input type="text" class="order-props__control" placeholder="">
+                                <div class="order-props__placeholder">Город</div>
+                                <div class="order-props__error">Введите ваш Город</div>
+                            </div>
+                            <div class="order-props-group order-props-group-ADDRESS">
+                                <input type="text" class="order-props__control" placeholder="">
+                                <div class="order-props__placeholder">Адрес (улица, дом)</div>
+                                <div class="order-props__error">Введите ваш Адрес</div>
+                            </div>
+                            <div class="order-props-group order-props-group-FLAT">
+                                <input type="text" class="order-props__control" placeholder="">
+                                <div class="order-props__placeholder">Квартира</div>
+                            </div>
+                            <div class="order-props-group order-props-group_has-error order-props-group-BUILDING">
+                                <input type="text" class="order-props__control" placeholder="">
+                                <div class="order-props__placeholder">Офис, стр.</div>
+                                <div class="order-props__error">Введите ваш Офис</div>
+                            </div>
+                            <div class="order-props-group order-props-group-ZIP">
+                                <input type="text" class="order-props__control" placeholder="">
+                                <div class="order-props__placeholder">П. Индекс</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-section order-payment">
+                        <div class="order-section__title">4. Оплата</div>
+                        <div class="order-section__note">Все транзакции защищены и зашифрованы.</div>
+                        <div class="order-error">
+                            <div class="order-error__icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
+                                     viewBox="0 0 20 20">
+                                    <path fill="#E80000"
+                                          d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20Zm0-18.667a8.667 8.667 0 1 0 0 17.334 8.667 8.667 0 0 0 0-17.334Z"/>
+                                    <path fill="#E80000"
+                                          d="M10 15.338a1.333 1.333 0 1 1 0-2.666 1.333 1.333 0 0 1 0 2.666ZM10 11.333a.667.667 0 0 1-.666-.666v-6a.667.667 0 0 1 1.333 0v6a.667.667 0 0 1-.666.666Z"/>
+                                </svg>
+                            </div>
+                            <div class="order-error__text">
+                                Ваши платежные реквизиты не удалось подтвердить.<br> Проверьте данные вашей карты и повторите попытку.
+                            </div>
+                        </div>
+                        <div class="order-payment-list">
+                            <div class="order-payment-list-item bx-selected">
+                                <div class="order-payment-list-item__marker"></div>
+                                <div class="order-payment-list-item__text">
+                                    Банковская карта
+                                </div>
+                            </div>
+                            <div class="order-payment-list-item">
+                                <div class="order-payment-list-item__marker"></div>
+                                <div class="order-payment-list-item__text">
+                                    Наличный расчет
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-payment-fields">
+                            <div class="order-props-group order-props-group-CARD_NUMBER">
+                                <input type="text" class="order-props__control" placeholder="">
+                                <div class="order-props__placeholder">Номер карты</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="15" fill="none"
+                                     viewBox="0 0 12 15">
+                                    <path fill="#939393"
+                                          d="M9.844 14.063H1.406A1.406 1.406 0 0 1 0 12.655V7.5a1.406 1.406 0 0 1 1.406-1.406h8.438A1.406 1.406 0 0 1 11.25 7.5v5.156a1.406 1.406 0 0 1-1.406 1.406ZM1.406 7.03a.469.469 0 0 0-.468.469v5.156a.469.469 0 0 0 .468.469h8.438a.469.469 0 0 0 .469-.469V7.5a.469.469 0 0 0-.47-.469H1.407Z"/>
+                                    <path fill="#939393"
+                                          d="M9.375 7.031h-7.5a.469.469 0 0 1-.469-.468V3.75A3.75 3.75 0 0 1 5.156 0h.938a3.75 3.75 0 0 1 3.75 3.75v2.813a.469.469 0 0 1-.469.468Zm-7.031-.937h6.562V3.75A2.813 2.813 0 0 0 6.094.937h-.938A2.813 2.813 0 0 0 2.344 3.75v2.344Z"/>
+                                </svg>
+                            </div>
+                            <div class="order-props-group order-props-group-CARD_HOLDER">
+                                <input type="text" class="order-props__control" placeholder="">
+                                <div class="order-props__placeholder">Владелец карты</div>
+                            </div>
+                            <div class="order-props-group order-props-group-CARD_EXPIRE">
+                                <input type="text" class="order-props__control" placeholder="">
+                                <div class="order-props__placeholder">Срок дейтсвия (MM / YY)</div>
+                            </div>
+                            <div class="order-props-group order-props-group-CARD_CCV">
+                                <input type="text" class="order-props__control" placeholder="">
+                                <div class="order-props__placeholder">Код безопасности</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-section order-bottom">
+                        <button class="button button_filled-bg button_filled-violet order__button" type="button">
+                            <img src="/local/assets/images/button-long.png" alt="" class="button__bg" loading="lazy">
+                            <span class="button__text">Оформить</span>
+                        </button>
+                        <div class="order-uc">
+                            <label for="USER_CONSENT" class="order-props-checkbox">
+                                <input type="hidden" name="USER_CONSENT" value="N">
+                                <input type="checkbox" name="USER_CONSENT" id="USER_CONSENT" value="Y">
+                                <span class="order-props-checkbox__marker">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24"><path fill="#fff"
+                                                                       d="M20.293 5.293 9 16.586l-4.293-4.293-1.414 1.414L9 19.414 21.707 6.707l-1.414-1.414z"/></svg>
+                                    </span>
+                                <span class="order-props-checkbox__text">Я согласен(а) с правилами и условиями и <a
+                                        href="#">политикой конфиденциальности</a></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-right">
+                    <div class="order-total">
+                        <div class="order-total-top">
+                            <div class="order-total__title">Корзина</div>
+                            <a href="#" class="order-total__link">Изменить</a>
+                        </div>
+                        <div class="order-total-list">
+                            <div class="order-total-item">
+                                <div class="order-total-item-image">
+                                    <img src="/local/assets/images/catalog/image1.png"
+                                         alt="Пептидный омолаживающий крем для кожи вокруг глаз против морщин и отеков "
+                                         class="order-total-item-image__img">
+                                </div>
+                                <div class="order-total-item-content">
+                                    <div class="order-total-item__title">Пептидный омолаживающий крем для кожи вокруг
+                                        глаз против морщин и отеков
+                                    </div>
+                                    <div class="order-total-item__volume">
+                                        Объем: 15мл
+                                    </div>
+                                    <div class="order-total-item__amount">
+                                        Количество: <b>1 упаковка</b>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-total-item">
+                                <div class="order-total-item-image">
+                                    <img src="/local/assets/images/catalog/image1.png"
+                                         alt="Пептидный омолаживающий крем для кожи вокруг глаз против морщин и отеков "
+                                         class="order-total-item-image__img">
+                                </div>
+                                <div class="order-total-item-content">
+                                    <div class="order-total-item__title">Пептидный омолаживающий крем для кожи вокруг
+                                        глаз против морщин и отеков
+                                    </div>
+                                    <div class="order-total-item__volume">
+                                        Объем: 15мл
+                                    </div>
+                                    <div class="order-total-item__amount">
+                                        Количество: <b>1 упаковка</b>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-total-sum">
+                            <div class="order-total-sum-item">
+                                <div class="order-total-sum-item__title">Промежуточный итог</div>
+                                <div class="order-total-sum-item__value">1 590 ₽</div>
+                            </div>
+                            <div class="order-total-sum-item bx-highlighted">
+                                <div class="order-total-sum-item__title">Доставка</div>
+                                <div class="order-total-sum-item__value">Бесплатно</div>
+                            </div>
+                            <div class="order-total-sum-item order-total-sum-item_total">
+                                <div class="order-total-sum-item__title">Итоговая цена</div>
+                                <div class="order-total-sum-item__value">1 590 ₽</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="/local/assets/local/bundle-common/bundle-common.js" defer data-skip-moving="true"></script>
+    <script src="/local/assets/local/bundle-order/bundle-order.js" defer data-skip-moving="true"></script>
+</main>
+</body>
+</html>

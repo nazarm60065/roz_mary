@@ -4,11 +4,12 @@ $pageConfig = [
     'title' => 'Увлажняющий тоник для восстановления микробиома и рН кожи',
     'inlineCss' => [
         '/local/assets/local/bundle-common/bundle-common.css',
+        '/local/assets/local/bundle-forms/bundle-forms.css',
         '/local/assets/local/bundle-catalog-detail/bundle-catalog-detail.css',
     ],
     'deferJs' => [
         '/local/assets/local/bundle-common/bundle-common.js',
-        '/local/assets/local/bundle-catalog-detail/bundle-catalog-detail.js',
+        '/local/assets/local/bundle-forms/bundle-forms.js',
     ],
     'notShowNavChain' => false,
 ]; ?>

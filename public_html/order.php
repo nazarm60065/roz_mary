@@ -26,16 +26,20 @@ $pageConfig = [
                         <div class="order-section__title">1. Персональные данные</div>
                         <div class="order-props-fields">
                             <div class="order-props-group order-props-group-FIRST_NAME">
-                                <input type="text" class="order-props__control" placeholder="Имя">
+                                <input type="text" class="order-props__control" placeholder="">
+                                <div class="order-props__placeholder">Имя</div>
                             </div>
                             <div class="order-props-group order-props-group-LAST_NAME">
-                                <input type="text" class="order-props__control" placeholder="Фамилия">
+                                <input type="text" class="order-props__control" placeholder="">
+                                <div class="order-props__placeholder">Фамилия</div>
                             </div>
                             <div class="order-props-group order-props-group-PHONE">
-                                <input type="text" class="order-props__control" placeholder="Телефон">
+                                <input type="text" class="order-props__control" placeholder="">
+                                <div class="order-props__placeholder">Телефон</div>
                             </div>
                             <div class="order-props-group order-props-group-EMAIL">
-                                <input type="text" class="order-props__control" placeholder="Email">
+                                <input type="text" class="order-props__control" placeholder="">
+                                <div class="order-props__placeholder">Email</div>
                             </div>
                             <div class="order-props-group order-props-group-SUBSCRIBE">
                                 <label for="soa-property-18" class="order-props-checkbox">
@@ -49,11 +53,12 @@ $pageConfig = [
                                     <span class="order-props-checkbox__text">Присылайте мне новости и предложения</span>
                                 </label>
                             </div>
-                            <div class="order-props-group order-props-group-ORDER_DESCRIPTION">
+                            <div class="order-props-group order-props-group-textarea order-props-group-ORDER_DESCRIPTION">
                                 <textarea id="orderDescription" cols="4"
                                           class="order-props__control order-props__control_textarea"
-                                          placeholder="Добавить примечание к заказу"
+                                          placeholder=""
                                           name="ORDER_DESCRIPTION"></textarea>
+                                <div class="order-props__placeholder">Добавить примечание к заказу</div>
                             </div>
                         </div>
                     </div>
@@ -88,16 +93,42 @@ $pageConfig = [
                             </div>
                         </div>
                         <div class="order-delivery-company">
-                            <div class="order-delivery-company__star">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="none"
-                                     viewBox="0 0 8 8">
-                                    <path fill="#9484C1"
-                                          d="m4 0 .898 2.764h2.906l-2.35 1.708.897 2.764L4 5.528 1.649 7.236l.898-2.764L.196 2.764h2.906L4 0Z"/>
-                                </svg>
+                            <div class="order-delivery-company-text-container">
+                                <div class="order-delivery-company__star">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="none"
+                                         viewBox="0 0 8 8">
+                                        <path fill="#9484C1"
+                                              d="m4 0 .898 2.764h2.906l-2.35 1.708.897 2.764L4 5.528 1.649 7.236l.898-2.764L.196 2.764h2.906L4 0Z"/>
+                                    </svg>
+                                </div>
+                                <div class="order-delivery-company__text">
+                                    Пункт самовывоза находится по адресу Москва, Проспект Вернадского, 41с1. Офис 428.
+                                    (м.
+                                    Проспект Вернадского, первый вагон из центра). Самовывоз по Москве - бесплатно.
+                                </div>
                             </div>
-                            <div class="order-delivery-company__text">
-                                Пункт самовывоза находится по адресу Москва, Проспект Вернадского, 41с1. Офис 428. (м.
-                                Проспект Вернадского, первый вагон из центра). Самовывоз по Москве - бесплатно.
+                            <div class="order-delivery-company-list">
+                                <div class="order-delivery-company-list-item bx-selected">
+                                    <div class="order-delivery-company-list-item__marker"></div>
+                                    <div class="order-delivery-company-list-item__text">Московская область (СДЭК) - 350
+                                        руб
+                                    </div>
+                                </div>
+                                <div class="order-delivery-company-list-item">
+                                    <div class="order-delivery-company-list-item__marker"></div>
+                                    <div class="order-delivery-company-list-item__text">Почта России</div>
+                                </div>
+                                <div class="order-delivery-company-list-item">
+                                    <div class="order-delivery-company-list-item__marker"></div>
+                                    <div class="order-delivery-company-list-item__text">Курьер (в пределах МКАД) - 350
+                                        руб.
+                                    </div>
+                                </div>
+                                <div class="order-delivery-company-list-item">
+                                    <div class="order-delivery-company-list-item__marker"></div>
+                                    <div class="order-delivery-company-list-item__text">Курьером (за МКАД) - 500 руб.
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -105,28 +136,67 @@ $pageConfig = [
                         <div class="order-section__title">3. Адрес доставки</div>
                         <div class="order-props-fields">
                             <div class="order-props-group order-props-group-LOCATION">
-                                <input type="text" class="order-props__control" placeholder="Местоположение">
+                                <div class="order-props-select">
+                                    <select type="text" class="order-props__control order-props-select__control">
+                                        <option value="Россия">Россия</option>
+                                        <option value="Беларусь>">Беларусь</option>
+                                        <option value="Казахстан">Казахстан</option>
+                                    </select>
+                                    <div class="order-props-select__icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" fill="none"
+                                             viewBox="0 0 18 10">
+                                            <path stroke="#3E3E3E" d="m1 1 8 8 8-8"/>
+                                        </svg>
+                                    </div>
+                                    <div class="order-props__placeholder">Местоположение</div>
+                                </div>
                             </div>
-                            <div class="order-props-group order-props-group-CITY">
-                                <input type="text" class="order-props__control" placeholder="Город">
+                            <div class="order-props-group order-props-group_has-error order-props-group-LOCATION">
+                                <input type="text" class="order-props__control" placeholder="">
+                                <div class="order-props__placeholder">Местоположение</div>
+                            </div>
+                            <div class="order-props-group order-props-group_has-error order-props-group-CITY">
+                                <input type="text" class="order-props__control" placeholder="">
+                                <div class="order-props__placeholder">Город</div>
+                                <div class="order-props__error">Введите ваш Город</div>
                             </div>
                             <div class="order-props-group order-props-group-ADDRESS">
-                                <input type="text" class="order-props__control" placeholder="Адрес (улица, дом)">
+                                <input type="text" class="order-props__control" placeholder="">
+                                <div class="order-props__placeholder">Адрес (улица, дом)</div>
+                                <div class="order-props__error">Введите ваш Адрес</div>
                             </div>
                             <div class="order-props-group order-props-group-FLAT">
-                                <input type="text" class="order-props__control" placeholder="Квартира">
+                                <input type="text" class="order-props__control" placeholder="">
+                                <div class="order-props__placeholder">Квартира</div>
                             </div>
-                            <div class="order-props-group order-props-group-BUILDING">
-                                <input type="text" class="order-props__control" placeholder="Офис, стр.">
+                            <div class="order-props-group order-props-group_has-error order-props-group-BUILDING">
+                                <input type="text" class="order-props__control" placeholder="">
+                                <div class="order-props__placeholder">Офис, стр.</div>
+                                <div class="order-props__error">Введите ваш Офис</div>
                             </div>
                             <div class="order-props-group order-props-group-ZIP">
-                                <input type="text" class="order-props__control" placeholder="П. Индекс">
+                                <input type="text" class="order-props__control" placeholder="">
+                                <div class="order-props__placeholder">П. Индекс</div>
                             </div>
                         </div>
                     </div>
                     <div class="order-section order-payment">
                         <div class="order-section__title">4. Оплата</div>
                         <div class="order-section__note">Все транзакции защищены и зашифрованы.</div>
+                        <div class="order-error">
+                            <div class="order-error__icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
+                                     viewBox="0 0 20 20">
+                                    <path fill="#E80000"
+                                          d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20Zm0-18.667a8.667 8.667 0 1 0 0 17.334 8.667 8.667 0 0 0 0-17.334Z"/>
+                                    <path fill="#E80000"
+                                          d="M10 15.338a1.333 1.333 0 1 1 0-2.666 1.333 1.333 0 0 1 0 2.666ZM10 11.333a.667.667 0 0 1-.666-.666v-6a.667.667 0 0 1 1.333 0v6a.667.667 0 0 1-.666.666Z"/>
+                                </svg>
+                            </div>
+                            <div class="order-error__text">
+                                Ваши платежные реквизиты не удалось подтвердить.<br> Проверьте данные вашей карты и повторите попытку.
+                            </div>
+                        </div>
                         <div class="order-payment-list">
                             <div class="order-payment-list-item bx-selected">
                                 <div class="order-payment-list-item__marker"></div>
@@ -143,21 +213,110 @@ $pageConfig = [
                         </div>
                         <div class="order-payment-fields">
                             <div class="order-props-group order-props-group-CARD_NUMBER">
-                                <input type="text" class="order-props__control" placeholder="Номер карты">
+                                <input type="text" class="order-props__control" placeholder="">
+                                <div class="order-props__placeholder">Номер карты</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="15" fill="none"
+                                     viewBox="0 0 12 15">
+                                    <path fill="#939393"
+                                          d="M9.844 14.063H1.406A1.406 1.406 0 0 1 0 12.655V7.5a1.406 1.406 0 0 1 1.406-1.406h8.438A1.406 1.406 0 0 1 11.25 7.5v5.156a1.406 1.406 0 0 1-1.406 1.406ZM1.406 7.03a.469.469 0 0 0-.468.469v5.156a.469.469 0 0 0 .468.469h8.438a.469.469 0 0 0 .469-.469V7.5a.469.469 0 0 0-.47-.469H1.407Z"/>
+                                    <path fill="#939393"
+                                          d="M9.375 7.031h-7.5a.469.469 0 0 1-.469-.468V3.75A3.75 3.75 0 0 1 5.156 0h.938a3.75 3.75 0 0 1 3.75 3.75v2.813a.469.469 0 0 1-.469.468Zm-7.031-.937h6.562V3.75A2.813 2.813 0 0 0 6.094.937h-.938A2.813 2.813 0 0 0 2.344 3.75v2.344Z"/>
+                                </svg>
                             </div>
                             <div class="order-props-group order-props-group-CARD_HOLDER">
-                                <input type="text" class="order-props__control" placeholder="Владелец карты">
+                                <input type="text" class="order-props__control" placeholder="">
+                                <div class="order-props__placeholder">Владелец карты</div>
                             </div>
                             <div class="order-props-group order-props-group-CARD_EXPIRE">
-                                <input type="text" class="order-props__control" placeholder="Срок дейтсвия (MM / YY)">
+                                <input type="text" class="order-props__control" placeholder="">
+                                <div class="order-props__placeholder">Срок дейтсвия (MM / YY)</div>
                             </div>
                             <div class="order-props-group order-props-group-CARD_CCV">
-                                <input type="text" class="order-props__control" placeholder="Код безопасности">
+                                <input type="text" class="order-props__control" placeholder="">
+                                <div class="order-props__placeholder">Код безопасности</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-section order-bottom">
+                        <button class="button button_filled-bg button_filled-violet order__button" type="button">
+                            <img src="/local/assets/images/button-long.png" alt="" class="button__bg" loading="lazy">
+                            <span class="button__text">Оформить</span>
+                        </button>
+                        <div class="order-uc">
+                            <label for="USER_CONSENT" class="order-props-checkbox">
+                                <input type="hidden" name="USER_CONSENT" value="N">
+                                <input type="checkbox" name="USER_CONSENT" id="USER_CONSENT" value="Y">
+                                <span class="order-props-checkbox__marker">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24"><path fill="#fff"
+                                                                       d="M20.293 5.293 9 16.586l-4.293-4.293-1.414 1.414L9 19.414 21.707 6.707l-1.414-1.414z"/></svg>
+                                    </span>
+                                <span class="order-props-checkbox__text">Я согласен(а) с правилами и условиями и <a
+                                            href="#">политикой конфиденциальности</a></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-right">
+                    <div class="order-total">
+                        <div class="order-total-top">
+                            <div class="order-total__title">Корзина</div>
+                            <a href="#" class="order-total__link">Изменить</a>
+                        </div>
+                        <div class="order-total-list">
+                            <div class="order-total-item">
+                                <div class="order-total-item-image">
+                                    <img src="/local/assets/images/catalog/image1.png"
+                                         alt="Пептидный омолаживающий крем для кожи вокруг глаз против морщин и отеков "
+                                         class="order-total-item-image__img">
+                                </div>
+                                <div class="order-total-item-content">
+                                    <div class="order-total-item__title">Пептидный омолаживающий крем для кожи вокруг
+                                        глаз против морщин и отеков
+                                    </div>
+                                    <div class="order-total-item__volume">
+                                        Объем: 15мл
+                                    </div>
+                                    <div class="order-total-item__amount">
+                                        Количество: <b>1 упаковка</b>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-total-item">
+                                <div class="order-total-item-image">
+                                    <img src="/local/assets/images/catalog/image1.png"
+                                         alt="Пептидный омолаживающий крем для кожи вокруг глаз против морщин и отеков "
+                                         class="order-total-item-image__img">
+                                </div>
+                                <div class="order-total-item-content">
+                                    <div class="order-total-item__title">Пептидный омолаживающий крем для кожи вокруг
+                                        глаз против морщин и отеков
+                                    </div>
+                                    <div class="order-total-item__volume">
+                                        Объем: 15мл
+                                    </div>
+                                    <div class="order-total-item__amount">
+                                        Количество: <b>1 упаковка</b>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-total-sum">
+                            <div class="order-total-sum-item">
+                                <div class="order-total-sum-item__title">Промежуточный итог</div>
+                                <div class="order-total-sum-item__value">1 590 ₽</div>
+                            </div>
+                            <div class="order-total-sum-item bx-highlighted">
+                                <div class="order-total-sum-item__title">Доставка</div>
+                                <div class="order-total-sum-item__value">Бесплатно</div>
+                            </div>
+                            <div class="order-total-sum-item order-total-sum-item_total">
+                                <div class="order-total-sum-item__title">Итоговая цена</div>
+                                <div class="order-total-sum-item__value">1 590 ₽</div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="order-right"></div>
             </div>
         </div>
     </div>

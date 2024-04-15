@@ -13,9 +13,34 @@
   left: 0
   width: 100%
   height: 100%
-  z-index: -1
+  z-index: -2
 
 .button_filled-violet
   color: #fff
   background-color: #998BC4
   background-blend-mode: luminosity, normal
+
+.button_linear-violet
+  color: #9080BF
+  border: 1px solid #9080BF
+
+//+mq(desktop)
+//  .button_filled-violet
+//    position: relative
+//
+//  .button_filled-violet:before
+//    content: ''
+//    position: absolute
+//    width: 100%
+//    height: 100%
+//    top: 0
+//    left: 0
+//    transform: rotate(-45deg)
+//    background: linear-gradient(180deg, #FFFFFF 0%, #D8D4E4 100%)
+//    z-index: -1
+//    animation: smart-animate
+//    animation-delay: 800ms
+//    animation-timing-function: ease-out
+//    animation-duration: 300ms
+//
+//@keyframes smart-animate

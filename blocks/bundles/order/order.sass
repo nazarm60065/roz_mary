@@ -1,18 +1,52 @@
 @import '../../variables/variables'
 @import '../../mixins/mixins'
 
+.order
+  padding: 0 0 60px
+
 .order-wrapper
   border-top: 1px solid #D9D9D9
   padding-top: 16px
 
 
+.order-right
+  margin-top: 40px
+
 .order-section
   margin-bottom: 32px
+  position: relative
+  z-index: 0
+  &:last-child
+    margin-bottom: 0px
 
 .order-section__title
   font-size: 16px
   font-weight: 500
   margin-bottom: 14px
+
+
+.order-section__note
+  font-size: 12px
+  font-weight: 400
+  margin-bottom: 8px
+
+
+.order-error
+  margin: 8px 0
+  font-size: 12px
+  font-weight: 400
+  padding: 20px 16px
+  border: 1px solid #D9D9D9
+  border-radius: 8px
+  background-color: #FFF0EE
+  display: flex
+  gap: 8px
+
+.order-error__icon
+  width: 16px
+  height: 16px
+  flex-shrink: 0
+  +svg
 
 .order-props-fields
   display: flex
@@ -21,6 +55,7 @@
   gap: 8px
 
 .order-props-group
+  position: relative
   width: 100%
 
 .order-props-group-FIRST_NAME,
@@ -32,21 +67,86 @@
 .order-props-group-ZIP
   width: calc(33.33% - 6px)
 
+.order-props-group-CARD_NUMBER .order-props__control
+  padding-right: 40px
+
+.order-props-group-CARD_NUMBER svg
+  position: absolute
+  top: 50%
+  right: 20px
+  margin-top: -6px
+  width: 12px
+  height: 14px
+  pointer-events: none
+  +svg
+
+.order-props-group_has-error .order-props__control
+  border-color: #F91D1D
+
 .order-props__control
   font-family: inherit
+  width: 100%
+  background-color: #fff
+  height: 56px
   font-size: 16px
   font-weight: 400
   border-radius: 8px
   border: 1px solid #D9D9D9
-  padding: 18px 15px 19px 15px
-  &::placeholder
-    font-size: 12px
-    color: #939393
+  padding: 20px 15px 10px 15px
+
+.order-props-select
+  position: relative
+
+.order-props-select__control
+  appearance: none
+  -webkit-appearance: none
+  -moz-appearance: none
+  padding-right: 40px
+
+.order-props-select__control:focus
+  border-color: #998BC4
+  outline: none
+  
+.order-props-select__control:focus + .order-props-select__icon
+  transform: rotate(180deg)
+
+.order-props-select__icon
+  position: absolute
+  width: 16px
+  height: 8px
+  top: 50%
+  right: 16px
+  margin-top: -4px
+  transition: transform $default-transition
+  +svg
+
+.order-props-group_filled .order-props__placeholder,
+.order-props__control:focus+.order-props__placeholder
+  font-size: 12px
+  padding-top: 4px
+
+.order-props__placeholder
+  +absoluteFluid
+  white-space: nowrap
+  pointer-events: none
+  font-size: 12px
+  color: #939393
+  border: 1px solid transparent
+  padding: 20px 15px 19px 15px
+  transition: padding $default-transition, font-size $default-transition, border $default-transition
+
+.order-props-group-textarea
+  margin-top: 8px
 
 .order-props__control_textarea
   height: 96px
   resize: vertical
-  margin-top: 8px
+
+.order-props__error
+  font-size: 10px
+  font-weight: 400
+  color: #F91D1D
+  margin-top: 4px
 
 .order-props-checkbox
   position: relative
@@ -121,7 +221,8 @@
   font-size: 14px
   font-weight: 500
 
-.order-delivery-company
+
+.order-delivery-company-text-container
   background-color: #fff
   padding: 8px 0
   display: flex
@@ -136,30 +237,84 @@
   margin-top: 4px
   +svg
 
-.order-section__note
-  font-size: 12px
+
+.order-delivery-company-list
+  position: relative
+  z-index: 0
+  margin-top: 14px
+  border: 1px solid #D9D9D9
+  border-radius: 8px
+
+.order-delivery-company-list-item
+  position: relative
+  padding: 18px 16px
+  display: flex
+  gap: 8px
+  font-size: 14px
   font-weight: 400
-  margin-bottom: 8px
+  border-bottom: 1px solid #D9D9D9
+  box-shadow: 0 0 1px 0 transparent
+  transition: $default-transition
+  margin-bottom: -1px
+  z-index: 0
+  &:last-child
+    border-bottom: none
+
+.order-delivery-company-list-item.bx-selected
+  box-shadow: 0 0 0 1px  #9484C1
+  border-radius: 8px
+  border-color: transparent
+  background-color: #9484C133
+  z-index: 1
+
+.order-delivery-company-list-item.bx-selected .order-delivery-company-list-item__marker
+  opacity: 1
+  border-color: #9484C1
+  border-width: 5px
+
+.order-delivery-company-list-item__marker
+  margin-top: 2px
+  width: 16px
+  height: 16px
+  border-radius: 50%
+  border: 1px solid #D9D9D9
+  background-color: #fff
+  transition: $default-transition
+
+
+.order-payment-list
+  position: relative
+  z-index: 0
+  position: relative
+  border: 1px solid #D9D9D9
+  border-radius: 8px
+  z-index: 1
   
 .order-payment-list-item
+  position: relative
+  z-index: 0
   padding: 18px 16px
-  border: 1px solid #D9D9D9
+  border-bottom: 1px solid #D9D9D9
   background-color: #fff
   display: flex
   gap: 8px
   font-size: 14px
   font-weight: 400
-  border-radius: 8px
-  margin-bottom: 16px
+  box-shadow: 0 0 0 1px transparent
   transition: $default-transition
   &:last-child
-    margin-bottom: 0
+    border-bottom: none
 
 .order-payment-list-item.bx-selected
-  border-color: #9484C1
+  box-shadow: 0 0 0 1px #9484C1
+  border-radius: 8px
+  border-color: transparent
   background-color: #9484C133
+  z-index: 1
 
 .order-payment-list-item.bx-selected .order-payment-list-item__marker
+  opacity: 1
+  border-width: 5px
   border-color: #9484C1
 
 .order-payment-list-item__marker
@@ -167,11 +322,278 @@
   width: 16px
   height: 16px
   border-radius: 50%
-  border: 5px solid #D9D9D9
+  border: 1px solid #D9D9D9
   background-color: #fff
   transition: $default-transition
 
 .order-payment-fields
   background-color: #F8F8F8
-  padding: 16px
+  margin-top: -8px
+  padding: 24px 16px 16px 16px
   border-radius: 0 0 10px 10px
+  display: flex
+  flex-wrap: wrap
+  gap: 8px
+
+.order__button
+  font-size: 16px
+  font-weight: 500
+  padding: 17px 17px 18px
+  width: 100%
+
+.order-uc
+  position: relative
+  margin-top: 8px
+  width: 100%
+
+  a
+    border-bottom: 1px solid
+    transition: $default-transition
+    &:hover
+      border-bottom-color: transparent
+
+.order-total
+  background-color: #F8F8F8
+  border-radius: 16px
+  padding: 16px
+
+.order-total-top
+  display: flex
+  gap: 10px
+  align-items: center
+  justify-content: space-between
+  margin-bottom: 32px
+
+.order-total__title
+  font-size: 16px
+  font-weight: 500
+
+.order-total__link
+  color: #9484C1
+  font-size: 12px
+  font-weight: 400
+  border-bottom: 1px solid
+  transition: $default-transition
+  &:hover
+    border-bottom-color: transparent
+
+.order-total-item
+  display: flex
+  gap: 14px
+  padding: 8px 0
+
+.order-total-item-image
+  width: 124px
+  height: 100px
+  background-color: #fff
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 5px
+  flex-shrink: 0
+  border-radius: 8px
+  overflow: hidden
+
+.order-total-item-image__img
+  width: 100%
+  height: 100%
+  object-fit: contain
+
+.order-total-item-content
+  display: flex
+  flex-direction: column
+
+.order-total-item__title
+  font-size: 12px
+  font-weight: 400
+
+.order-total-item__volume
+  margin-top: 8px
+  margin-bottom: 8px
+  font-size: 8px
+  font-weight: 400
+  color: $main-color40
+
+.order-total-item__amount
+  margin-top: auto
+  font-size: 8px
+  font-weight: 400
+  b
+    font-weight: bold
+
+
+.order-total-sum
+  margin-top: 16px
+
+.order-total-sum-item
+  display: flex
+  justify-content: space-between
+  gap: 10px
+  margin-top: 8px
+  font-size: 14px
+  font-weight: 400
+
+.order-total-sum-item__value
+  font-weight: 500
+
+.order-total-sum-item.bx-highlighted .order-total-sum-item__value
+  color: #54AA46
+
+.order-total-sum-item_total
+  margin-top: 16px
+  font-size: 18px
+
++mq(desktop)
+  .order
+    padding-bottom: 128px
+
+  .order__title
+    margin-bottom: 56px
+
+  .order-wrapper
+    padding-top: 24px
+    display: flex
+    gap: 40px
+
+  .order-left
+    max-width: 614px
+
+  .order-right
+    width: 677px
+    flex-shrink: 0
+    position: relative
+    margin-top: 50px
+
+  .order-section
+    margin-bottom: 40px
+
+  .order-section__title
+    font-size: 20px
+    margin-bottom: 24px
+
+  .order-section__note
+    margin-bottom: 16px
+    font-size: 14px
+
+
+  .order-error
+    font-size: 16px
+    gap: 10px
+    padding: 22px 24px
+    margin: 16px 0
+
+  .order-error__icon
+    width: 20px
+    height: 20px
+
+  .order-props__control
+    height: 67px
+
+  .order-props__placeholder
+    font-size: 16px
+    padding-top: 22px
+
+  .order-props__error
+    font-size: 14px
+
+  .order-delivery-list
+    padding: 24px
+    gap: 16px
+
+  .order-delivery-list-item
+    min-height: 185px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+  .order-delivery-list-item-image
+    width: 86px
+    height: 64px
+    margin-bottom: 16px
+
+  .order-delivery-list-item__text
+    font-size: 18px
+
+  .order-delivery-company-text-container
+    font-size: 14px
+
+  .order-delivery-company-list
+    margin-top: 24px
+
+  .order-delivery-company-list-item
+    padding: 22px 24px
+    font-size: 16px
+    border-radius: 0
+
+  .order-delivery-company-list-item:first-child
+    border-radius: 8px 8px 0 0
+
+  .order-delivery-company-list-item:last-child
+    border-radius: 0 0 8px 8px
+
+
+  .order-payment-list-item
+    padding: 22px 24px
+    font-size: 16px
+    border-radius: 0
+
+  .order-payment-list-item:last-child
+    border-radius: 0 0 8px 8px
+
+  .order-payment-list-item:first-child
+    border-radius: 8px 8px 0 0
+
+  .order-payment-fields
+    padding: 22px
+    border-radius: 0 0 10px 10px
+    gap: 10px
+
+  .order-props-group-CARD_EXPIRE,
+  .order-props-group-CARD_CCV
+    width: calc(50% - 5px)
+
+  .order-props-group-CARD_NUMBER svg
+    width: 14px
+    height: 16px
+    margin-top: -7px
+    right: 24px
+
+
+  .order-bottom
+    margin-top: 56px
+
+  .order-total
+    position: sticky
+    top: 60px
+    padding: 24px
+
+  .order-total-top
+    margin-bottom: 16px
+
+  .order-total__title
+    font-size: 20px
+
+  .order-total__link
+    font-size: 16px
+
+  .order-total-item
+    gap: 16px
+
+  .order-total-item__title
+    font-size: 14px
+
+  .order-total-item__volume
+    font-size: 12px
+
+  .order-total-item__amount
+    font-size: 12px
+
+  .order-total-sum
+    margin-top: 32px
+
+  .order-total-sum-item
+    font-size: 18px
+
+  .order-total-sum-item_total
+    font-size: 24px
