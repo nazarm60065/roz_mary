@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
       wrapperCounterShow: 'catalog-card-to-cart_show-counter'
     }
   })
-  fbInitAll()
   catalogSlider()
 
   check()

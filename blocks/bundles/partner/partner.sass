@@ -44,6 +44,7 @@
   padding: 13px 120px 13px 15px
   color: #326FDC
   border-radius: 8px
+  height: 50px
 
 .partner-share__copy
   position: absolute
@@ -141,9 +142,13 @@
   .partner-share__control
     padding: 9px 15px
     font-size: 24px
+    height: 55px
 
   .partner-share__copy
     font-size: 16px
+    transition: color $default-transition
+    &:hover
+      color: $light-violet-color
 
   .partner-info
     font-size: 18px

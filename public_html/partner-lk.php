@@ -33,8 +33,8 @@ $pageConfig = [
             <div class="partner-share">
                 <div class="partner-share__title">Ваша партнерская ссылка:</div>
                 <div class="partner-share-group">
-                    <input type="text" class="partner-share__control" value="https://rozmary.shop/?pk=8447">
-                    <button class="partner-share__copy" type="button">Копировать</button>
+                    <input type="text" class="partner-share__control" value="https://rozmary.shop/?pk=8447" id="copy-control">
+                    <button class="partner-share__copy" type="button" data-clipboard-target="#copy-control">Копировать</button>
                 </div>
             </div>
             <div class="partner-info">
