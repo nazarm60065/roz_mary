@@ -19,6 +19,7 @@
 .brand-catalog-consul__link
   font-size: 14px
   border-bottom: 1px solid
+  color: $main-color90
   em
     font-style: normal
     color: #9484C1
@@ -30,6 +31,7 @@
   bottom: 80%
   left: 50%
   transform: translateX(-50%)
+  cursor: pointer
 
 .brand-catalog-hint:hover .brand-catalog-hint__text
   +show
@@ -123,10 +125,11 @@
 
 +mq(desktop)
   .brand-catalog
-    margin: 128px 0
+    margin: 100px 0
 
   .brand-catalog-consul__link
     font-size: 16px
+    line-height: 1.5
 
   .brand-catalog-hint-marker
     width: 56px

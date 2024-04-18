@@ -13,6 +13,7 @@
 .brand-delivery-card-gallery:not(.brand-delivery-card-gallery_one-item)
   display: grid
   grid-template-columns: repeat(2, minmax(0, 1fr))
+  gap: 1px
 
 .brand-delivery-card-gallery_one-item .brand-delivery-card-gallery-item-wrapper
   padding-bottom: 75.53%
@@ -25,6 +26,11 @@
   +absoluteFluid
   overflow: hidden
   border-radius: 16px
+
+.brand-delivery-card-gallery-item__picture
+  display: block
+  width: 100%
+  height: 100%
 
 .brand-delivery-card-gallery-item__img
   width: 100%
@@ -42,16 +48,24 @@
 
 +mq(tablet)
   .brand-delivery-list
-    margin-top: 48px
     grid-template-columns: repeat(2, minmax(0, 1fr))
 
   .brand-delivery-card-gallery_one-item .brand-delivery-card-gallery-item-wrapper
-    padding-bottom: 58.35%
+    padding-bottom: 65%
 
   .brand-delivery-card-gallery-item-wrapper
-    padding-bottom: 116.65%
+    padding-bottom: 130%
 
 +mq(desktop)
   .brand-delivery-list
-    margin-top: 56px
-    gap: 24px
+    gap: 16px
+
+  .brand-delivery-card-content
+    padding: 24px
+
+  .brand-delivery-card__title
+    font-size: 22px
+
+  .brand-delivery-card__text
+    font-size: 18px
+    margin-top: 16px

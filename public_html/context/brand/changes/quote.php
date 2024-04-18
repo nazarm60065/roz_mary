@@ -3,7 +3,7 @@
 return [
     'quote' => [
         'image' => [
-            'src' => '/local/assets/images/person.jpg',
+            'src' => '/local/assets/images/person.png',
             'width' => 90,
             'height' => 90,
             'alt' => 'Цитата',

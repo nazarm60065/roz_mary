@@ -10,7 +10,7 @@
   display: flex
   gap: 12px
   color: $second-color
-  transition: color $default-transition, background-color $default-transition
+  transition: background-color $default-transition
   position: relative
   z-index: 0
 
@@ -28,6 +28,9 @@
 .brand-notice-card:hover
   background-color: transparent
   color: #fff
+
+.brand-notice-card:hover .brand-notice-card__text
+  color: rgba(255, 255, 255, 0.9)
 
 .brand-notice-card-image-container
   width: 43.4%
@@ -53,10 +56,12 @@
 
 .brand-notice-card__title
   font-weight: 500
+  transition: color $default-transition
 
 .brand-notice-card__text
   font-size: 14px
   margin-top: 6px
+  transition: color $default-transition
 
 +mq(tablet)
   .brand-notice-list
@@ -69,20 +74,20 @@
 +mq(desktop)
   .brand-notice-list
     grid-template-columns: repeat(2, minmax(0, 1fr))
-    gap: 24px
+    gap: 16px
 
   .brand-notice-card
-    gap: 24px
+    gap: 16px
 
   .brand-notice-card-image-container
     width: 212px
 
   .brand-notice-card-content
-    padding: 24px 24px 32px 0
+    padding: 24px 24px 24px 0
 
   .brand-notice-card__title
-    font-size: 24px
+    font-size: 20px
 
   .brand-notice-card__text
-    margin-top: 16px
-    font-size: 18px
+    margin-top: 12px
+    font-size: 16px

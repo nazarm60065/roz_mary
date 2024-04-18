@@ -56,20 +56,20 @@ export class BrandPoints {
       ],
       'desktop': [
         {
-          top: -21,
-          left: 2,
-        },
-        {
-          top: -7,
+          top: -25,
           left: 1,
         },
         {
-          top: 7.5,
-          left: -6,
+          top: -11,
+          left: 2.5,
         },
         {
-          top: 22,
-          left: -1.5,
+          top: 12.5,
+          left: -3.5,
+        },
+        {
+          top: 26,
+          left: -3.5,
         },
       ],
     }

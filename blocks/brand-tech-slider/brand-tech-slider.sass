@@ -1,6 +1,5 @@
 .brand-tech-slider
   margin: 32px 0
-  height: 314px
   padding-bottom: 36px
   border-radius: 8px
   overflow: unset
@@ -20,6 +19,7 @@
   height: 4px
   border-radius: 4px
   background-color: #F4F4F4
+  margin-top: 32px
 
   .swiper-pagination-progressbar-fill
     display: block
@@ -33,12 +33,10 @@
 
 +mq(tablet)
   .brand-tech-slider
-    height: 607px
-    margin: 48px 0
+    height: 470px
 
   .brand-tech-slide
-    height: 571px
+    height: 470px
 
-+mq(desktop)
-  .brand-tech-slider
-    margin: 56px 0px
+  .brand-tech-slider .brand-tech-progress
+    display: none

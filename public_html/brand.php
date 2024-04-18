@@ -123,7 +123,7 @@ $pageConfig = [
                                             srcset="/local/assets/images/brand/changes/bg-mobile.png">
                                     <source media="(max-width: 1279px)"
                                             srcset="/local/assets/images/brand/changes/bg-tablet.png">
-                                    <img src="/local/assets/images/brand/changes/bg.png"
+                                    <img src="/local/assets/images/brand/changes/bg.jpg"
                                          alt="Восстановление липидного барьера и борьба с обезвоженностью"
                                          class="brand-points__img" loading="lazy">
                                 </picture>

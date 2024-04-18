@@ -7,10 +7,10 @@ export default () => {
     if (slider) {
         const swiper = new Swiper(slider, {
             modules: [Pagination, FreeMode],
-            freeMode: {
+            /*freeMode: {
                 enabled: true,
                 momentum: false,
-            },
+            },*/
             spaceBetween: 16,
             slidesPerView: 'auto',
             watchOverflow: true,
