@@ -207,7 +207,7 @@
   .brand-top
     padding-top: 24px
     &:before
-      height: calc(100% - 127px)
+      height: calc(100% - 136px)
       background: #E2E0E5 radial-gradient(72.11% 141.82% at 54.01% 74.52%, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0) 100%)
 
   .brand-top-inner
@@ -216,7 +216,7 @@
 
   .brand-top__title
     position: absolute
-    top: -36px
+    top: -24px
     right: -10px
     z-index: -2
     font-size: 200px
@@ -303,3 +303,74 @@
     left: 0
     margin-top: -28px
     margin-left: 0
+
++mq(wide-screen)
+  .brand-top
+    padding-top: 40px
+    &:before
+      height: calc(100% - 183px)
+
+  .brand-top-inner
+    min-height: 738px
+    position: relative
+
+  .brand-top__title
+    top: -30px
+    right: -14px
+    font-size: 246px
+
+  .brand-top__slogan
+    top: 224px
+    font-size: 44px
+    line-height: 64px
+
+  .brand-top-cards
+    padding-bottom: 64px
+    width: 353px
+
+  .brand-top-card
+    min-height: 308px
+
+  .brand-top-card:nth-child(odd)
+    border-radius: 16px
+    background: rgba(0, 0, 0, 0.08) radial-gradient(92.32% 92.32% at 103.68% -19.29%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%)
+
+    &:before
+      content: ""
+      +absoluteFluid()
+      z-index: -1
+      background-color: #5A5276
+
+  .brand-top-card:nth-child(odd) .brand-top-card__text
+    color: #fff
+
+  .brand-top-card:nth-child(odd) .brand-top-card__text
+    background-color: #FFFFFF1A
+
+  .brand-top-card:nth-child(even) .brand-top-card__text
+    background-color: #EFEFEF80
+
+  .brand-top-card-image-wrapper
+    +absoluteFluid
+    margin: 0
+    padding: 0
+
+  .brand-top-card__text
+    flex-grow: 0
+    padding: 16px
+    font-size: 18px
+    margin: 16px
+
+  .brand-top-person-image-wrapper
+    left: auto
+    right: 0
+    margin: 0
+    width: 1245px
+    height: 802px
+
+  .brand-top-person-content
+    top: 487px
+    padding: 24px
+
+  .brand-top-person__text
+    margin-top: 8px

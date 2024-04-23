@@ -14,6 +14,10 @@
 @import "../../brand-points/brand-points"
 @import "../../brand-catalog/brand-catalog"
 
+.header
+  margin-bottom: 32px
+  padding-bottom: 0
+
 .brand-section
   margin: 60px 0
 
@@ -67,9 +71,10 @@
 
   .brand-tech__text_bottom
     max-width: 457px
-    text-align: right
     margin-left: auto
 
+  .brand-tech-slider
+    padding-bottom: 0
 
   +mq(desktop, max)
     .brand-skin
@@ -101,6 +106,7 @@
     left: 24px
     right: auto
     bottom: auto
+
 
   .brand-delivery
     margin: 100px 0
@@ -135,4 +141,39 @@
     width: 322px
     padding: 17px 17px 18px
     flex-shrink: 0
+
++mq(wide-screen)
+  .brand__title
+    font-size: 44px
+
+  .brand-skin .brand-quote
+    width: 413px
+    top: 32px
+    left: 32px
+
+  .brand-skin-stick
+    top: 80px
+
+  .brand-tech__text
+    font-size: 18px
+
+  .brand-tech__text_bottom
+    max-width: 514px
+
+  .brand-delivery-top
+    gap: 72px
+
+  .brand-delivery .brand-quote
+    max-width: none
+
+  .brand-delivery__title
+    margin-bottom: 0
+    flex-shrink: 0
+    max-width: 50%
+
+  .brand-notice-top
+    margin-bottom: 40px
+
+  .brand-notice__title
+    max-width: none
 
