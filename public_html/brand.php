@@ -57,7 +57,9 @@ $pageConfig = [
                                   clip-rule="evenodd"/>
                         </svg>
                     </div>
-                    <div class="brand-catalog-consul__text">Консультация <br class="mobile-hide tablet-show">по подбору косметики</div>
+                    <div class="brand-catalog-consul__text">Консультация <br class="mobile-hide tablet-show">по подбору
+                        косметики
+                    </div>
                 </div>
                 <div class="brand-catalog-consul-link-container">
                     <a href="#" class="brand-catalog-consul__link">
@@ -122,63 +124,314 @@ $pageConfig = [
                                     <source media="(max-width: 767px)"
                                             srcset="/local/assets/images/brand/changes/bg-mobile.png">
                                     <source media="(max-width: 1279px)"
-                                            srcset="/local/assets/images/brand/changes/bg-tablet.png">
+                                            srcset="/local/assets/images/brand/changes/bg.jpg">
                                     <img src="/local/assets/images/brand/changes/bg.jpg"
                                          alt="Восстановление липидного барьера и борьба с обезвоженностью"
                                          class="brand-points__img" loading="lazy">
                                 </picture>
                                 <div class="brand-points-list">
                                     <div class="brand-point">
-                                        <div class="brand-point-marker">
-                                            <div class="brand-point-marker__icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="4" height="10"
-                                                     viewBox="0 0 4 10"
-                                                     fill="none">
-                                                    <path fill="#5A5276"
-                                                          d="m.779 9.348.985-.772-.213-4.332-1.162-.76 2.7-.458-.483 5.035 1.35.841-3.177.446Zm2.379-7.84a.871.871 0 0 1-.075.357c-.05.109-.12.207-.208.295-.087.084-.188.15-.3.2a1.02 1.02 0 0 1-.735 0 .97.97 0 0 1-.295-.2 1.084 1.084 0 0 1-.201-.295.871.871 0 0 1-.076-.358c0-.13.025-.249.076-.358a.97.97 0 0 1 .2-.295A.884.884 0 0 1 1.84.66a.946.946 0 0 1 .734 0 .956.956 0 0 1 .509.49c.05.108.075.227.075.357Z"/>
+                                        <div class="brand-point-inner">
+                                            <div class="brand-point-bg">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="507" height="387"
+                                                     fill="none" viewBox="0 0 507 387">
+                                                    <path stroke="#fff" stroke-width="2"
+                                                          d="M354.009 229.299 62.76 374.213c-10.502 5.225-23.016-1.505-24.446-13.149L2.544 69.731c-.674-5.479 4.274-9.977 9.665-8.786l330.079 72.893c46.968 10.372 54.785 74.034 11.721 95.461Z"/>
+                                                    <circle cx="333" cy="183" r="49" stroke="#fff" stroke-width="2"/>
+                                                </svg>
+                                            </div>
+                                            <div class="brand-point-marker-wrapper">
+                                                <div class="brand-point-marker">
+                                                    <div class="brand-point-marker__icon">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="4" height="10"
+                                                             viewBox="0 0 4 10"
+                                                             fill="none">
+                                                            <path fill="#5A5276"
+                                                                  d="m.779 9.348.985-.772-.213-4.332-1.162-.76 2.7-.458-.483 5.035 1.35.841-3.177.446Zm2.379-7.84a.871.871 0 0 1-.075.357c-.05.109-.12.207-.208.295-.087.084-.188.15-.3.2a1.02 1.02 0 0 1-.735 0 .97.97 0 0 1-.295-.2 1.084 1.084 0 0 1-.201-.295.871.871 0 0 1-.076-.358c0-.13.025-.249.076-.358a.97.97 0 0 1 .2-.295A.884.884 0 0 1 1.84.66a.946.946 0 0 1 .734 0 .956.956 0 0 1 .509.49c.05.108.075.227.075.357Z"/>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="brand-comp">
+                                            <div class="brand-comp-item brand-comp-item_before brand-comp_active">
+                                                <div class="brand-comp__label brand-comp__label_before">До</div>
+                                                <img src="/local/assets/images/brand/changes/skin/image1.jpg"
+                                                     alt="До"
+                                                     class="brand-comp-image__img">
+                                            </div>
+                                            <div class="brand-comp-item brand-comp-item_after">
+                                                <div class="brand-comp__label brand-comp__label_after">После</div>
+                                                <img src="/local/assets/images/brand/changes/skin/image2.jpg"
+                                                     alt="После" class="brand-comp-image__img">
+                                            </div>
+                                            <div class="brand-comp__cursor">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="52"
+                                                     fill="none" viewBox="0 0 35 52">
+                                                    <path fill="#fff"
+                                                          d="M13.772 0h8.084v52h-8.084zM34.791 26l-9.701-5.63v11.26L34.79 26ZM.837 26l9.701-5.63v11.26L.837 26Z"/>
                                                 </svg>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="brand-point">
-                                        <div class="brand-point-marker">
-                                            <div class="brand-point-marker__icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="4" height="10"
-                                                     viewBox="0 0 4 10"
-                                                     fill="none">
-                                                    <path fill="#5A5276"
-                                                          d="m.779 9.348.985-.772-.213-4.332-1.162-.76 2.7-.458-.483 5.035 1.35.841-3.177.446Zm2.379-7.84a.871.871 0 0 1-.075.357c-.05.109-.12.207-.208.295-.087.084-.188.15-.3.2a1.02 1.02 0 0 1-.735 0 .97.97 0 0 1-.295-.2 1.084 1.084 0 0 1-.201-.295.871.871 0 0 1-.076-.358c0-.13.025-.249.076-.358a.97.97 0 0 1 .2-.295A.884.884 0 0 1 1.84.66a.946.946 0 0 1 .734 0 .956.956 0 0 1 .509.49c.05.108.075.227.075.357Z"/>
+                                        <div class="brand-point-inner">
+                                            <div class="brand-point-bg">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="487" height="356"
+                                                     fill="none" viewBox="0 0 487 356">
+                                                    <path stroke="#fff" stroke-width="2"
+                                                          d="m145.127 220.924 300.648 124.245c10.841 4.48 22.855-3.107 23.469-14.822l15.362-293.118c.289-5.513-4.961-9.655-10.255-8.092L150.16 124.88c-46.129 13.623-49.486 77.675-5.033 96.045Z"/>
+                                                    <circle cx="163" cy="173" r="49" stroke="#fff" stroke-width="2"/>
+                                                </svg>
+                                            </div>
+                                            <div class="brand-point-marker-wrapper">
+                                                <div class="brand-point-marker">
+                                                    <div class="brand-point-marker__icon">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="4" height="10"
+                                                             viewBox="0 0 4 10"
+                                                             fill="none">
+                                                            <path fill="#5A5276"
+                                                                  d="m.779 9.348.985-.772-.213-4.332-1.162-.76 2.7-.458-.483 5.035 1.35.841-3.177.446Zm2.379-7.84a.871.871 0 0 1-.075.357c-.05.109-.12.207-.208.295-.087.084-.188.15-.3.2a1.02 1.02 0 0 1-.735 0 .97.97 0 0 1-.295-.2 1.084 1.084 0 0 1-.201-.295.871.871 0 0 1-.076-.358c0-.13.025-.249.076-.358a.97.97 0 0 1 .2-.295A.884.884 0 0 1 1.84.66a.946.946 0 0 1 .734 0 .956.956 0 0 1 .509.49c.05.108.075.227.075.357Z"/>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="brand-comp">
+                                            <div class="brand-comp-item brand-comp-item_before brand-comp_active">
+                                                <div class="brand-comp__label brand-comp__label_before">До</div>
+                                                <img src="/local/assets/images/brand/changes/skin/image3.jpg"
+                                                     alt="До"
+                                                     class="brand-comp-image__img">
+                                            </div>
+                                            <div class="brand-comp-item brand-comp-item_after">
+                                                <div class="brand-comp__label brand-comp__label_after">После</div>
+                                                <img src="/local/assets/images/brand/changes/skin/image4.jpg"
+                                                     alt="После" class="brand-comp-image__img">
+                                            </div>
+                                            <div class="brand-comp__cursor">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="52"
+                                                     fill="none" viewBox="0 0 35 52">
+                                                    <path fill="#fff"
+                                                          d="M13.772 0h8.084v52h-8.084zM34.791 26l-9.701-5.63v11.26L34.79 26ZM.837 26l9.701-5.63v11.26L.837 26Z"/>
                                                 </svg>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="brand-point">
-                                        <div class="brand-point-marker">
-                                            <div class="brand-point-marker__icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="4" height="10"
-                                                     viewBox="0 0 4 10"
-                                                     fill="none">
-                                                    <path fill="#5A5276"
-                                                          d="m.779 9.348.985-.772-.213-4.332-1.162-.76 2.7-.458-.483 5.035 1.35.841-3.177.446Zm2.379-7.84a.871.871 0 0 1-.075.357c-.05.109-.12.207-.208.295-.087.084-.188.15-.3.2a1.02 1.02 0 0 1-.735 0 .97.97 0 0 1-.295-.2 1.084 1.084 0 0 1-.201-.295.871.871 0 0 1-.076-.358c0-.13.025-.249.076-.358a.97.97 0 0 1 .2-.295A.884.884 0 0 1 1.84.66a.946.946 0 0 1 .734 0 .956.956 0 0 1 .509.49c.05.108.075.227.075.357Z"/>
+                                        <div class="brand-point-inner">
+                                            <div class="brand-point-bg">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="507" height="387"
+                                                     fill="none" viewBox="0 0 507 387">
+                                                    <path stroke="#fff" stroke-width="2"
+                                                          d="M354.009 157.145c43.063 21.427 35.247 85.088-11.721 95.46l-317.655 70.15c-11.455 2.53-21.97-7.028-20.54-18.672L39.866 12.75c.672-5.479 6.561-8.646 11.504-6.187l302.64 150.582Z"/>
+                                                    <circle cx="334" cy="203" r="49" stroke="#fff" stroke-width="2"/>
+                                                </svg>
+                                            </div>
+                                            <div class="brand-point-marker-wrapper">
+                                                <div class="brand-point-marker">
+                                                    <div class="brand-point-marker__icon">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="4" height="10"
+                                                             viewBox="0 0 4 10"
+                                                             fill="none">
+                                                            <path fill="#5A5276"
+                                                                  d="m.779 9.348.985-.772-.213-4.332-1.162-.76 2.7-.458-.483 5.035 1.35.841-3.177.446Zm2.379-7.84a.871.871 0 0 1-.075.357c-.05.109-.12.207-.208.295-.087.084-.188.15-.3.2a1.02 1.02 0 0 1-.735 0 .97.97 0 0 1-.295-.2 1.084 1.084 0 0 1-.201-.295.871.871 0 0 1-.076-.358c0-.13.025-.249.076-.358a.97.97 0 0 1 .2-.295A.884.884 0 0 1 1.84.66a.946.946 0 0 1 .734 0 .956.956 0 0 1 .509.49c.05.108.075.227.075.357Z"/>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="brand-comp">
+                                            <div class="brand-comp-item brand-comp-item_before brand-comp_active">
+                                                <div class="brand-comp__label brand-comp__label_before">До</div>
+                                                <img src="/local/assets/images/brand/changes/skin/image5.jpg"
+                                                     alt="До"
+                                                     class="brand-comp-image__img">
+                                            </div>
+                                            <div class="brand-comp-item brand-comp-item_after">
+                                                <div class="brand-comp__label brand-comp__label_after">После</div>
+                                                <img src="/local/assets/images/brand/changes/skin/image6.jpg"
+                                                     alt="После" class="brand-comp-image__img">
+                                            </div>
+                                            <div class="brand-comp__cursor">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="52"
+                                                     fill="none" viewBox="0 0 35 52">
+                                                    <path fill="#fff"
+                                                          d="M13.772 0h8.084v52h-8.084zM34.791 26l-9.701-5.63v11.26L34.79 26ZM.837 26l9.701-5.63v11.26L.837 26Z"/>
                                                 </svg>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="brand-point">
-                                        <div class="brand-point-marker">
-                                            <div class="brand-point-marker__icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="4" height="10"
-                                                     viewBox="0 0 4 10"
-                                                     fill="none">
-                                                    <path fill="#5A5276"
-                                                          d="m.779 9.348.985-.772-.213-4.332-1.162-.76 2.7-.458-.483 5.035 1.35.841-3.177.446Zm2.379-7.84a.871.871 0 0 1-.075.357c-.05.109-.12.207-.208.295-.087.084-.188.15-.3.2a1.02 1.02 0 0 1-.735 0 .97.97 0 0 1-.295-.2 1.084 1.084 0 0 1-.201-.295.871.871 0 0 1-.076-.358c0-.13.025-.249.076-.358a.97.97 0 0 1 .2-.295A.884.884 0 0 1 1.84.66a.946.946 0 0 1 .734 0 .956.956 0 0 1 .509.49c.05.108.075.227.075.357Z"/>
+                                        <div class="brand-point-inner">
+                                            <div class="brand-point-bg">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="529" height="423"
+                                                     fill="none" viewBox="0 0 529 423">
+                                                    <path stroke="#fff" stroke-width="2"
+                                                          d="m160.597 238.191 277.51 169.747c10.007 6.121 23.06.507 25.499-10.968l61.027-287.106c1.147-5.4-3.389-10.312-8.863-9.596l-335.177 43.848c-47.693 6.239-61.028 68.977-19.996 94.075Z"/>
+                                                    <circle cx="185" cy="194" r="49" stroke="#fff" stroke-width="2"/>
+                                                </svg>
+                                            </div>
+                                            <div class="brand-point-marker-wrapper">
+                                                <div class="brand-point-marker">
+                                                    <div class="brand-point-marker__icon">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="4" height="10"
+                                                             viewBox="0 0 4 10"
+                                                             fill="none">
+                                                            <path fill="#5A5276"
+                                                                  d="m.779 9.348.985-.772-.213-4.332-1.162-.76 2.7-.458-.483 5.035 1.35.841-3.177.446Zm2.379-7.84a.871.871 0 0 1-.075.357c-.05.109-.12.207-.208.295-.087.084-.188.15-.3.2a1.02 1.02 0 0 1-.735 0 .97.97 0 0 1-.295-.2 1.084 1.084 0 0 1-.201-.295.871.871 0 0 1-.076-.358c0-.13.025-.249.076-.358a.97.97 0 0 1 .2-.295A.884.884 0 0 1 1.84.66a.946.946 0 0 1 .734 0 .956.956 0 0 1 .509.49c.05.108.075.227.075.357Z"/>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="brand-comp">
+                                            <div class="brand-comp-item brand-comp-item_before brand-comp_active">
+                                                <div class="brand-comp__label brand-comp__label_before">До</div>
+                                                <img src="/local/assets/images/brand/changes/skin/image7.jpg"
+                                                     alt="До"
+                                                     class="brand-comp-image__img">
+                                            </div>
+                                            <div class="brand-comp-item brand-comp-item_after">
+                                                <div class="brand-comp__label brand-comp__label_after">После</div>
+                                                <img src="/local/assets/images/brand/changes/skin/image8.jpg"
+                                                     alt="После" class="brand-comp-image__img">
+                                            </div>
+                                            <div class="brand-comp__cursor">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="52"
+                                                     fill="none" viewBox="0 0 35 52">
+                                                    <path fill="#fff"
+                                                          d="M13.772 0h8.084v52h-8.084zM34.791 26l-9.701-5.63v11.26L34.79 26ZM.837 26l9.701-5.63v11.26L.837 26Z"/>
                                                 </svg>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <?= $mustache->render('brand-points-slider', include $_SERVER['DOCUMENT_ROOT'] . '/context/brand/changes/slider.php') ?>
+                            <div class="brand-points-slider swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="brand-points-slide swiper-slide">
+                                        <div class="brand-points-slide-image-container">
+                                            <div class="brand-points-slide-image-wrapper">
+                                                <div class="brand-comp">
+                                                    <div class="brand-comp-item brand-comp-item_before brand-comp_active">
+                                                        <div class="brand-comp__label brand-comp__label_before">До</div>
+                                                        <img src="/local/assets/images/brand/changes/skin/image1.jpg"
+                                                             alt="До"
+                                                             class="brand-comp-image__img">
+                                                    </div>
+                                                    <div class="brand-comp-item brand-comp-item_after">
+                                                        <div class="brand-comp__label brand-comp__label_after">После
+                                                        </div>
+                                                        <img src="/local/assets/images/brand/changes/skin/image2.jpg"
+                                                             alt="После" class="brand-comp-image__img">
+                                                    </div>
+                                                    <div class="brand-comp__cursor">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="52"
+                                                             fill="none" viewBox="0 0 35 52">
+                                                            <path fill="#fff"
+                                                                  d="M13.772 0h8.084v52h-8.084zM34.791 26l-9.701-5.63v11.26L34.79 26ZM.837 26l9.701-5.63v11.26L.837 26Z"/>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="brand-points-slide__text">
+                                            Осветление пигментации и выравнивание тона кожи
+                                        </div>
+                                    </div>
+                                    <div class="brand-points-slide swiper-slide">
+                                        <div class="brand-points-slide-image-container">
+                                            <div class="brand-points-slide-image-wrapper">
+                                                <div class="brand-comp">
+                                                    <div class="brand-comp-item brand-comp-item_before brand-comp_active">
+                                                        <div class="brand-comp__label brand-comp__label_before">До</div>
+                                                        <img src="/local/assets/images/brand/changes/skin/image3.jpg"
+                                                             alt="До"
+                                                             class="brand-comp-image__img">
+                                                    </div>
+                                                    <div class="brand-comp-item brand-comp-item_after">
+                                                        <div class="brand-comp__label brand-comp__label_after">После
+                                                        </div>
+                                                        <img src="/local/assets/images/brand/changes/skin/image4.jpg"
+                                                             alt="После" class="brand-comp-image__img">
+                                                    </div>
+                                                    <div class="brand-comp__cursor">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="52"
+                                                             fill="none" viewBox="0 0 35 52">
+                                                            <path fill="#fff"
+                                                                  d="M13.772 0h8.084v52h-8.084zM34.791 26l-9.701-5.63v11.26L34.79 26ZM.837 26l9.701-5.63v11.26L.837 26Z"/>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="brand-points-slide__text">
+                                            Повышение плотности кожи и коррекция мелких морщинок
+                                        </div>
+                                    </div>
+                                    <div class="brand-points-slide swiper-slide">
+                                        <div class="brand-points-slide-image-container">
+                                            <div class="brand-points-slide-image-wrapper">
+                                                <div class="brand-comp">
+                                                    <div class="brand-comp-item brand-comp-item_before brand-comp_active">
+                                                        <div class="brand-comp__label brand-comp__label_before">До</div>
+                                                        <img src="/local/assets/images/brand/changes/skin/image5.jpg"
+                                                             alt="До"
+                                                             class="brand-comp-image__img">
+                                                    </div>
+                                                    <div class="brand-comp-item brand-comp-item_after">
+                                                        <div class="brand-comp__label brand-comp__label_after">После
+                                                        </div>
+                                                        <img src="/local/assets/images/brand/changes/skin/image6.jpg"
+                                                             alt="После" class="brand-comp-image__img">
+                                                    </div>
+                                                    <div class="brand-comp__cursor">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="52"
+                                                             fill="none" viewBox="0 0 35 52">
+                                                            <path fill="#fff"
+                                                                  d="M13.772 0h8.084v52h-8.084zM34.791 26l-9.701-5.63v11.26L34.79 26ZM.837 26l9.701-5.63v11.26L.837 26Z"/>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="brand-points-slide__text">
+                                            Очищение кожи, профилактика высыпаний
+                                        </div>
+                                    </div>
+                                    <div class="brand-points-slide swiper-slide">
+                                        <div class="brand-points-slide-image-container">
+                                            <div class="brand-points-slide-image-wrapper">
+                                                <div class="brand-comp">
+                                                    <div class="brand-comp-item brand-comp-item_before brand-comp_active">
+                                                        <div class="brand-comp__label brand-comp__label_before">До</div>
+                                                        <img src="/local/assets/images/brand/changes/skin/image7.jpg"
+                                                             alt="До"
+                                                             class="brand-comp-image__img">
+                                                    </div>
+                                                    <div class="brand-comp-item brand-comp-item_after">
+                                                        <div class="brand-comp__label brand-comp__label_after">После
+                                                        </div>
+                                                        <img src="/local/assets/images/brand/changes/skin/image8.jpg"
+                                                             alt="После" class="brand-comp-image__img">
+                                                    </div>
+                                                    <div class="brand-comp__cursor">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="52"
+                                                             fill="none" viewBox="0 0 35 52">
+                                                            <path fill="#fff"
+                                                                  d="M13.772 0h8.084v52h-8.084zM34.791 26l-9.701-5.63v11.26L34.79 26ZM.837 26l9.701-5.63v11.26L.837 26Z"/>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="brand-points-slide__text">
+                                            Восстановление липидного барьера и борьба с обезвоженностью
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -38,38 +38,56 @@ export class BrandPoints {
       ],
       'tablet': [
         {
-          top: -4,
-          left: 0,
+          top: -26,
+          left: 1,
         },
         {
-          top: -2,
-          left: 0,
+          top: -12,
+          left: 2.6,
         },
         {
-          top: 19,
-          left: 0,
+          top: 27,
+          left: -2.4,
         },
         {
-          top: 4,
-          left: 0,
+          top: 12.5,
+          left: -2.2,
         },
       ],
       'desktop': [
         {
-          top: -25,
+          top: -26,
           left: 1,
         },
         {
-          top: -11,
-          left: 2.5,
+          top: -12,
+          left: 2.6,
+        },
+        {
+          top: 27,
+          left: -2.4,
         },
         {
           top: 12.5,
-          left: -3.5,
+          left: -2.2,
+        },
+      ],
+      'wide-screen': [
+        {
+          top: -20,
+          left: -1,
         },
         {
-          top: 26,
-          left: -3.5,
+          top: -8,
+          left: 5.1,
+        },
+        {
+          top: 21,
+          left: -4.7,
+        },
+        {
+          top: 7.7,
+          left: 0.2,
         },
       ],
     }
@@ -201,7 +219,9 @@ export class BrandPoints {
     if (this.slider) {
       let screen = 'mobile'
 
-      if (window.innerWidth >= 1280) {
+      if (window.innerWidth >= 1500) {
+        screen = 'wide-screen'
+      } else if (window.innerWidth >= 1280) {
         screen = 'desktop'
       } else if (window.innerWidth >= 768) {
         screen = 'tablet'

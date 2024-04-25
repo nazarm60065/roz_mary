@@ -18,9 +18,6 @@
 
 .brand-point
   position: absolute
-  top: 50%
-  left: 50%
-  transform: translate(-50%, -50%)
 
 .brand-point-marker
   width: 40px
@@ -60,6 +57,11 @@
   top: 60px
 
 +mq(tablet, max)
+  .brand-point
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
   .brand-point:nth-child(1)
     margin-top: -40%
     margin-left: -20%
@@ -76,6 +78,12 @@
     margin-left: -28%
     margin-top: 36%
 
+  .brand-point-image-container
+    display: none
+
+  .brand-point .brand-comp,
+  .brand-point-bg
+    display: none
 
 +mq(tablet)
   .brand-points
@@ -84,21 +92,128 @@
   .brand-points-wrapper
     padding-bottom: 62.23%
 
+  .brand-point
+    width: 334px
+    height: 334px
+    z-index: 0
+    transform: scale(.55)
+
   .brand-point:nth-child(1)
-    margin-top: -20.4%
-    margin-left: -12.1%
+    top: 16px
+    left: 16px
+    transform-origin: top left
+
+  .brand-point:nth-child(1) .brand-point-inner
+    left: 55%
+
+  .brand-point:nth-child(1) .brand-point-bg
+    left: 0
+    bottom: 0
+    width: 500px
+    height: 400px
+
+  .brand-point:nth-child(1) .brand-point-marker-wrapper
+    top: 73px
+    right: 21px
 
   .brand-point:nth-child(2)
-    margin-top: -18.5%
-    margin-left: 11.6%
+    top: 16px
+    right: 16px
+    transform-origin: top right
+
+  .brand-point:nth-child(2) .brand-point-bg
+    right: 0
+    bottom: 0
+    width: 486px
+    height: 355px
+
+  .brand-point:nth-child(2) .brand-point-inner
+    right: 55%
+  .brand-point:nth-child(2) .brand-point-marker-wrapper
+    top: 102px
+    left: 26px
 
   .brand-point:nth-child(3)
-    margin-top: 12.55%
-    margin-left: 12.8%
+    left: 16px
+    bottom: 16px
+    transform-origin: bottom left
+
+  .brand-point:nth-child(3) .brand-point-bg
+    left: -6px
+    top: 6px
+    width: 506px
+    height: 386px
+
+  .brand-point:nth-child(3) .brand-point-inner
+    left: 55%
+
+  .brand-point:nth-child(3) .brand-point-marker-wrapper
+    top: 159px
+    right: 23px
 
   .brand-point:nth-child(4)
-    margin-left: -12.25%
-    margin-top: 20.2%
+    right: 16px
+    bottom: 16px
+    transform-origin: bottom right
+
+  .brand-point:nth-child(4) .brand-point-bg
+    right: -28px
+    bottom: 6px
+    width: 528px
+    height: 422px
+
+  .brand-point:nth-child(4) .brand-point-inner
+    right: 55%
+
+  .brand-point:nth-child(4) .brand-point-marker-wrapper
+    top: 50px
+    left: 35px
+
+  .brand-point-inner
+    position: absolute
+    top: 0
+    bottom: 0
+    width: 400px
+    z-index: -1
+
+  .brand-point-bg
+    position: absolute
+    +svg
+
+  .brand-point-marker-wrapper
+    position: absolute
+    width: 100px
+    height: 100px
+
+
+  .brand-point-marker
+    width: 56px
+    height: 56px
+    padding: 12px
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+  .brand-point-marker__icon
+    width: 28px
+    height: 28px
+    padding: 7px
+
+  .brand-point_active .brand-point-marker
+    width: 72px
+    height: 72px
+    padding: 16px
+
+  .brand-point_active .brand-point-marker__icon
+    width: 36px
+    height: 36px
+    padding: 10px
+
+
+@media screen and (min-width: 900px)
+  .brand-point
+    transform: scale(.6)
 
 +mq(desktop)
   .brand-points
@@ -111,25 +226,25 @@
     padding: 0
     height: 728px
 
-  .brand-point-marker
-    width: 56px
-    height: 56px
-    padding: 12px
+  .brand-point
+    transform: scale(0.82)
 
-  .brand-point-marker__icon
-    width: 28px
-    height: 28px
-    padding: 7px
+  .brand-point:nth-child(1)
+    top: 24px
+    left: 24px
 
-  .brand-point_active .brand-point-marker
-    width: 72px
-    height: 72px
-    padding: 16px
+  .brand-point:nth-child(2)
+    top: 24px
+    right: 24px
 
-  .brand-point_active .brand-point-marker__icon
-    width: 36px
-    height: 36px
-    padding: 10px
+  .brand-point:nth-child(3)
+    left: 24px
+    bottom: 24px
+
+  .brand-point:nth-child(4)
+    right: 24px
+    bottom: 24px
+
 +mq(wide-screen)
   .brand-points
     margin-top: 114px
@@ -137,22 +252,21 @@
   .brand-points-wrapper
     height: 756px
 
-  .brand-point-marker
-    width: 56px
-    height: 56px
-    padding: 12px
+  .brand-point
+    transform: scale(1)
 
-  .brand-point-marker__icon
-    width: 28px
-    height: 28px
-    padding: 7px
+  .brand-point:nth-child(1)
+    top: 32px
+    left: 32px
 
-  .brand-point_active .brand-point-marker
-    width: 72px
-    height: 72px
-    padding: 16px
+  .brand-point:nth-child(2)
+    top: 32px
+    right: 32px
 
-  .brand-point_active .brand-point-marker__icon
-    width: 36px
-    height: 36px
-    padding: 10px
+  .brand-point:nth-child(3)
+    left: 32px
+    bottom: 32px
+
+  .brand-point:nth-child(4)
+    right: 32px
+    bottom: 32px

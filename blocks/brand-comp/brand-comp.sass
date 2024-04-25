@@ -1,0 +1,111 @@
+.brand-comp
+  width: 100%
+  height: 100%
+  border-radius: 50%
+  border: 2px solid #fff
+  position: relative
+  overflow: hidden
+  margin: 0
+  padding: 0
+  pointer-events: auto
+  -ms-touch-action: none
+  z-index: 0
+
+.brand-comp-item
+  +absoluteFluid
+  overflow: hidden
+
+.brand-comp-item_before
+  width: 50%
+  z-index: 1
+
+.brand-comp-image-wrapper
+  width: 100%
+  height: 100%
+
+.brand-comp-image__img
+  width: 100%
+  height: 100%
+  object-fit: cover
+
+.brand-comp__cursor
+  position: absolute
+  top: 0
+  left: 50%
+  bottom: 0
+  margin-left: -17px
+  width: 34px
+  z-index: 2
+  +svg
+
+  path
+    transition: $default-transition
+  
+.brand-comp__cursor:before
+  content: ''
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 50%
+  margin-left: -1px
+  width: 2px
+  background-color: #fff
+  transition: $default-transition
+  z-index: -1
+
+.brand-comp__cursor:hover path,
+.brand-comp__cursor.resize path
+  fill: $light-violet-color
+
+.brand-comp__label
+  position: absolute
+  font-size: 6px
+  padding: 3px
+  font-weight: 500
+  color: #fff
+  border: 1px solid rgba(255, 255, 255, 0.4)
+  text-transform: uppercase
+  border-radius: 4px
+  background: #3029461A
+  backdrop-filter: blur(2px)
+  text-align: center
+
+.brand-comp-item_before .brand-comp__label
+  left: 48px
+  bottom: 16px
+
+.brand-comp-item_after .brand-comp__label
+  top: 16px
+  left: calc(50% + 6px)
+
+
++mq(tablet)
+  .brand-comp__label
+    font-size: 10px
+
++mq(desktop)
+  .brand-comp__label
+    font-size: 14px
+    padding: 5px
+    min-width: 56px
+
+  .brand-comp-item_before .brand-comp__label
+    left: 74px
+    bottom: 24px
+
+  .brand-comp-item_after .brand-comp__label
+    top: 24px
+    left: calc(50% + 6px)
+
++mq(wide-screen)
+  .brand-comp__label
+    font-size: 16px
+    padding: 7px 9px
+
+  .brand-comp-item_before .brand-comp__label
+    left: 104px
+    bottom: 30px
+
+  .brand-comp-item_after .brand-comp__label
+    top: 30px
+    left: calc(50% + 6px)

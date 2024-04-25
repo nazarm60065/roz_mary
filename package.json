@@ -33,6 +33,7 @@
   "license": "MIT",
   "dependencies": {
     "@fancyapps/ui": "^5.0.35",
+    "before-after": "^3.0.0",
     "clipboard": "^2.0.11",
     "inputmask": "^5.0.8",
     "loading-attribute-polyfill": "^2.1.1",

@@ -9,6 +9,7 @@ import brandTechSlider from "../../brand-tech-slider/brand-tech-slider"
 import {BrandChangesList} from "../../brand-changes-list/brand-changes-list"
 import {BrandPoints} from "../../brand-points/brand-points"
 import {BrandCatalogSlider} from "../../brand-catalog-slider/brand-catalog-slider"
+import brandComp from "../../brand-comp/brand-comp"
 
 import './brand.sass'
 
@@ -21,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     new BrandDispensers()
     new BrandChangesList()
     new BrandPoints()
+    brandComp()
 
     if (anchorList.length) {
         anchorList.forEach(anchor => {
