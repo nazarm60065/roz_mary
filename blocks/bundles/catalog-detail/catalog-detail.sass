@@ -10,6 +10,10 @@
 @import '../../catalog-card/catalog-card'
 @import '../../catalog-slider/catalog-slider'
 
+.header
+  margin-bottom: 32px
+  padding-bottom: 0
+
 .catalog-detail
   padding-top: 24px
   padding-bottom: 60px
@@ -124,8 +128,8 @@
 
 +mq(desktop)
   .catalog-detail
-    padding-top: 48px
-    padding-bottom: 128px
+    padding-top: 24px
+    padding-bottom: 100px
 
   .catalog-detail-top
     gap: 40px
@@ -138,28 +142,28 @@
     margin-bottom: 16px
 
   .catalog-detail__label
-    font-size: 18px
+    font-size: 16px
     padding: 5px 15px
 
   .catalog-detail-title-container
     margin-bottom: 32px
 
   .catalog-detail__title
-    font-size: 44px
+    font-size: 40px
 
   .catalog-detail__volume
-    margin-top: 8px
+    margin-top: 16px
     font-size: 16px
 
   .catalog-detail-feature__title
-    font-size: 18px
+    font-size: 16px
     margin-bottom: 8px
 
   .catalog-detail-feature__text
-    font-size: 18px
+    font-size: 16px
 
   .catalog-detail-price-and-counter
-    margin-top: 28px
+    margin-top: 40px
 
   .catalog-detail-price__base
     font-size: 32px
@@ -178,3 +182,31 @@
 
   .catalog-detail__to-cart
     margin-top: 30px
+
++mq(wide-screen)
+  .catalog-detail
+    padding-top: 48px
+    padding-bottom: 128px
+
+  .catalog-detail__label
+    font-size: 18px
+
+  .catalog-detail__title
+    font-size: 44px
+
+  .catalog-detail__volume
+    margin-top: 8px
+    font-size: 16px
+
+  .catalog-detail-feature__title
+    font-size: 18px
+    margin-bottom: 8px
+
+  .catalog-detail-feature__text
+    font-size: 18px
+
+  .catalog-detail-price-and-counter
+    margin-top: 35px
+
+  .catalog-detail__to-cart
+    margin-top: 35px

@@ -33,6 +33,10 @@ export default () => {
         },
         1280: {
           slidesPerView: 3,
+          spaceBetween: 16,
+        },
+        1500: {
+          slidesPerView: 3,
           spaceBetween: 26,
         }
       }

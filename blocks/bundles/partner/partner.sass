@@ -1,6 +1,10 @@
 @import '../../variables/variables'
 @import '../../mixins/mixins'
 
+.header
+  margin-bottom: 32px
+  padding-bottom: 0
+
 .partner
   padding-top: 24px
   padding-bottom: 80px
@@ -114,8 +118,8 @@
 
 +mq(desktop)
   .partner
-    padding-top: 48px
-    padding-bottom: 128px
+    padding-top: 56px
+    padding-bottom: 100px
 
   .partner-top
     margin-bottom: 24px
@@ -181,3 +185,8 @@
 
   .partner-stats:nth-child(3)
     width: 360px
+
++mq(wide-screen)
+  .partner
+    padding-top: 48px
+    padding-bottom: 128px

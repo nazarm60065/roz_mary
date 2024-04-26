@@ -281,6 +281,12 @@ $pageConfig = [
                                         Количество: <b>1 упаковка</b>
                                     </div>
                                 </div>
+                                <div class="order-total-item-price">
+                                    <div class="order-total-item-price-base">
+                                        <span class="order-total-item-price__value">1 590</span>
+                                        <span class="order-total-item-price__currency">₽</span>
+                                    </div>
+                                </div>
                             </div>
                             <div class="order-total-item">
                                 <div class="order-total-item-image">
@@ -297,6 +303,16 @@ $pageConfig = [
                                     </div>
                                     <div class="order-total-item__amount">
                                         Количество: <b>1 упаковка</b>
+                                    </div>
+                                </div>
+                                <div class="order-total-item-price">
+                                    <div class="order-total-item-price-base">
+                                        <span class="order-total-item-price__value">1 590</span>
+                                        <span class="order-total-item-price__currency">₽</span>
+                                    </div>
+                                    <div class="order-total-item-price-old">
+                                        <span class="order-total-item-price__value">2 590</span>
+                                        <span class="order-total-item-price__currency">₽</span>
                                     </div>
                                 </div>
                             </div>

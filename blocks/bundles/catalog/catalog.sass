@@ -4,6 +4,10 @@
 @import '../../catalog-list/catalog-list'
 @import '../../catalog-card/catalog-card'
 
+.header
+  margin-bottom: 32px
+  padding-bottom: 0
+
 .catalog
   padding-bottom: 56px
 
@@ -41,19 +45,20 @@
 
 +mq(desktop)
   .catalog
-    padding-bottom: 128px
+    padding-bottom: 100px
 
   .catalog-title-container
     display: flex
     justify-content: space-between
-    margin-top: 48px
-    margin-bottom: 24px
+    align-items: center
+    margin-top: 24px
+    margin-bottom: 16px
 
   .catalog__title
     margin: 0
 
   .catalog__welcome
-    font-size: 24px
+    font-size: 20px
     font-weight: 500
 
   .catalog__anchor
@@ -65,3 +70,11 @@
 
   .catalog-top
     margin-bottom: 100px
+
++mq(wide-screen)
+  .catalog-title-container
+    margin-top: 40px
+    margin-bottom: 24px
+
+  .catalog__welcome
+    font-size: 24px

@@ -1,6 +1,10 @@
 @import '../../variables/variables'
 @import '../../mixins/mixins'
 
+.header
+  padding-bottom: 0
+  margin-bottom: 32px
+
 .order
   padding: 0 0 60px
 
@@ -443,9 +447,13 @@
   margin-top: 16px
   font-size: 18px
 
++mq(desktop, max)
+  .order-total-item-price
+    display: none
+
 +mq(desktop)
   .order
-    padding-bottom: 128px
+    padding-bottom: 100px
 
   .order__title
     margin-bottom: 56px
@@ -453,13 +461,14 @@
   .order-wrapper
     padding-top: 24px
     display: flex
+    justify-content: space-between
     gap: 40px
 
   .order-left
-    max-width: 614px
+    width: 614px
 
   .order-right
-    width: 677px
+    width: 514px
     flex-shrink: 0
     position: relative
     margin-top: 50px
@@ -488,10 +497,11 @@
 
   .order-props__control
     height: 67px
+    padding: 21px 23px 10px
 
   .order-props__placeholder
     font-size: 16px
-    padding-top: 22px
+    padding: 22px 24px 10px
 
   .order-props__error
     font-size: 14px
@@ -531,7 +541,6 @@
 
   .order-delivery-company-list-item:last-child
     border-radius: 0 0 8px 8px
-
 
   .order-payment-list-item
     padding: 22px 24px
@@ -580,6 +589,13 @@
   .order-total-item
     gap: 16px
 
+  .order-total-item-image
+    width: 127px
+    border-radius: 12px
+
+  .order-total-item-content
+    max-width: 300px
+
   .order-total-item__title
     font-size: 14px
 
@@ -589,11 +605,37 @@
   .order-total-item__amount
     font-size: 12px
 
+  .order-total-item-price
+    padding-top: 20px
+    width: 86px
+    flex-shrink: 0
+    white-space: nowrap
+    text-align: right
+    margin-left: auto
+
+  .order-total-item-price-base
+    font-size: 14px
+
+  .order-total-item-price-old
+    display: inline-block
+    margin-top: 4px
+    font-size: 12px
+    color: $main-color50
+    +oldPrice($main-color50)
+
   .order-total-sum
     margin-top: 32px
 
   .order-total-sum-item
     font-size: 18px
+    font-weight: 500
 
   .order-total-sum-item_total
     font-size: 24px
+
++mq(wide-screen)
+  .order
+    padding-bottom: 128px
+
+  .order-right
+    width: 677px
