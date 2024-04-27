@@ -94,22 +94,22 @@ $pageConfig = [
     </section>
     <section class="brand-changes">
         <div class="container brand-changes-container">
-            <div class="brand-changes-left">
-                <div class="brand__title brand-changes__title">
-                    В течение первой недели вы почувствуете первые положительные изменения, которые будут нарастать.
-                </div>
-                <?= $mustache->render('brand-quote', include $_SERVER['DOCUMENT_ROOT'] . '/context/brand/changes/quote.php') ?>
+            <div class="brand-changes-wrapper">
                 <div class="brand-changes-rail">
                     <div class="brand-changes-stick">
-                        <?= $mustache->render('brand-changes-list', include $_SERVER['DOCUMENT_ROOT'] . '/context/brand/changes/cards.php') ?>
-                    </div>
-                </div>
-            </div>
-            <div class="brand-changes-right">
-                <?= $mustache->render('brand-quote', include $_SERVER['DOCUMENT_ROOT'] . '/context/brand/changes/quote.php') ?>
-                <div class="brand-changes-rail">
-                    <div class="brand-changes-stick">
-                        <?= $mustache->render('brand-changes-photos', include $_SERVER['DOCUMENT_ROOT'] . '/context/brand/changes/cards.php') ?>
+                        <div class="brand-changes-inner">
+                            <div class="brand-changes-left">
+                                <div class="brand__title brand-changes__title">
+                                    В течение первой недели вы почувствуете первые положительные изменения, которые будут нарастать.
+                                </div>
+                                <?= $mustache->render('brand-quote', include $_SERVER['DOCUMENT_ROOT'] . '/context/brand/changes/quote.php') ?>
+                                <?= $mustache->render('brand-changes-list', include $_SERVER['DOCUMENT_ROOT'] . '/context/brand/changes/cards.php') ?>
+                            </div>
+                            <div class="brand-changes-right">
+                                <?= $mustache->render('brand-quote', include $_SERVER['DOCUMENT_ROOT'] . '/context/brand/changes/quote.php') ?>
+                                <?= $mustache->render('brand-changes-photos', include $_SERVER['DOCUMENT_ROOT'] . '/context/brand/changes/cards.php') ?>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

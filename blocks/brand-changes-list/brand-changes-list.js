@@ -4,9 +4,9 @@ import {EffectFade} from "swiper/modules"
 export class BrandChangesList {
     constructor() {
         this.selectors = {
-            wrapper: '.brand-changes',
+            wrapper: '.brand-changes-wrapper',
             rail: '.brand-changes-rail',
-            content: '.brand-changes-list',
+            content: '.brand-changes-inner',
             card: '.brand-changes-card',
             bg: '.brand-changes-bg',
             slider: '.brand-changes-photos',
@@ -36,8 +36,7 @@ export class BrandChangesList {
             this.swiper = null
 
             if (this.cardList.length) {
-
-                //this.prepareWrapperHeight()
+                this.prepareWrapperHeight()
                 this.prepareCards()
                 this.prepareSlides()
                 this.attachEvents()
@@ -47,7 +46,13 @@ export class BrandChangesList {
     }
 
     prepareWrapperHeight() {
-        this.rail.style.height = (this.content.clientHeight * 2) + 'px'
+        let multiply = 1
+
+        if (window.innerWidth >= 1280) {
+            multiply = 3
+        }
+
+        this.rail.style.height = (this.content.clientHeight * multiply) + 'px'
     }
 
     initSwiper() {
@@ -77,22 +82,22 @@ export class BrandChangesList {
 
     scrollHandler() {
         const viewportOffsetTop = window.scrollY,
-            viewportOffsetCenter = window.scrollY + window.innerHeight / 2,
-            contentViewportOffset = this.content.getBoundingClientRect(),
-            contentViewportOffsetTop = viewportOffsetTop + contentViewportOffset.top,
-            contentViewportOffsetBottom = contentViewportOffsetTop + contentViewportOffset.height
+            viewportOffsetBottom = window.scrollY + window.innerHeight,
+            wrapperViewportOffset = this.wrapper.getBoundingClientRect(),
+            wrapperViewportOffsetTop = viewportOffsetTop + wrapperViewportOffset.top,
+            wrapperViewportOffsetBottom = wrapperViewportOffsetTop + wrapperViewportOffset.height
 
-        if ((viewportOffsetCenter >= contentViewportOffsetTop) && (viewportOffsetCenter <= contentViewportOffsetBottom)) {
-            const avgCardHeight = Math.round(contentViewportOffset.height / this.cardList.length)
-            const progress = Math.floor((viewportOffsetCenter - contentViewportOffsetTop) / avgCardHeight)
+        if ((viewportOffsetTop >= wrapperViewportOffsetTop) && (viewportOffsetBottom <= wrapperViewportOffsetBottom)) {
+            const progress = (viewportOffsetTop - wrapperViewportOffsetTop) / (wrapperViewportOffsetBottom - wrapperViewportOffsetTop - window.innerHeight)
+            const cardProgress = Math.round(progress * this.cardList.length)
 
-            this.calculateProgress(progress)
+            this.calculateProgress(cardProgress)
         } else {
-            if (viewportOffsetCenter < contentViewportOffsetTop) {
+            if (viewportOffsetTop < wrapperViewportOffsetTop) {
                 this.activeCard = this.cardList[0]
             }
 
-            if (viewportOffsetCenter > contentViewportOffsetBottom) {
+            if (viewportOffsetBottom > wrapperViewportOffsetBottom) {
                 this.activeCard = this.cardList[this.cardList.length - 1]
             }
 
