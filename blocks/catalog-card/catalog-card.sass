@@ -67,24 +67,22 @@
   padding: 1px 4px
   border-radius: 2px
 
+.catalog-card-title-container
+  min-height: 42px
+
 .catalog-card__title
   width: 100%
   font-weight: 600
-  font-size: 14px
-  min-height: 36px
+  font-size: 16px
 
 .catalog-card__text
   width: 100%
-  margin-top: 2px
+  margin-top: 4px
   opacity: 0.9
-  font-size: 8px
+  font-size: 12px
 
 .catalog-card__volume
   width: 100%
-  margin-top: 8px
-  font-size: 6px
-  opacity: .48
-
   b
     font-weight: 600
 
@@ -95,7 +93,7 @@
   margin: auto -4px 0
 
 .catalog-card-to-cart
-  margin-top: 10px
+  margin-top: 24px
 
 .catalog-card-to-cart__button
   width: 100%
@@ -231,6 +229,16 @@
     width: 100%
     height: 100%
     transition: opacity $default-transition
+
+  .catalog-card__volume_mobile
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    text-align: right
+    color: #A2A2A2
+    font-size: 10px
+    padding: 6px
 
   .catalog-card__volume_desktop
     display: none

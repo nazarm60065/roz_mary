@@ -23,6 +23,9 @@
                     {{/labels}}
                 </div>
             {{/issetLabels}}
+            {{#volume}}
+                <div class="catalog-card__volume catalog-card__volume_mobile">{{{.}}}</div>
+            {{/volume}}
         </div>
         <div class="catalog-card-content">
             {{#price}}
@@ -55,9 +58,6 @@
             {{#text}}
                 <div class="catalog-card__text">{{{.}}}</div>
             {{/text}}
-            {{#volume}}
-                <div class="catalog-card__volume catalog-card__volume_mobile"><b>Объем: </b>{{{.}}}</div>
-            {{/volume}}
             <div class="catalog-card-bottom">
                 {{#canBuy}}
                     <div class="catalog-card-to-cart">
