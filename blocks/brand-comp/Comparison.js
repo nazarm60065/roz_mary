@@ -48,8 +48,8 @@ export class Comparison {
     document.addEventListener('mouseleave', this.docMouseLeaveHandler.bind(this))
     document.addEventListener('touchcancel', this.docMouseLeaveHandler.bind(this))
 
-    document.addEventListener('mousemove', this.docMouseMoveHandler.bind(this), {passive: true})
-    document.addEventListener('touchmove', this.docTouchMoveHandler.bind(this), {passive: true})
+    document.addEventListener('mousemove', this.docMouseMoveHandler.bind(this), {passive: false})
+    document.addEventListener('touchmove', this.docTouchMoveHandler.bind(this), {passive: false})
   }
 
   checkWidth() {

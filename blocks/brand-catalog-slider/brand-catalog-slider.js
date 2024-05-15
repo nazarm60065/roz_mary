@@ -12,6 +12,7 @@ export class BrandCatalogSlider {
 
     this.classes = {
       sliderHide: 'brand-catalog-slider_hide',
+      sliderHideNav: 'brand-catalog-slider_hide-nav',
       filterActive: 'brand-catalog-filter__button_active',
     }
 
@@ -55,6 +56,7 @@ export class BrandCatalogSlider {
     this.swiper = new Swiper(this.slider, {
       modules: [Navigation],
       spaceBetween: 20,
+      watchOverflow: true,
       navigation: {
         prevEl: '.brand-catalog-slider__arrow_prev',
         nextEl: '.brand-catalog-slider__arrow_next',
@@ -96,15 +98,25 @@ export class BrandCatalogSlider {
     setTimeout(() => {
       if (this.swiper) this.swiper.destroy()
 
+      let count = 0
+
       this.slideList.forEach(slide => {
         if (slide.dataset['filter'] === this.filter.dataset['filter']) {
           slide.style.display = ''
           slide.classList.add('swiper-slide')
+
+          count++
         } else {
           slide.style.display = 'none'
           slide.classList.remove('swiper-slide')
         }
       })
+
+      if (count > 6) {
+        this.slider.classList.remove(this.classes.sliderHideNav)
+      } else {
+        this.slider.classList.add(this.classes.sliderHideNav)
+      }
 
       this.initSwiper()
       this.slider.classList.remove(this.classes.sliderHide)

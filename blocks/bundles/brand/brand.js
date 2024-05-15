@@ -10,6 +10,7 @@ import {BrandChangesList} from "../../brand-changes-list/brand-changes-list"
 import {BrandPoints} from "../../brand-points/brand-points"
 import {BrandCatalogSlider} from "../../brand-catalog-slider/brand-catalog-slider"
 import brandComp from "../../brand-comp/brand-comp"
+import brandReviewsSlider from "../../brand-reviews-slider/brand-reviews-slider"
 
 import './brand.sass'
 
@@ -23,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     new BrandChangesList()
     new BrandPoints()
     brandComp()
+    brandReviewsSlider()
 
     if (anchorList.length) {
         anchorList.forEach(anchor => {

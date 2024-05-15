@@ -1,0 +1,115 @@
+{{#issetItems}}
+    <div class="brand-reviews-top">
+        <div class="brand-reviews__title">Отзывы <em>Roz Mary</em></div>
+        <div class="brand-reviews-rate">
+            <div class="brand-reviews-clients">
+                {{#clients}}
+                    <div class="brand-reviews-client">
+                        <img src="{{src}}" alt="{{alt}}" class="brand-reviews-client__img" loading="lazy">
+                    </div>
+                {{/clients}}
+            </div>
+            <div class="brand-reviews-rate__number">
+                <div class="brand-reviews-rate__number-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" fill="none" viewBox="0 0 11 10">
+                        <path fill="#5A5276"
+                              d="m5.5 0 1.235 3.8h3.996L7.498 6.15l1.235 3.8L5.5 7.6 2.267 9.95l1.235-3.8L.269 3.8h3.996L5.5 0Z"/>
+                    </svg>
+                </div>
+                <div class="brand-reviews-rate__number-value">5.0</div>
+            </div>
+            <div class="brand-reviews-rate__text">
+                <b>Тысячи довольных клиентов</b> со всего мира
+            </div>
+        </div>
+    </div>
+    <div class="brand-reviews-products-wrapper">
+        <div class="brand-reviews-products-bg">
+            <picture class="brand-reviews-products-bg__picture">
+                <source media="(max-width: 767px)" srcset="/local/assets/images/brand/catalog/bg-mobile.png">
+                <img src="/local/assets/images/brand/catalog/bg.png" alt="Каталог"
+                     class="brand-reviews-products-bg__img"
+                     loading="lazy">
+            </picture>
+        </div>
+        <div class="brand-reviews-products swiper">
+            <button class="brand-reviews-products__arrow brand-reviews-products__arrow_prev" type="button">
+                <img src="/local/assets/images/arrow.png" alt="prev" loading="lazy">
+                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="14" fill="none" viewBox="0 0 29 14">
+                    <path fill="#fff"
+                          d="M.68 7.606a.857.857 0 0 1 0-1.212L6.134.939a.857.857 0 1 1 1.213 1.212L2.497 7l4.85 4.849a.857.857 0 0 1-1.213 1.212L.68 7.606Zm28.063.251H1.286V6.143h27.457v1.714Z"/>
+                </svg>
+            </button>
+            <div class="swiper-wrapper">
+                {{#items}}
+                    <div class="brand-reviews-product swiper-slide">
+                        {{#image}}
+                            <picture class="brand-reviews-product__picture">
+                                {{#mobileSrc}}
+                                    <source media="(max-width: 767px)" srcset="{{.}}">{{/mobileSrc}}
+                                <img src="{{src}}" alt="{{alt}}" class="brand-reviews-product__img" loading="lazy">
+                            </picture>
+                        {{/image}}
+                        {{#issetReviews}}
+                            <div class="brand-reviews-product-trigger">
+                                <span class="brand-reviews-product-trigger__text">Открыть отзывы</span>
+                                <span class="brand-reviews-product-trigger-marker">
+                                    <span class="brand-reviews-product-trigger__icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="4" height="10"
+                                             viewBox="0 0 4 10"
+                                             fill="none">
+                                            <path fill="#5A5276"
+                                                  d="m.779 9.348.985-.772-.213-4.332-1.162-.76 2.7-.458-.483 5.035 1.35.841-3.177.446Zm2.379-7.84a.871.871 0 0 1-.075.357c-.05.109-.12.207-.208.295-.087.084-.188.15-.3.2a1.02 1.02 0 0 1-.735 0 .97.97 0 0 1-.295-.2 1.084 1.084 0 0 1-.201-.295.871.871 0 0 1-.076-.358c0-.13.025-.249.076-.358a.97.97 0 0 1 .2-.295A.884.884 0 0 1 1.84.66a.946.946 0 0 1 .734 0 .956.956 0 0 1 .509.49c.05.108.075.227.075.357Z"/>
+                                        </svg>
+                                    </span>
+                                </span>
+                            </div>
+                            <button class="brand-reviews-product-close" type="button">
+                                Закрыть отзывы
+                            </button>
+                            <div class="brand-reviews-slider swiper">
+                                <button class="brand-reviews-slider__arrow brand-reviews-slider__arrow_prev" type="button">
+                                    <img src="/local/assets/images/arrow.png" alt="prev" loading="lazy">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="29" height="14" fill="none" viewBox="0 0 29 14">
+                                        <path fill="#fff"
+                                              d="M.68 7.606a.857.857 0 0 1 0-1.212L6.134.939a.857.857 0 1 1 1.213 1.212L2.497 7l4.85 4.849a.857.857 0 0 1-1.213 1.212L.68 7.606Zm28.063.251H1.286V6.143h27.457v1.714Z"/>
+                                    </svg>
+                                </button>
+                                <div class="swiper-wrapper">
+                                    {{#reviews}}
+                                        <div class="brand-reviews-slide swiper-slide">
+                                            {{#image}}
+                                                <picture class="brand-reviews-slide__picture">
+                                                    {{#mobileSrc}}
+                                                        <source media="(max-width: 767px)" srcset="{{.}}">{{/mobileSrc}}
+                                                    <img src="{{src}}" alt="{{alt}}" class="brand-reviews-slide__img"
+                                                         loading="lazy">
+                                                </picture>
+                                            {{/image}}
+                                        </div>
+                                    {{/reviews}}
+                                </div>
+                                <div class="brand-reviews-slider-counter"></div>
+                                <button class="brand-reviews-slider__arrow brand-reviews-slider__arrow_next" type="button">
+                                    <img src="/local/assets/images/arrow.png" alt="next" loading="lazy">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="28" fill="none" viewBox="0 0 30 28">
+                                        <path fill="#fff"
+                                              d="M28.972 14.884a.857.857 0 0 0 0-1.213l-5.455-5.454a.857.857 0 0 0-1.212 1.212l4.849 4.849-4.849 4.848a.857.857 0 0 0 1.212 1.212l5.455-5.454Zm-28.063.25h27.457V13.42H.91v1.715Z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        {{/issetReviews}}
+                    </div>
+                {{/items}}
+            </div>
+            <button class="brand-reviews-products__arrow brand-reviews-products__arrow_next" type="button">
+                <img src="/local/assets/images/arrow.png" alt="next" loading="lazy">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="28" fill="none" viewBox="0 0 30 28">
+                    <path fill="#fff"
+                          d="M28.972 14.884a.857.857 0 0 0 0-1.213l-5.455-5.454a.857.857 0 0 0-1.212 1.212l4.849 4.849-4.849 4.848a.857.857 0 0 0 1.212 1.212l5.455-5.454Zm-28.063.25h27.457V13.42H.91v1.715Z"/>
+                </svg>
+            </button>
+        </div>
+        <div class="brand-reviews-products-progress"></div>
+    </div>
+{{/issetItems}}

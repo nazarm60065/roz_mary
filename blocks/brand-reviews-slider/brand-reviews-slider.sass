@@ -1,0 +1,279 @@
+.brand-reviews-products-wrapper
+  position: relative
+  z-index: 0
+  height: 524px
+  margin-top: 32px
+  border-radius: 32px
+  overflow: hidden
+
+.brand-reviews-products-bg
+  +absoluteFluid
+  z-index: -1
+
+.brand-reviews-products-bg__img
+  width: 100%
+  height: 100%
+  object-fit: cover
+
+
+.brand-reviews-products
+  width: 100%
+  height: 100%
+  overflow: visible
+  transition: opacity $default-transition
+  &_hide
+    opacity: 0
+
+.brand-reviews-product
+  border-radius: 32px
+  padding: 16px 0 48px
+  text-align: center
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+
+.brand-reviews-product-close
+  position: absolute
+  top: 18px
+  right: -30px
+  font-size: 12px
+  font-weight: 500
+  color: #fff
+  border-bottom: 1px solid
+  opacity: 0
+  visibility: hidden
+  z-index: -1
+  transition: opacity $default-transition 0s, visibility 0s $default-transition, z-index 0s $default-transition
+
+.brand-reviews-product__picture
+  transition: transform $default-transition
+
+.brand-reviews-product__img
+  width: auto
+  height: auto
+  max-width: 100%
+  max-height: 100%
+  object-position: center bottom
+
+.brand-reviews-product-trigger
+  position: absolute
+  top: 98px
+  left: 0
+  right: 0
+  +show
+
+.brand-reviews-product-trigger__button
+  background-color: transparent
+  width: 100%
+  height: 100%
+
+.brand-reviews-product-trigger__text
+  font-size: 14px
+  font-weight: 500
+  color: $violet-color
+  border-bottom: 1px solid
+
+.brand-reviews-product-trigger-marker
+  display: block
+  margin: 16px auto 0
+  width: 40px
+  height: 40px
+  border: 2px solid rgba(255, 255, 255, 0.31)
+  background-color: rgba(255, 255, 255, 0.24)
+  border-radius: 50%
+  overflow: hidden
+  padding: 10px
+
+.brand-reviews-product-trigger__icon
+  display: block
+  width: 100%
+  height: 100%
+  padding: 4px
+  background-color: #fff
+  border-radius: 50%
+  line-height: 0
+  +svg
+
+.brand-reviews-products__arrow
+  width: 48px
+  height: 48px
+  border-radius: 6px
+  overflow: hidden
+  position: absolute
+  bottom: 68px
+  padding: 8px
+  display: flex
+  align-items: center
+  justify-content: center
+  z-index: 4
+  background-color: #e9e9e9
+  +svg
+
+  img
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: -2
+    transition: opacity $default-transition
+
+.brand-reviews-products__arrow path
+  transition: fill $default-transition
+
+.brand-reviews-products__arrow_prev
+  left: 0
+  img
+    transform: scale(-1)
+
+.brand-reviews-products__arrow_next
+  right: 0
+
+.brand-reviews-products__arrow_disabled
+  cursor: default
+
+.brand-reviews-products__arrow_disabled img
+  opacity: 0
+
+.brand-reviews-products__arrow_disabled path
+  fill: $violet-color
+
+.brand-reviews-products__arrow_lock
+  display: none
+
+.brand-reviews-products-wrapper .brand-reviews-products-progress
+  position: absolute
+  top: auto
+  left: 12px
+  right: 12px
+  bottom: 25px
+  width: auto
+  height: 4px
+  background-color: #fff
+  border-radius: 4px
+
+.brand-reviews-products-wrapper .brand-reviews-products-progress .swiper-pagination-progressbar-fill
+  background-color: $violet-color
+
+.brand-reviews-products-progress_lock
+  display: none
+
+.brand-reviews-slider
+  position: absolute
+  top: 80px
+  right: -30px
+  bottom: 0
+  width: 190px
+  padding-bottom: 140px
+  opacity: 0
+  visibility: hidden
+  z-index: -1
+  transition: opacity $default-transition 0s, visibility 0s $default-transition, z-index 0s $default-transition
+
+.brand-reviews-slide__picture
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 100%
+  height: 100%
+
+.brand-reviews-slide__img
+  width: auto
+  height: auto
+  max-width: 100%
+  max-height: 100%
+
+.brand-reviews-slider__arrow
+  width: 48px
+  height: 48px
+  border-radius: 6px
+  overflow: hidden
+  position: absolute
+  bottom: 68px
+  padding: 8px
+  display: flex
+  align-items: center
+  justify-content: center
+  z-index: 4
+  background-color: #e9e9e9
+  +svg
+
+  img
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: -2
+    transition: opacity $default-transition
+
+.brand-reviews-slider__arrow path
+  transition: fill $default-transition
+
+.brand-reviews-slider__arrow_prev
+  left: 0
+  img
+    transform: scale(-1)
+
+.brand-reviews-slider__arrow_next
+  right: 0
+
+.brand-reviews-slider__arrow_disabled
+  cursor: default
+
+.brand-reviews-slider__arrow_disabled img
+  opacity: 0
+
+.brand-reviews-slider__arrow_disabled path
+  fill: $violet-color
+
+.brand-reviews-slider__arrow_lock
+  display: none
+
++mq(tablet, max)
+  .brand-reviews-products_show-reviews .brand-reviews-products__arrow
+    +hide()
+
+  .brand-reviews-products
+    width: 100%
+    max-width: 224px
+
+  .brand-reviews-product
+    transform-origin: center bottom
+    transition: transform $default-transition, opacity $default-transition
+
+  .brand-reviews-product.swiper-slide-prev
+    transform: scale(0.9) translateX(100px)
+
+  .brand-reviews-product.swiper-slide-next
+    transform: scale(0.9) translateX(-100px)
+
+  .brand-reviews-product_show-reviews .brand-reviews-product-close
+    opacity: 1
+    visibility: visible
+    z-index: 1
+    transition: opacity $default-transition $default-transition, visibility 0s $default-transition, z-index 0s $default-transition
+
+  .brand-reviews-product_show-reviews .brand-reviews-slider
+    opacity: 1
+    visibility: visible
+    z-index: 1
+    transition: opacity $default-transition $default-transition, visibility 0s $default-transition, z-index 0s $default-transition
+
+  .brand-reviews-product_show-reviews .brand-reviews-product__picture
+    transform: translateX(-100px)
+
+  .brand-reviews-product-trigger
+    opacity: 0
+    transition: opacity $default-transition
+
+  .brand-reviews-product.swiper-slide-active .brand-reviews-product-trigger
+    opacity: 1
+
+  .brand-reviews-product.brand-reviews-product_show-reviews.swiper-slide-active .brand-reviews-product-trigger
+    opacity: 0
+
+  .brand-reviews-products_show-reviews .brand-reviews-product.swiper-slide-prev,
+  .brand-reviews-products_show-reviews .brand-reviews-product.swiper-slide-next
+    transform: scale(0.9) translateX(0)
+    opacity: 0

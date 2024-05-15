@@ -438,6 +438,13 @@ $pageConfig = [
             </div>
         </div>
     </section>
+    <section class="brand-section brand-reviews">
+        <div class="container">
+            <div class="brand-reviews-inner">
+                <?= $mustache->render('brand-reviews-slider', include $_SERVER['DOCUMENT_ROOT'] . '/context/brand/reviews/reviews.php') ?>
+            </div>
+        </div>
+    </section>
     <section class="brand-section brand-delivery">
         <div class="container">
             <div class="brand-delivery-inner">

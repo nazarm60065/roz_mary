@@ -89,7 +89,7 @@ export class BrandChangesList {
 
         if ((viewportOffsetTop >= wrapperViewportOffsetTop) && (viewportOffsetBottom <= wrapperViewportOffsetBottom)) {
             const progress = (viewportOffsetTop - wrapperViewportOffsetTop) / (wrapperViewportOffsetBottom - wrapperViewportOffsetTop - window.innerHeight)
-            const cardProgress = Math.round(progress * this.cardList.length)
+            const cardProgress = Math.min(Math.round(progress * (this.cardList.length - 1)), this.cardList.length)
 
             this.calculateProgress(cardProgress)
         } else {

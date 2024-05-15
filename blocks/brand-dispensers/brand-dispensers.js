@@ -3,6 +3,7 @@ export class BrandDispensers {
         this.selectors = {
             wrapper: '.brand-dispensers',
             rail: '.brand-dispensers-rail',
+            stick: '.brand-dispensers-stick',
             content: '.brand-dispensers-inner',
             quote: '.brand-quote',
             bottle: '.brand-dispensers-bottle',
@@ -22,6 +23,7 @@ export class BrandDispensers {
         if (this.wrapper) {
             this.content = this.wrapper.querySelector(this.selectors.content)
             this.rail = this.wrapper.querySelector(this.selectors.rail)
+            this.stick = this.wrapper.querySelector(this.selectors.stick)
             this.quote = this.wrapper.querySelector(this.selectors.quote)
             this.bottleTopList = this.wrapper.querySelectorAll(this.selectors.bottleTop)
             this.bottleMiddleList = this.wrapper.querySelectorAll(this.selectors.bottleMiddle)
@@ -33,9 +35,9 @@ export class BrandDispensers {
 
     prepareWrapperHeight() {
         if (window.innerWidth < 768) {
-            this.rail.style.height = (this.wrapper.clientHeight * 2) + 'px'
+            this.rail.style.height = (this.stick.clientHeight * 2) + 'px'
         } else {
-            this.rail.style.height = (this.wrapper.clientHeight) + 'px'
+            this.rail.style.height = (this.stick.clientHeight) + 'px'
         }
     }
 

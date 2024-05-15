@@ -41,7 +41,12 @@
                                         <div class="brand-catalog-hint__text">{{{.}}}</div>
                                     </div>
                                 {{/hint}}
-                                <img src="{{src}}" alt="{{alt}}" class="brand-catalog-slide__img" loading="lazy">
+                                <picture class="brand-catalog-slide__picture">
+                                    {{#mobileSrc}}
+                                        <source media="(max-width: 767px)" srcset="{{.}}">
+                                    {{/mobileSrc}}
+                                    <img src="{{src}}" alt="{{alt}}" class="brand-catalog-slide__img" loading="lazy">
+                                </picture>
                             </div>
                         {{/image}}
                     </div>
